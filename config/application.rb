@@ -18,6 +18,8 @@ require "action_cable/engine"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+
+
 module Waterbnb
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
@@ -35,5 +37,12 @@ module Waterbnb
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+    config.middleware.use ActionDispatch::Cookies
+    config.middleware.use ActionDispatch::Session::CookieStore,
+    key: '_waterbnb_session',
+    same_site: :lax, 
+    secure: Rails.env.production?
   end
+
+  
 end
