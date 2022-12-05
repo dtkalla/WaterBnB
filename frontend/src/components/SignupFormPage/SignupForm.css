@@ -1,4 +1,4 @@
 .signupForm {
-    color: rebeccapurple;
-    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
 }

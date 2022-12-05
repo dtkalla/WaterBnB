@@ -23,13 +23,14 @@ ApplicationRecord.transaction do
         last_name: 'User',
         email: 'demo@user.io', 
         password: 'password',
-        phone_number: '6513144665'
     )
   
     # More users
+    
     # 10.times do 
     #   User.create!({
-    #     username: Faker::Internet.unique.username(specifier: 3),
+    #     first_name: Faker::Name.firstName,
+    #     last_name: Faker::Name.lastName,
     #     email: Faker::Internet.unique.email,
     #     password: 'password'
     #   }) 

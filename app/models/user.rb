@@ -1,8 +1,7 @@
 class User < ApplicationRecord
-    validates :phone_number, :email, presence: true, uniqueness: true
+    validates :email, presence: true, uniqueness: true, format: { with: URI::MailTo::EMAIL_REGEXP }
     validates :first_name, :last_name, :password_digest, :session_token, presence: true
     validates :password, length: { minimum: 8 }, allow_nil: true
-    validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
 
     attr_reader :password
     before_validation :ensure_session_token
