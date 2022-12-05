@@ -7,6 +7,17 @@
     right: 20px;
 }
 
+#myModal {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+}
+
 #modalButtonImage {
     width: 50px;
+}
+
+#modalContent {
+    display: flex;
+    justify-content: center;
 }
