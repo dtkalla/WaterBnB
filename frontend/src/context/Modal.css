@@ -5,6 +5,7 @@
     left: 0;
     bottom: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
   }
@@ -21,4 +22,9 @@
   #modal-content {
     position: absolute;
     background-color:white;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
   }

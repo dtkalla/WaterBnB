@@ -12,14 +12,14 @@ function SignupFormPage() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
+  // const [confirmPassword, setConfirmPassword] = useState("");
   const [errors, setErrors] = useState([]);
 
   if (sessionUser) return <Redirect to="/" />;
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (password === confirmPassword) {
+    if (!!password) {
       setErrors([]);
       return dispatch(sessionActions.signup({ email, firstName, lastName, password }))
         .catch(async (res) => {
@@ -76,15 +76,6 @@ function SignupFormPage() {
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-      </label>
-      <label>
-        Confirm Password
-        <input
-          type="password"
-          value={confirmPassword}
-          onChange={(e) => setConfirmPassword(e.target.value)}
           required
         />
       </label>
