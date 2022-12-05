@@ -2,7 +2,19 @@
 
 #session-Links {
     display: flex;
+    flex-direction: column;
     justify-items: flex-end;
     position: absolute;
+    top: 50px;
     right: 20px;
 }
+
+/* #modalButtonImage {
+    display: flex;
+    justify-items: flex-end;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 30px;
+} */
+

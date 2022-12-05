@@ -1,0 +1,10 @@
+#navButton {
+    width: 500px;
+}
+
+#hamburger {
+    width: 20px;
+    position: relative;
+    top: -10px;
+    right: 15px;
+}
