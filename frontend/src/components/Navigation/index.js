@@ -6,6 +6,7 @@ import LoginFormModal from '../LoginFormModal';
 import './Navigation.css';
 import SignupFormModal from '../SignupFormModal';
 import * as sessionActions from '../../store/session';
+import DemoLogin from '../DemoLogin';
 
 
 function Navigation(){
@@ -33,6 +34,7 @@ function Navigation(){
       <>
         <LoginFormModal />
         <SignupFormModal />
+        {/* <DemoLogin /> */}
       </>
     );
   }

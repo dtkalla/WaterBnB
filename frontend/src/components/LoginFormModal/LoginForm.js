@@ -32,6 +32,7 @@ function LoginForm() {
       <ul>
         {errors.map(error => <li key={error}>{error}</li>)}
       </ul>
+      <ul>
       <label>
         Email
         <input
@@ -51,6 +52,7 @@ function LoginForm() {
         />
       </label>
       <button type="submit">Log In</button>
+      </ul>
     </form>
   );
 }
