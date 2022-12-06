@@ -4,10 +4,22 @@
     padding: 10px;
 }
 
-.a {
+.dropdown-button {
     padding: 10px;
     display: flex;
     position: absolute;
     top: 20px;
-    right: 20px;
+    right: 50px;
+    border: 1px;
+    border-style: solid;
+    border-radius: 25px;
+    height: 15px;
+    width: 50px;
+    align-items: center;
+    justify-content: center;
 }
+
+/* .profile-dropdown {
+    position: relative;
+    top: 100px;
+} */
