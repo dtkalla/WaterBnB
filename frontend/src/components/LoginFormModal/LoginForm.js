@@ -36,15 +36,14 @@ function LoginForm() {
         {errors.map(error => <li key={error}>{error}</li>)}
       </ul>      
       <ul>
-      <label>
-        Email
-        <input
-          type="text"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-      </label>
+        <div className="entry-input-box">
+          <div className="small-text">Email</div>
+          <label>
+          <input className="entryInput" type="text" value={email}
+          onChange={(e) => setEmail(e.target.value)} required />
+          </label>
+        </div>
+      
       <label>
         Password
         <input

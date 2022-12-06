@@ -16,7 +16,7 @@
     right: 0;
     left: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.5);
   }
 
   #modal2-background {
@@ -30,6 +30,21 @@
   #modal-content {
     position: absolute;
     background-color:white;
+    width: 575px;
+    height: 575px;
+    border-radius: 10px;
+  }
+
+  .login-header {
+    display: flex;
+    justify-content: center;
+    font-size: 14;
+    border-bottom: 1px;
+    border-bottom-style: solid;
+    border-color: lightgray;
+    padding: 20px;
+    font-weight: 600;
+    line-height: 20px;
   }
 
   ul {
