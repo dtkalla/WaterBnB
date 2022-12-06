@@ -15,7 +15,7 @@ function LoginForm() {
     e.preventDefault();
     setErrors([]);
     return dispatch(sessionActions.login({ email, password }))
-      .catch(async (res) => {
+      .catch((async (res) => {
         let data;
         try {
           // .clone() essentially allows you to read the response body twice
@@ -26,7 +26,7 @@ function LoginForm() {
         if (data?.errors) setErrors(data.errors);
         else if (data) setErrors([data]);
         else setErrors([res.statusText]);
-      });
+      }));
   };
   
 
