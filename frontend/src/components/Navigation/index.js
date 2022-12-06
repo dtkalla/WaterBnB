@@ -22,19 +22,21 @@ function Navigation(){
   if (sessionUser) {
     sessionLinks = (
       <ul className="profile-dropdown">
-        <li>{sessionUser.firstName}</li>
-        <li>{sessionUser.email}</li>
-        <li>
-          <button onClick={logout}>Log Out</button>
-        </li>
+        {/* <li>{sessionUser.firstName}</li>
+        <li>{sessionUser.email}</li> */}
+        {/* <li> */}
+          <span onClick={logout}>Log Out<i className='box'>hi</i></span>
+        {/* </li> */}
       </ul>
     );
   } else {
     sessionLinks = (
-      <>
-        <LoginFormModal />
-        <SignupFormModal />
-      </>
+      <div className='logged-out-links'>
+        <ul>
+          <li><LoginFormModal /></li>
+          <li><SignupFormModal /></li>
+        </ul>
+      </div>
     );
   }
 

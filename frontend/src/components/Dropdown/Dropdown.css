@@ -4,8 +4,8 @@
 }
 
 .dropdown-menu {
-    position: relative;
-    top: -5px;
-    right: 20px;
+    position: absolute;
+    top: 15px;
+    right: 30px;
 }
 

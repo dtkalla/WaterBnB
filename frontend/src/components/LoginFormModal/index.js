@@ -9,7 +9,7 @@ function LoginFormModal() {
 
   return (
     <>
-      <button onClick={() => setShowModal(true)}>Log In</button>
+      <span onClick={() => setShowModal(true)}>Log In<i className='box'>hfcvnhjvbfh</i></span>
       {showModal && (
         <Modal onClose={() => setShowModal(false)}>
           <div className='login-header'>Log In</div>

@@ -45,3 +45,7 @@
     list-style-image: url('./red_x2.png');
 }
 
+.box {
+    opacity: 0;
+}
+
