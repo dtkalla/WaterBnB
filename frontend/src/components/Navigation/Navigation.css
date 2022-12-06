@@ -55,3 +55,28 @@
     list-style-type: none;
 }
 
+.logged-in-links {
+    height: 50px;
+    width: 90px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px;
+    border-style: solid;
+}
+
+.logged-in-links li {
+    top: 6px;
+    padding: 10px;
+    height: 15px;
+    width: 70px;
+    position: relative;
+    /* left: -40px; */
+}
+
+.logged-in-links li:hover {
+    background-color: lightgray;
+}
+
+.logged-in-links {
+    list-style-type: none;
+}

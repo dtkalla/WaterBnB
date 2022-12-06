@@ -21,13 +21,13 @@ function Navigation(){
   let sessionLinks;
   if (sessionUser) {
     sessionLinks = (
-      <ul className="profile-dropdown">
+      <div className="logged-in-links">
         {/* <li>{sessionUser.firstName}</li>
         <li>{sessionUser.email}</li> */}
-        {/* <li> */}
+        <li>
           <span onClick={logout}>Log Out<i className='box'>hi</i></span>
-        {/* </li> */}
-      </ul>
+        </li>
+      </div>
     );
   } else {
     sessionLinks = (
