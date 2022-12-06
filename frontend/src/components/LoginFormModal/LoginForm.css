@@ -1,7 +1,7 @@
 .entry-input-box {
     display: flex;
     flex-direction: column;
-    width: 500px;
+    width: 95%;
     height: 50px;
     border: 0.5px;
     border-style: solid;
@@ -17,6 +17,7 @@
     font-size: 16px;
     background: white !important;
     background-color: white !important;
+    
 }
 
 .small-text {
@@ -25,3 +26,22 @@
     padding-top: 10px;
     padding-left: 3px;
 }
+
+.Login-button {
+    width: 95%;
+    height: 50px;
+    background-color:rgb(230, 30, 77);
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    border: 0;
+}
+
+.form-errors {
+    color: red;
+    font-size: 14px;
+    font-weight: 500;
+    list-style-image: url('./red_x2.png');
+}
+

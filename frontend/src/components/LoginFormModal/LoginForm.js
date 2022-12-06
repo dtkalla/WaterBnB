@@ -29,31 +29,43 @@ function LoginForm() {
       }));
   };
   
+  let hide = "password"
+  // const swtichHidden = () => {
+  //   hide = hide == "password" ? "text" : "password"
+  // }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <ul className="form-errors">
-        {errors.map(error => <li key={error}>{error}</li>)}
-      </ul>      
+    <form onSubmit={handleSubmit}>     
       <ul>
         <div className="entry-input-box">
           <div className="small-text">Email</div>
           <label>
           <input className="entryInput" type="text" value={email}
-          onChange={(e) => setEmail(e.target.value)} required />
+          onChange={(e) => setEmail(e.target.value)} required 
+          placeholder="Email Address"/>
           </label>
         </div>
-      
-      <label>
-        Password
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-      </label>
-      <button type="submit">Log In</button>
+        <br/>
+        <div className="entry-input-box">
+          <div className="small-text">Password</div>
+          <label>
+          <input className="entryInput" type={hide} value={password}
+          onChange={(e) => setPassword(e.target.value)} required 
+          placeholder="Password"/>
+          </label>
+
+        </div>
+
+        <br/>
+
+        <ul className="form-errors">
+          {errors.map(error => <li key={error}>{error}</li>)}
+        </ul> 
+
+        {/* <input type="checkbox" onChange={swtichHidden} value={"Show password"} /> */}
+        <br/>
+
+      <button className="Login-button" type="submit">Log In</button>
       </ul>
     </form>
   );

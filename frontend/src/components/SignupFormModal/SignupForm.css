@@ -1,0 +1,17 @@
+#top-box{
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#bottom-box{
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-top: 0;
+}
+
+.close {
+    width: 50px;
+    height: 50px;
+
+}
+
