@@ -1,12 +1,12 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import ProfileButton from './ProfileButton';
 import LoginFormModal from '../LoginFormModal';
 import './Navigation.css';
 import SignupFormModal from '../SignupFormModal';
 import * as sessionActions from '../../store/session';
-import DemoLogin from '../DemoLogin';
+// import DemoLogin from '../DemoLogin';
+// import { NavLink } from 'react-router-dom';
+// import ProfileButton from './ProfileButton';
 
 
 function Navigation(){
@@ -34,7 +34,6 @@ function Navigation(){
       <>
         <LoginFormModal />
         <SignupFormModal />
-        {/* <DemoLogin /> */}
       </>
     );
   }

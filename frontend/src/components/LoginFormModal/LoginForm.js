@@ -3,11 +3,13 @@ import * as sessionActions from "../../store/session";
 import { useDispatch } from "react-redux";
 import "./LoginForm.css";
 
+
 function LoginForm() {
   const dispatch = useDispatch();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState([]);
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -26,12 +28,13 @@ function LoginForm() {
         else setErrors([res.statusText]);
       });
   };
+  
 
   return (
     <form onSubmit={handleSubmit}>
-      <ul>
+      <ul className="form-errors">
         {errors.map(error => <li key={error}>{error}</li>)}
-      </ul>
+      </ul>      
       <ul>
       <label>
         Email
