@@ -39,6 +39,13 @@ ApplicationRecord.transaction do
         password: 'crush_the_proletariat',
     )
 
+    User.create!(
+        first_name: 'Elisa',
+        last_name: 'Arias',
+        email: 'earias@yahoo.com', 
+        password: 'contrasena',
+    )
+
 
     # 10.times do 
     #   User.create!({
@@ -84,7 +91,7 @@ ApplicationRecord.transaction do
         lister_id: 2,
         latitude: 40.7831,
         longitude: -73.9712,
-        price: 157,
+        price: 257,
     )
     
 
@@ -93,7 +100,7 @@ ApplicationRecord.transaction do
         country: 'Spain',
         description: '¡Bienvenidos a todos!', 
         pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
-        lister_id: 3,
+        lister_id: 4,
         latitude: 41.3874,
         longitude: 2.1686,
         price: 84,
@@ -120,7 +127,7 @@ ApplicationRecord.transaction do
         lister_id: 3,
         latitude: -34.6037,
         longitude: -58.3816,
-        price: 49,
+        price: 149,
     )
 
 
@@ -216,7 +223,7 @@ ApplicationRecord.transaction do
         lister_id: 3,
         latitude: 40.8116,
         longitude: -73.9465,
-        price: 75,
+        price: 475,
     )
 
 
@@ -240,7 +247,7 @@ ApplicationRecord.transaction do
         lister_id: 1,
         latitude: 47.6062,
         longitude: -122.3321,
-        price: 106,
+        price: 206,
     )
 
 
@@ -264,7 +271,91 @@ ApplicationRecord.transaction do
         lister_id: 3,
         latitude: -22.9068,
         longitude: 43.1729,
-        price: 62,
+        price: 162,
+    )
+
+
+    Listing.create!(
+        city: 'Flores',
+        country: 'Guatemala',
+        description: "Close to the famous Tikal ruins!", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 4,
+        latitude: 16.9181,
+        longitude: -89.8926,
+        price: 31,
+    )
+
+
+    Listing.create!(
+        city: 'Tokyo',
+        country: 'Japan',
+        description: "Stay at the biggest city on earth and climb Mount Fuji!", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 3,
+        latitude: 35.6762,
+        longitude: 139.6503,
+        price: 132,
+    )
+
+
+    Listing.create!(
+        city: 'Venice',
+        country: 'Italy',
+        description: "No need for a car -- take a gondola!", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 1,
+        latitude: 45.4408,
+        longitude: 12.3155,
+        price: 86,
+    )
+
+
+    Listing.create!(
+        city: 'Lagos',
+        country: 'Nigeria',
+        description: "The heart of Africa", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 1,
+        latitude: 6.5244,
+        longitude: 3.3792,
+        price: 14,
+    )
+
+
+    Listing.create!(
+        city: 'Dakar',
+        country: 'Senegal',
+        description: "Venez ici, toutes le monde !", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 3,
+        latitude: 14.7167,
+        longitude: -17.4677,
+        price: 19,
+    )
+
+
+    Listing.create!(
+        city: 'Phuket',
+        country: 'Thailand',
+        description: "Please pronounce this city's name correctly...", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 1,
+        latitude: 7.8804,
+        longitude: 98.3923,
+        price: 28,
+    )
+
+
+    Listing.create!(
+        city: 'San Sebastian',
+        country: 'Spain',
+        description: "Also known as Donostia", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 4,
+        latitude: 43.3183,
+        longitude: -1.9812,
+        price: 78,
     )
 
     puts "Done!"

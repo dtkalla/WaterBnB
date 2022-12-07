@@ -11,7 +11,7 @@ class Listing < ApplicationRecord
     
 
     def self.map_all_listings
-        listings = Listing.all.sort_by { |p| [p.latitude] }
+        listings = Listing.all.sort_by { |p| [-2*p.latitude + p.longitude] }
         (0...listings.length).each do |i|
             listing = listings[i]
             p [listing.city, listing.latitude, listing.longitude]
