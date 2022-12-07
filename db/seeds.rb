@@ -1,10 +1,7 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 #
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+
 
 
 ApplicationRecord.transaction do 
@@ -596,6 +593,138 @@ ApplicationRecord.transaction do
         latitude: 41.9192,
         longitude: 8.7386,
         price: 41,
+    )
+
+
+    Listing.create!(
+        city: 'San Francisco',
+        country: 'California',
+        description: "...", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 3,
+        latitude: 37.7180,
+        longitude: -122.4772,
+        price: 284,
+    )
+
+
+    Listing.create!(
+        city: 'San Francisco',
+        country: 'California',
+        description: "...", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 3,
+        latitude: 37.7277,
+        longitude: -122.3932,
+        price: 411,
+    )
+
+
+    Listing.create!(
+        city: 'Staten Island',
+        country: 'New York',
+        description: "...", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 3,
+        latitude: 40.6427,
+        longitude: -74.0799,
+        price: 108,
+    )
+
+
+    Listing.create!(
+        city: 'Bronx',
+        country: 'New York',
+        description: "...", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 3,
+        latitude: 40.8553,
+        longitude: -73.8640,
+        price: 93,
+    )
+
+
+    Listing.create!(
+        city: 'New Orleans',
+        country: 'Louisiana',
+        description: "...", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 1,
+        latitude: 29.9511,
+        longitude: -90.0715,
+        price: 117,
+    )
+
+
+    Listing.create!(
+        city: 'Kampala',
+        country: 'Uganda',
+        description: "...", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 1,
+        latitude: 0.3476,
+        longitude: 32.5825,
+        price: 13,
+    )
+
+
+    Listing.create!(
+        city: 'Shanghai',
+        country: 'China',
+        description: "...", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 3,
+        latitude: 31.2304,
+        longitude: 121.4737,
+        price: 168,
+    )
+
+
+    Listing.create!(
+        city: 'Cartagena',
+        country: 'Colombia',
+        description: "...", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 4,
+        latitude: 10.3932,
+        longitude: -75.4832,
+        price: 39,
+    )
+
+
+    Listing.create!(
+        city: 'Cozumel',
+        country: 'Mexico',
+        description: "...", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 4,
+        latitude: 20.5072,
+        longitude: -86.9446,
+        price: 57,
+    )
+
+
+    Listing.create!(
+        city: 'Cozumel',
+        country: 'Mexico',
+        description: "...", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 4,
+        latitude: -12.0464,
+        longitude: -77.0428,
+        price: 41,
+    )
+
+
+    Listing.create!(
+        city: 'Valparaiso',
+        country: 'Chile',
+        description: "...", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 4,
+        latitude: -33.0472,
+        longitude: -71.6127,
+        price: 66,
     )
 
     puts "Done!"
