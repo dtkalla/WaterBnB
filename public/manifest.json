@@ -1,6 +1,6 @@
 {
-  "short_name": "BenchBnB",
-  "name": "BenchBnB App Academy Project",
+  "short_name": "React Template",
+  "name": "Create React App Template",
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",

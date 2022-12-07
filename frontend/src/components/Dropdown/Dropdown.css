@@ -1,0 +1,15 @@
+#hamburger {
+    width: 20px;
+    padding-right: 10px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+}
+
+.dropdown-button {
+    cursor: pointer;
+}
+

@@ -1,1 +1,15 @@
 /* TODO Add site wide styles */
+
+#session-Links {
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-end;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+}
+
+#root {
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+}
+

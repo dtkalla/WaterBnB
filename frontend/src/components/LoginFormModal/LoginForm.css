@@ -1,0 +1,61 @@
+.entry-input-box {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    height: 50px;
+    border: 0.5px;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+.entryInput {
+    /* padding: 5px; */
+    margin-left: 10px;
+    align-self: flex-end;
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+    background: white !important;
+    background-color: white !important;
+    cursor: text;
+}
+
+.small-text {
+    margin-left: 10px;
+    font-size: 12px;
+    padding-top: 10px;
+    padding-left: 3px;
+}
+
+.Login-button {
+    width: 95%;
+    height: 50px;
+    background-color:rgb(230, 30, 77);
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    border: 0;
+    cursor: pointer;
+}
+
+.form-errors {
+    color: red;
+    font-size: 14px;
+    font-weight: 500;
+    list-style-image: url('./red_x2.png');
+}
+
+.box {
+    opacity: 0;
+}
+
+
+.dropdown-menu-option:hover {
+    background-color: lightgrey;
+}
+
+.dropdown-menu-option {
+    width: 100%;
+    cursor: pointer;
+}

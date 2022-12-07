@@ -1,0 +1,87 @@
+.navLinks {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.dropdown-button {
+    padding: 10px;
+    display: flex;
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    border: 1px;
+    border-style: solid;
+    border-radius: 25px;
+    height: 15px;
+    width: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .profile-dropdown {
+    position: relative;
+    top: 100px;
+} */
+
+#demo-user {
+    margin-left: 40px;
+    width: 88.5%;
+}
+
+.logged-out-links {
+    height: 80px;
+    width: 150px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px;
+    border-style: solid;
+}
+
+.logged-out-links li {
+    top: 5px;
+    padding: 10px;
+    height: 15px;
+    width: 130px;
+    position: relative;
+    left: -40px;
+}
+
+.logged-out-links li:hover {
+    background-color: lightgray;
+}
+
+.logged-out-links ul {
+    list-style-type: none;
+}
+
+.logged-in-links {
+    height: 40px;
+    width: 90px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px;
+    border-style: solid;
+}
+
+.logged-in-links li {
+    top: 6px;
+    /* padding: 10px; */
+    height: 15px;
+    width: 90px;
+    position: relative;
+    /* left: -40px; */
+}
+
+.logged-in-links li:hover {
+    background-color: lightgray;
+}
+
+.logged-in-links {
+    list-style-type: none;
+}
+
+#logout {
+    padding: 10px;
+    line-height: 30px;
+}
