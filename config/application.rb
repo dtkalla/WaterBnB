@@ -12,6 +12,7 @@ require "action_mailbox/engine"
 require "action_text/engine"
 require "action_view/railtie"
 require "action_cable/engine"
+
 # require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems
@@ -42,6 +43,8 @@ module Waterbnb
     key: '_waterbnb_session',
     same_site: :lax, 
     secure: Rails.env.production?
+    config.railties_order = [:all, :main_app]
+
   end
 
   
