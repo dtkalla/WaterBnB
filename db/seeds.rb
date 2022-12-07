@@ -270,7 +270,7 @@ ApplicationRecord.transaction do
         pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
         lister_id: 3,
         latitude: -22.9068,
-        longitude: 43.1729,
+        longitude: -43.1729,
         price: 162,
     )
 
@@ -438,7 +438,7 @@ ApplicationRecord.transaction do
         pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
         lister_id: 1,
         latitude: 42.3601,
-        longitude: 71.0589,
+        longitude: -71.0589,
         price: 173,
     )
 
@@ -522,7 +522,7 @@ ApplicationRecord.transaction do
         pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
         lister_id: 3,
         latitude: 5.2190,
-        longitude: -103.2649,
+        longitude: 103.2649,
         price: 96,
     )
 
