@@ -9,12 +9,13 @@ import { fetchListings, getListings } from '../../store/listings';
 const ListingIndex = () => {
     const dispatch = useDispatch();
     const listings = useSelector(getListings)
+    const randomListings = listings.sort(() => Math.random() - 0.5)
 
     useEffect(() => {
         dispatch(fetchListings())
     }, [])
 
-    const listingItems = listings.map((listing) => {
+    const listingItems = randomListings.map((listing) => {
         return <ListingIndexItem key={listing.id} listing={listing} />
     })
 
