@@ -1,10 +1,10 @@
 class Api::ListingsController < ApplicationController
     wrap_parameters include: Listing.attribute_names
+    before_action :require_logged_in, only: [:create, :update, :destroy]
   
     def create
         lister_id = current_user.id
         @listing = Listing.new(listing_params, lister_id: lister_id)
-        # p params[:first_name]
         if @listing.save
             render :show
         else
@@ -13,11 +13,21 @@ class Api::ListingsController < ApplicationController
     end
 
     def index
-
+        @listings = Listing.all
+        render :index
     end
 
     def show
-        
+        @listing = Listing.find(params[:id])
+        render :show
+    end
+
+    def update
+
+    end
+
+    def destroy
+
     end
   
   
