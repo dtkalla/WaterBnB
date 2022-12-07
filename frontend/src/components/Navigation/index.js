@@ -25,7 +25,7 @@ function Navigation(){
         {/* <li>{sessionUser.firstName}</li>
         <li>{sessionUser.email}</li> */}
         <li>
-          <span onClick={logout}>Log Out<i className='box'>hi</i></span>
+          <div className='dropdown-menu-option' onClick={logout}><span id='logout'>Log Out</span></div>
         </li>
       </div>
     );

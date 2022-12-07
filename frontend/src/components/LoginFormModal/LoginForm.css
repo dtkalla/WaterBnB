@@ -17,7 +17,7 @@
     font-size: 16px;
     background: white !important;
     background-color: white !important;
-    
+    cursor: text;
 }
 
 .small-text {
@@ -36,6 +36,7 @@
     font-size: 18px;
     font-weight: 600;
     border: 0;
+    cursor: pointer;
 }
 
 .form-errors {
@@ -49,3 +50,12 @@
     opacity: 0;
 }
 
+
+.dropdown-menu-option:hover {
+    background-color: lightgrey;
+}
+
+.dropdown-menu-option {
+    width: 100%;
+    cursor: pointer;
+}

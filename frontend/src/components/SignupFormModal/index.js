@@ -11,7 +11,7 @@ function SignupFormModal() {
   // }
   return (
     <>
-      <span onClick={() => setShowModal(true)}>Sign Up<i className='box'>hfcvnhjvh</i></span>
+      <div className='dropdown-menu-option' onClick={() => setShowModal(true)}><span>Sign Up</span></div>
       {showModal && (
         <>
         <Modal onClose={() => setShowModal(false)}>

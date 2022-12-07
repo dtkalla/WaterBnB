@@ -9,7 +9,7 @@ function LoginFormModal() {
 
   return (
     <>
-      <span onClick={() => setShowModal(true)}>Log In<i className='box'>hfcvnhjvbfh</i></span>
+      <div className='dropdown-menu-option' onClick={() => setShowModal(true)}><span>Log In</span></div>
       {showModal && (
         <Modal onClose={() => setShowModal(false)}>
           <div className='login-header'>Log In</div>

@@ -9,3 +9,7 @@
     right: 30px;
 }
 
+.dropdown-button {
+    cursor: pointer;
+}
+
