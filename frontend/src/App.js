@@ -4,6 +4,7 @@ import { Route, Switch } from "react-router-dom";
 // import Navigation from "./components/Navigation";
 import { Dropdown } from "./components/Dropdown/Dropdown";
 import ListingIndex from "./components/Listings/ListingIndex";
+import ListingShow from "./components/Listings/ListingShowPage";
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
         <Switch>
           <Route exact path="/">
             <ListingIndex />
+          </Route>
+          <Route path="/listings/:listingId">
+            <ListingShow />
           </Route>
         </Switch>
     </>

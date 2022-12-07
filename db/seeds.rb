@@ -323,7 +323,7 @@ ApplicationRecord.transaction do
     Listing.create!(
         city: 'Dakar',
         country: 'Senegal',
-        description: "Venez ici, toutes le monde !", 
+        description: "Venez ici, tout le monde !", 
         pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
         lister_id: 3,
         latitude: 14.7167,
@@ -407,7 +407,7 @@ ApplicationRecord.transaction do
     Listing.create!(
         city: 'Miami',
         country: 'Florida',
-        description: "...", 
+        description: "Stay here -- it'll be a great experience!", 
         pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
         lister_id: 4,
         latitude: 25.7617,
@@ -431,7 +431,7 @@ ApplicationRecord.transaction do
     Listing.create!(
         city: 'Boston',
         country: 'Massachusetts',
-        description: "...", 
+        description: "Stay here -- it'll be a great experience!", 
         pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
         lister_id: 1,
         latitude: 42.3601,
@@ -443,7 +443,7 @@ ApplicationRecord.transaction do
     Listing.create!(
         city: 'Mumbai',
         country: 'India',
-        description: "...", 
+        description: "Stay here -- it'll be a great experience!", 
         pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
         lister_id: 1,
         latitude: 19.0760,
@@ -455,7 +455,7 @@ ApplicationRecord.transaction do
     Listing.create!(
         city: 'Hong Kong',
         country: 'China',
-        description: "...", 
+        description: "Stay here -- it'll be a great experience!", 
         pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
         lister_id: 3,
         latitude: 22.3193,
@@ -467,7 +467,7 @@ ApplicationRecord.transaction do
     Listing.create!(
         city: 'Bondai Beach',
         country: 'Australia',
-        description: "...", 
+        description: "Stay here -- it'll be a great experience!", 
         pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
         lister_id: 3,
         latitude: -33.8915,
@@ -479,7 +479,7 @@ ApplicationRecord.transaction do
     Listing.create!(
         city: 'Amalfi Coast',
         country: 'Italy',
-        description: "...", 
+        description: "Stay here -- it'll be a great experience!", 
         pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
         lister_id: 3,
         latitude: 40.6333,
@@ -491,7 +491,7 @@ ApplicationRecord.transaction do
     Listing.create!(
         city: 'Arcachon',
         country: 'France',
-        description: "...", 
+        description: "Stay here -- it'll be a great experience!", 
         pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
         lister_id: 3,
         latitude: 44.6523,
@@ -503,7 +503,7 @@ ApplicationRecord.transaction do
     Listing.create!(
         city: 'Vancouver',
         country: 'Canada',
-        description: "...", 
+        description: "Stay here -- it'll be a great experience!", 
         pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
         lister_id: 1,
         latitude: 49.2827,
@@ -515,7 +515,7 @@ ApplicationRecord.transaction do
     Listing.create!(
         city: 'Pulau Kapas',
         country: 'Malaysia',
-        description: "...", 
+        description: "Stay here -- it'll be a great experience!", 
         pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
         lister_id: 3,
         latitude: 5.2190,
@@ -527,7 +527,7 @@ ApplicationRecord.transaction do
     Listing.create!(
         city: 'Atlantis',
         country: 'Atlantis',
-        description: "...", 
+        description: "Stay here -- it'll be a great experience!", 
         pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
         lister_id: 3,
         latitude: -48.8767,
@@ -539,7 +539,7 @@ ApplicationRecord.transaction do
     Listing.create!(
         city: 'Luanda',
         country: 'Angola',
-        description: "...", 
+        description: "Stay here -- it'll be a great experience!", 
         pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
         lister_id: 4,
         latitude: -8.8147,
@@ -551,7 +551,7 @@ ApplicationRecord.transaction do
     Listing.create!(
         city: 'Providence',
         country: 'Rhode Island',
-        description: "...", 
+        description: "Stay here -- it'll be a great experience!", 
         pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
         lister_id: 4,
         latitude: 41.8240,
@@ -563,7 +563,7 @@ ApplicationRecord.transaction do
     Listing.create!(
         city: 'Montreux',
         country: 'Switzerland',
-        description: "...", 
+        description: "Stay here -- it'll be a great experience!", 
         pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
         lister_id: 1,
         latitude: 46.4312,
@@ -575,7 +575,7 @@ ApplicationRecord.transaction do
     Listing.create!(
         city: 'Odessa',
         country: 'Ukraine',
-        description: "...", 
+        description: "Stay here -- it'll be a great experience!", 
         pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
         lister_id: 3,
         latitude: 46.4825,
@@ -587,7 +587,7 @@ ApplicationRecord.transaction do
     Listing.create!(
         city: 'Ajaccio',
         country: 'France',
-        description: "...", 
+        description: "Stay here -- it'll be a great experience!", 
         pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
         lister_id: 3,
         latitude: 41.9192,
@@ -599,7 +599,7 @@ ApplicationRecord.transaction do
     Listing.create!(
         city: 'San Francisco (west)',
         country: 'California',
-        description: "...", 
+        description: "Stay here -- it'll be a great experience!", 
         pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
         lister_id: 3,
         latitude: 37.7180,
@@ -611,7 +611,7 @@ ApplicationRecord.transaction do
     Listing.create!(
         city: 'San Francisco (east)',
         country: 'California',
-        description: "...", 
+        description: "Stay here -- it'll be a great experience!", 
         pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
         lister_id: 3,
         latitude: 37.7277,
@@ -623,7 +623,7 @@ ApplicationRecord.transaction do
     Listing.create!(
         city: 'Staten Island',
         country: 'New York',
-        description: "...", 
+        description: "Stay here -- it'll be a great experience!", 
         pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
         lister_id: 3,
         latitude: 40.6427,
@@ -635,7 +635,7 @@ ApplicationRecord.transaction do
     Listing.create!(
         city: 'Bronx',
         country: 'New York',
-        description: "...", 
+        description: "Stay here -- it'll be a great experience!", 
         pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
         lister_id: 3,
         latitude: 40.8553,
@@ -647,7 +647,7 @@ ApplicationRecord.transaction do
     Listing.create!(
         city: 'New Orleans',
         country: 'Louisiana',
-        description: "...", 
+        description: "Stay here -- it'll be a great experience!", 
         pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
         lister_id: 1,
         latitude: 29.9511,
@@ -659,7 +659,7 @@ ApplicationRecord.transaction do
     Listing.create!(
         city: 'Kampala',
         country: 'Uganda',
-        description: "...", 
+        description: "Stay here -- it'll be a great experience!", 
         pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
         lister_id: 1,
         latitude: 0.3476,
@@ -671,7 +671,7 @@ ApplicationRecord.transaction do
     Listing.create!(
         city: 'Shanghai',
         country: 'China',
-        description: "...", 
+        description: "Stay here -- it'll be a great experience!", 
         pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
         lister_id: 3,
         latitude: 31.2304,
@@ -683,7 +683,7 @@ ApplicationRecord.transaction do
     Listing.create!(
         city: 'Cartagena',
         country: 'Colombia',
-        description: "...", 
+        description: "Stay here -- it'll be a great experience!", 
         pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
         lister_id: 4,
         latitude: 10.3932,
@@ -695,7 +695,7 @@ ApplicationRecord.transaction do
     Listing.create!(
         city: 'Cozumel',
         country: 'Mexico',
-        description: "...", 
+        description: "Stay here -- it'll be a great experience!", 
         pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
         lister_id: 4,
         latitude: 20.5072,
@@ -707,7 +707,7 @@ ApplicationRecord.transaction do
     Listing.create!(
         city: 'Lima',
         country: 'Peru',
-        description: "...", 
+        description: "Stay here -- it'll be a great experience!", 
         pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
         lister_id: 4,
         latitude: -12.0464,
@@ -719,7 +719,7 @@ ApplicationRecord.transaction do
     Listing.create!(
         city: 'Valparaiso',
         country: 'Chile',
-        description: "...", 
+        description: "Stay here -- it'll be a great experience!", 
         pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
         lister_id: 4,
         latitude: -33.0472,
@@ -731,7 +731,7 @@ ApplicationRecord.transaction do
     Listing.create!(
         city: 'Saint-Malo',
         country: 'France',
-        description: "...", 
+        description: "Stay here -- it'll be a great experience!", 
         pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
         lister_id: 4,
         latitude: 48.6493,
@@ -743,7 +743,7 @@ ApplicationRecord.transaction do
     Listing.create!(
         city: 'Valencia',
         country: 'Spain',
-        description: "...", 
+        description: "Stay here -- it'll be a great experience!", 
         pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
         lister_id: 4,
         latitude: 39.4699,
@@ -755,7 +755,7 @@ ApplicationRecord.transaction do
     Listing.create!(
         city: 'Lisbon',
         country: 'Portugal',
-        description: "...", 
+        description: "Stay here -- it'll be a great experience!", 
         pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
         lister_id: 1,
         latitude: 38.7223,
@@ -767,7 +767,7 @@ ApplicationRecord.transaction do
     Listing.create!(
         city: 'Abidjan',
         country: "Côte d'Ivoire",
-        description: "...", 
+        description: "Stay here -- it'll be a great experience!", 
         pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
         lister_id: 3,
         latitude: 5.3600,
@@ -779,7 +779,7 @@ ApplicationRecord.transaction do
     Listing.create!(
         city: 'Reykjavik ',
         country: "Iceland",
-        description: "...", 
+        description: "Stay here -- it'll be a great experience!", 
         pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
         lister_id: 3,
         latitude: 64.1466,
@@ -791,7 +791,7 @@ ApplicationRecord.transaction do
     Listing.create!(
         city: 'Bemidji ',
         country: "Minnesota",
-        description: "...", 
+        description: "Stay here -- it'll be a great experience!", 
         pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
         lister_id: 1,
         latitude: 47.4716,
