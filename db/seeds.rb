@@ -8,7 +8,7 @@
 
 
 ApplicationRecord.transaction do 
-    puts "Destroying tables..."
+    puts "Destroying users table..."
     # Unnecessary if using `rails db:seed:replant`
     User.destroy_all
   
@@ -19,9 +19,9 @@ ApplicationRecord.transaction do
     puts "Creating users..."
     # Create one user with an easy to remember username, email, and password:
     User.create!(
-        first_name: 'Demo',
-        last_name: 'User',
-        email: 'demo@user.io', 
+        first_name: 'Muhammed',
+        last_name: 'Li',
+        email: 'common@name.net', 
         password: 'password',
     )
 
@@ -31,8 +31,15 @@ ApplicationRecord.transaction do
         email: 'anthony@travel.org', 
         password: 'password2',
     )
-    # More users
     
+    User.create!(
+        first_name: 'Barbara',
+        last_name: 'Corcoran',
+        email: 'barb@money.com', 
+        password: 'crush_the_proletariat',
+    )
+
+
     # 10.times do 
     #   User.create!({
     #     first_name: Faker::Name.firstName,
@@ -41,6 +48,224 @@ ApplicationRecord.transaction do
     #     password: 'password'
     #   }) 
     # end
+
+
+
+
+
+
+    puts "Destroying listings table..."
+    # Unnecessary if using `rails db:seed:replant`
+    Listing.destroy_all
   
+    puts "Resetting primary keys..."
+    # For easy testing, so that after seeding, the first `User` has `id` of 1
+    ApplicationRecord.connection.reset_pk_sequence!('listings')
+  
+    puts "Creating listings..."
+    # Create one user with an easy to remember username, email, and password:
+    Listing.create!(
+        city: 'San Francisco',
+        country: 'California',
+        description: 'Stay here while you interview for a tech job in Silicon Valley!', 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 3,
+        latitude: 37.7749,
+        longitude: -122.4194,
+        price: 112,
+    )
+
+
+    Listing.create!(
+        city: 'Manhattan',
+        country: 'New York',
+        description: 'Greatest city on earth!', 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 2,
+        latitude: 40.7831,
+        longitude: -73.9712,
+        price: 157,
+    )
+    
+
+    Listing.create!(
+        city: 'Barcelona',
+        country: 'Spain',
+        description: '¡Bienvenidos a todos!', 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 3,
+        latitude: 41.3874,
+        longitude: 2.1686,
+        price: 84,
+    )
+
+
+    Listing.create!(
+        city: 'Cape Town',
+        country: 'South Africa',
+        description: 'Stay at the edge of the world!', 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 3,
+        latitude: -33.9249,
+        longitude: 18.4241,
+        price: 35,
+    )
+
+
+    Listing.create!(
+        city: 'Buenos Aires',
+        country: 'Buenos Aires',
+        description: 'Algun lema escrito mas tarde', 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 3,
+        latitude: -34.6037,
+        longitude: -58.3816,
+        price: 49,
+    )
+
+
+    Listing.create!(
+        city: 'Bouvet Island',
+        country: 'Norway',
+        description: "It's actually illegal to visit, and good luck getting here!", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 1,
+        latitude: -54.4208,
+        longitude: 3.3464,
+        price: 90,
+    )
+
+
+    Listing.create!(
+        city: 'Dubai',
+        country: 'United Arab Emirates',
+        description: "The world is your oyster here (if you have the money)!", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 3,
+        latitude: 25.2048,
+        longitude: 55.2708,
+        price: 253,
+    )
+
+
+    Listing.create!(
+        city: 'Port Moresby',
+        country: 'Papua New Guinea',
+        description: "Come learn about the most diverse country you've never heard of!", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 3,
+        latitude: -9.4438,
+        longitude: 147.1803,
+        price: 21,
+    )
+
+
+    Listing.create!(
+        city: 'Chicago',
+        country: 'Illinois',
+        description: "Midwest MidBEST!", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 1,
+        latitude: 41.8781,
+        longitude: -87.6298,
+        price: 92,
+    )
+
+
+    Listing.create!(
+        city: 'Duluth',
+        country: 'Minnesota',
+        description: "Other cities have lakes, but ours is Superior!", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 3,
+        latitude: 46.7867,
+        longitude: -92.1005,
+        price: 92,
+    )
+
+
+    Listing.create!(
+        city: 'Flushing',
+        country: 'New York',
+        description: "Make sure to try the hot pot!", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 1,
+        latitude: 40.7675,
+        longitude: -73.8331,
+        price: 144,
+    )
+
+
+    Listing.create!(
+        city: 'Crown Heights',
+        country: 'New York',
+        description: "Stay in the affordable part of Brooklyn", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 3,
+        latitude: 40.6694,
+        longitude: -73.9422,
+        price: 99,
+    )
+
+
+    Listing.create!(
+        city: 'Manhattan',
+        country: 'New York',
+        description: "So much history to see in Harlem!", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 3,
+        latitude: 40.8116,
+        longitude: -73.9465,
+        price: 75,
+    )
+
+
+    Listing.create!(
+        city: 'San Francisco',
+        country: 'California',
+        description: "Have a gay old time!", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 3,
+        latitude: 37.7609,
+        longitude: -122.4350,
+        price: 137,
+    )
+
+
+    Listing.create!(
+        city: 'Seattle',
+        country: 'Washington',
+        description: "Make sure to rent a bike and explore the city!", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 1,
+        latitude: 47.6062,
+        longitude: -122.3321,
+        price: 106,
+    )
+
+
+    Listing.create!(
+        city: 'Bali',
+        country: 'Indonesia',
+        description: "Eat, pray, love <3", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 1,
+        latitude: -8.4095,
+        longitude: 115.1889,
+        price: 94,
+    )
+
+
+    Listing.create!(
+        city: 'Rio de Janeiro',
+        country: 'Brazil',
+        description: "Come see the biggest Carnaval on earth!", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 3,
+        latitude: -22.9068,
+        longitude: 43.1729,
+        price: 62,
+    )
+
     puts "Done!"
   end
