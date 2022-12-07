@@ -14,6 +14,7 @@ const ListingShow = () => {
 
     return (
         <>
+            <img className="listing-index-image" src={listing.picturesUrl} />
             <h1>{listing.description}</h1>
             <h2>{listing.city}</h2>
             <h2>{listing.country}</h2>
