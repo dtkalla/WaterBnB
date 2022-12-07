@@ -597,7 +597,7 @@ ApplicationRecord.transaction do
 
 
     Listing.create!(
-        city: 'San Francisco',
+        city: 'San Francisco (west)',
         country: 'California',
         description: "...", 
         pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
@@ -609,7 +609,7 @@ ApplicationRecord.transaction do
 
 
     Listing.create!(
-        city: 'San Francisco',
+        city: 'San Francisco (east)',
         country: 'California',
         description: "...", 
         pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
@@ -705,8 +705,8 @@ ApplicationRecord.transaction do
 
 
     Listing.create!(
-        city: 'Cozumel',
-        country: 'Mexico',
+        city: 'Lima',
+        country: 'Peru',
         description: "...", 
         pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
         lister_id: 4,
@@ -725,6 +725,78 @@ ApplicationRecord.transaction do
         latitude: -33.0472,
         longitude: -71.6127,
         price: 66,
+    )
+
+
+    Listing.create!(
+        city: 'Saint-Malo',
+        country: 'France',
+        description: "...", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 4,
+        latitude: 48.6493,
+        longitude: -2.0257,
+        price: 73,
+    )
+
+
+    Listing.create!(
+        city: 'Valencia',
+        country: 'Spain',
+        description: "...", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 4,
+        latitude: 39.4699,
+        longitude: -0.3763,
+        price: 94,
+    )
+
+
+    Listing.create!(
+        city: 'Lisbon',
+        country: 'Portugal',
+        description: "...", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 1,
+        latitude: 38.7223,
+        longitude: -9.1393,
+        price: 58,
+    )
+
+
+    Listing.create!(
+        city: 'Abidjan',
+        country: "Côte d'Ivoire",
+        description: "...", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 3,
+        latitude: 5.3600,
+        longitude: -4.0083,
+        price: 38,
+    )
+
+
+    Listing.create!(
+        city: 'Reykjavik ',
+        country: "Iceland",
+        description: "...", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 3,
+        latitude: 64.1466,
+        longitude: -21.9426,
+        price: 80,
+    )
+
+
+    Listing.create!(
+        city: 'Bemidji ',
+        country: "Minnesota",
+        description: "...", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 1,
+        latitude: 47.4716,
+        longitude: -94.8827,
+        price: 67,
     )
 
     puts "Done!"
