@@ -11,6 +11,14 @@ class Api::ListingsController < ApplicationController
             render json: { errors: @listing.errors.full_messages}, status: 422
         end
     end
+
+    def index
+
+    end
+
+    def show
+        
+    end
   
   
     private

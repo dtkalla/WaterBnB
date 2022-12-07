@@ -151,7 +151,7 @@ ApplicationRecord.transaction do
         lister_id: 3,
         latitude: 25.2048,
         longitude: 55.2708,
-        price: 253,
+        price: 316,
     )
 
 
@@ -252,7 +252,7 @@ ApplicationRecord.transaction do
 
 
     Listing.create!(
-        city: 'Bali',
+        city: 'Ubud',
         country: 'Indonesia',
         description: "Eat, pray, love <3", 
         pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
@@ -356,6 +356,246 @@ ApplicationRecord.transaction do
         latitude: 43.3183,
         longitude: -1.9812,
         price: 78,
+    )
+
+
+    Listing.create!(
+        city: 'Marseille',
+        country: 'France',
+        description: "J'ai pas pense quoi dire ici.", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 1,
+        latitude: 43.2965,
+        longitude: 5.3698,
+        price: 103,
+    )
+
+
+    Listing.create!(
+        city: 'Honolulu',
+        country: 'Hawaii',
+        description: "Great beaches and vacations.", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 1,
+        latitude: 21.3099,
+        longitude: -157.8581,
+        price: 341,
+    )
+
+
+    Listing.create!(
+        city: 'San Juan',
+        country: 'Puerto Rico',
+        description: "Buenas vacaciones y playas", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 4,
+        latitude: 18.4671,
+        longitude: -66.1185,
+        price: 88,
+    )
+
+
+    Listing.create!(
+        city: 'Singapore',
+        country: 'Singapore',
+        description: "City-states are making a comeback!", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 3,
+        latitude: 1.3521,
+        longitude: 103.8198,
+        price: 103,
+    )
+
+
+    Listing.create!(
+        city: 'Miami',
+        country: 'Florida',
+        description: "...", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 4,
+        latitude: 25.7617,
+        longitude: -80.1918,
+        price: 148,
+    )
+
+
+    Listing.create!(
+        city: 'Amsterdam',
+        country: 'Netherlands',
+        description: "City-states are making a comeback!", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 3,
+        latitude: 52.3676,
+        longitude: 4.9041,
+        price: 214,
+    )
+
+
+    Listing.create!(
+        city: 'Boston',
+        country: 'Massachusetts',
+        description: "...", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 1,
+        latitude: 42.3601,
+        longitude: 71.0589,
+        price: 173,
+    )
+
+
+    Listing.create!(
+        city: 'Mumbai',
+        country: 'India',
+        description: "...", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 1,
+        latitude: 19.0760,
+        longitude: 72.8777,
+        price: 56,
+    )
+
+
+    Listing.create!(
+        city: 'Hong Kong',
+        country: 'China',
+        description: "...", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 3,
+        latitude: 22.3193,
+        longitude: 114.1694,
+        price: 386,
+    )
+
+
+    Listing.create!(
+        city: 'Bondai Beach',
+        country: 'Australia',
+        description: "...", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 3,
+        latitude: -33.8915,
+        longitude: 151.2767,
+        price: 162,
+    )
+
+
+    Listing.create!(
+        city: 'Amalfi Coast',
+        country: 'Italy',
+        description: "...", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 3,
+        latitude: 40.6333,
+        longitude: 14.6029,
+        price: 128,
+    )
+
+
+    Listing.create!(
+        city: 'Arcachon',
+        country: 'France',
+        description: "...", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 3,
+        latitude: 44.6523,
+        longitude: -1.1785,
+        price: 46,
+    )
+
+
+    Listing.create!(
+        city: 'Vancouver',
+        country: 'Canada',
+        description: "...", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 1,
+        latitude: 49.2827,
+        longitude: -123.1207,
+        price: 172,
+    )
+
+
+    Listing.create!(
+        city: 'Pulau Kapas',
+        country: 'Malaysia',
+        description: "...", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 3,
+        latitude: 5.2190,
+        longitude: -103.2649,
+        price: 96,
+    )
+
+
+    Listing.create!(
+        city: 'Atlantis',
+        country: 'Atlantis',
+        description: "...", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 3,
+        latitude: -48.8767,
+        longitude: -123.3933,
+        price: 1729,
+    )
+
+
+    Listing.create!(
+        city: 'Luanda',
+        country: 'Angola',
+        description: "...", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 4,
+        latitude: -8.8147,
+        longitude: 13.2302,
+        price: 649,
+    )
+
+
+    Listing.create!(
+        city: 'Providence',
+        country: 'Rhode Island',
+        description: "...", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 4,
+        latitude: 41.8240,
+        longitude: -71.4128,
+        price: 72,
+    )
+
+
+    Listing.create!(
+        city: 'Montreux',
+        country: 'Switzerland',
+        description: "...", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 1,
+        latitude: 46.4312,
+        longitude: 6.9107,
+        price: 104,
+    )
+
+
+    Listing.create!(
+        city: 'Odessa',
+        country: 'Ukraine',
+        description: "...", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 3,
+        latitude: 46.4825,
+        longitude: 30.7233,
+        price: 54,
+    )
+
+
+    Listing.create!(
+        city: 'Ajaccio',
+        country: 'France',
+        description: "...", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/441748be-b4e4-4261-af0c-aff299ebbad9.jpg?im_w=960',
+        lister_id: 3,
+        latitude: 41.9192,
+        longitude: 8.7386,
+        price: 41,
     )
 
     puts "Done!"
