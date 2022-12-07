@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_07_143955) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_07_145450) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -21,12 +21,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_07_143955) do
     t.string "longitude", null: false
     t.text "description", null: false
     t.string "pictures_url", null: false
-    t.bigint "users_id"
+    t.bigint "lister_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["city"], name: "index_listings_on_city"
     t.index ["country"], name: "index_listings_on_country"
-    t.index ["users_id"], name: "index_listings_on_users_id"
+    t.index ["lister_id"], name: "index_listings_on_lister_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -39,5 +39,5 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_07_143955) do
     t.string "last_name", null: false
   end
 
-  add_foreign_key "listings", "users", column: "users_id"
+  add_foreign_key "listings", "users", column: "lister_id"
 end
