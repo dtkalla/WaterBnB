@@ -6,6 +6,8 @@ import { Dropdown } from "./components/Dropdown/Dropdown";
 import { Header } from "./components/Header";
 import ListingIndex from "./components/Listings/ListingIndex";
 import ListingShow from "./components/Listings/ListingShowPage";
+import './index.css'
+
 
 function App() {
   return (

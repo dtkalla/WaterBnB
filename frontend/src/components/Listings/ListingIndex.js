@@ -17,7 +17,7 @@ const ListingIndex = () => {
     }, [])
 
     const listingItems = listings.map((listing) => {
-        return <ListingIndexItem key={listing.id} listing={listing} />
+        return <ListingIndexItem className="listing-index-image" key={listing.id} listing={listing} />
     })
 
     return (
