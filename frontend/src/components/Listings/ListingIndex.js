@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 // import { Link } from 'react-router-dom';
 import ListingIndexItem from './ListingIndexItem';
 import { fetchListings, getListings } from '../../store/listings';
-// import './Listings.css'
+import './listings.css'
 
 
 
@@ -17,7 +17,7 @@ const ListingIndex = () => {
     }, [])
 
     const listingItems = listings.map((listing) => {
-        return <ListingIndexItem className="listing-index-image" key={listing.id} listing={listing} />
+        return <ListingIndexItem key={listing.id} listing={listing} />
     })
 
     return (

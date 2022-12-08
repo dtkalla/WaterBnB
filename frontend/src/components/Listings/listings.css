@@ -1,5 +1,6 @@
 .listing-index-image {
-    width: 500px;
+    /* width: 300px; */
+    /* padding: 20px; */
 }
 
 .listings-index ul {
@@ -10,7 +11,13 @@
 }
 
 
+
 .index-show-list-element {
     display: flex;
     flex-direction: column;
+}
+
+.listing-index-item {
+    width: 300px;
+    padding: 20px;
 }

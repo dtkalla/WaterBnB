@@ -16,7 +16,7 @@ const ListingIndexItem = (props) => {
     
     if (listing.id) {
         return (
-            <div>
+            <div className="listing-index-item">
                 <Link className='index-show-list-element' to={`/listings/${listing.id}`}>
                     <img className="listing-index-image" src={image_url} alt="" />
                     <span>{listing.city}, {listing.country}</span>

@@ -1,24 +1,12 @@
 /* TODO Add site wide styles */
 /* @import "./components/Listings/Listings.css"; */
 
-.listing-index-image {
-    /* width: 300px; */
-}
-
-.listings-index ul {
-    /* list-style-type: none; */
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
 
 
 
 
-.index-show-list-element {
-    display: flex;
-    flex-direction: column;
-}
+
+
 
 
 #session-Links {
