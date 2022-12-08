@@ -1,10 +1,10 @@
 class Api::ListingsController < ApplicationController
-    wrap_parameters include: Listing.attribute_names
+    wrap_parameters include: Listing.attribute_names + ['buildingType']
     before_action :require_logged_in, only: [:create, :update, :destroy]
   
     def create
-        lister_id = current_user.id
-        @listing = Listing.new(listing_params, lister_id: lister_id)
+        lister_id, lister_name = current_user.id, current_user.first_name
+        @listing = Listing.new(listing_params, lister_id: lister_id, lister_name: lister_name)
         if @listing.save
             render :show
         else

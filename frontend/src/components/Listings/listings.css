@@ -27,15 +27,32 @@
 
 
 .listing-index-image-main {
-    width: 40%;
+    width: 20%;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
 
-#location {
+#title {
     font-weight: 500;
 }
 
 #price {
     font-size: 15px;
+}
+
+
+#location {
+    font-size: 14px;
+    color: gray;
+}
+
+
+#listing-show-page {
+    display: flex;
+    flex-direction: column;
+}
+
+
+#listing-show-page > * {
+    padding: 3px;
 }
