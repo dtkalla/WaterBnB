@@ -89,6 +89,7 @@ ApplicationRecord.transaction do
         latitude: 40.7831,
         longitude: -73.9712,
         price: 257,
+        lister_name: "Anthony"
     )
     
 
@@ -101,6 +102,7 @@ ApplicationRecord.transaction do
         latitude: 41.3874,
         longitude: 2.1686,
         price: 84,
+        lister_name: "Elisa"
     )
 
 
@@ -113,6 +115,7 @@ ApplicationRecord.transaction do
         latitude: -33.9249,
         longitude: 18.4241,
         price: 35,
+        lister_name: "Barbara"
     )
 
 
@@ -125,6 +128,7 @@ ApplicationRecord.transaction do
         latitude: -34.6037,
         longitude: -58.3816,
         price: 149,
+        lister_name: "Barbara"
     )
 
 
@@ -137,6 +141,7 @@ ApplicationRecord.transaction do
         latitude: -54.4208,
         longitude: 3.3464,
         price: 90,
+        lister_name: "Muhammed"
     )
 
 

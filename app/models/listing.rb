@@ -14,7 +14,7 @@ class Listing < ApplicationRecord
         listings = Listing.all.sort_by { |p| [-2*p.latitude + p.longitude] }
         (0...listings.length).each do |i|
             listing = listings[i]
-            p [listing.city, listing.latitude, listing.longitude]
+            p [listing.lister_name, listing.city, listing.latitude, listing.longitude]
         end
         return
     end
