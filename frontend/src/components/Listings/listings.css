@@ -1,7 +1,23 @@
 .listing-index-image {
-    width: 100px;
+    width: 300px;
 }
 
 .listings-index ul {
     list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.listings-index {
+    /* list-style-type: none; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.listings-index-ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }

@@ -10,19 +10,19 @@ import './Listings.css'
 const ListingIndex = () => {
     const dispatch = useDispatch();
     const listings = useSelector(getListings)
-    const randomListings = listings.sort(() => Math.random() - 0.5)
+    // const randomListings = listings.sort(() => Math.random() - 0.5)
 
     useEffect(() => {
         dispatch(fetchListings())
     }, [])
 
-    const listingItems = randomListings.map((listing) => {
+    const listingItems = listings.map((listing) => {
         return <ListingIndexItem key={listing.id} listing={listing} />
     })
 
     return (
         <div className='listings-index'>
-            <ul>
+            <ul id='listings-index-ul'>
                 {listingItems}
             </ul>
         </div>

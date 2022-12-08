@@ -1,0 +1,21 @@
+#logo-img {
+    width: 30px;
+    padding: 10px;
+}
+
+#span-logo {
+    display: flex;
+    align-items: center;
+    color: #FF385C;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    text-decoration: none
+}
+
+#logo {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none
+}
+
