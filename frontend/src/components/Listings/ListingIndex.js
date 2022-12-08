@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 // import { Link } from 'react-router-dom';
 import ListingIndexItem from './ListingIndexItem';
 import { fetchListings, getListings } from '../../store/listings';
-import './Listings.css'
+// import './Listings.css'
 
 
 

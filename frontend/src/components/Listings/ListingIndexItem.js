@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 // import { useDispatch } from 'react-redux';
-import './Listings.css'
+import './listings.css'
 
 
 const ListingIndexItem = (props) => {
@@ -18,7 +18,7 @@ const ListingIndexItem = (props) => {
         return (
             <div>
                 <Link className='index-show-list-element' to={`/listings/${listing.id}`}>
-                    <img className="listing-index-image" src={image_url} />
+                    <img className="listing-index-image" src={image_url} alt="" />
                     <span>{listing.city}, {listing.country}</span>
                     <span>${listing.price}/night</span>
                 </Link>
