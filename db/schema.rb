@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_07_152638) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_08_182920) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -25,6 +25,17 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_07_152638) do
     t.decimal "latitude", precision: 10, scale: 6
     t.decimal "longitude", precision: 10, scale: 6
     t.integer "price"
+    t.integer "bedrooms", default: 2
+    t.integer "beds", default: 2
+    t.integer "bathrooms", default: 1
+    t.string "building_type", default: "house"
+    t.string "type_of_water", default: "ocean"
+    t.boolean "kitchen", default: true
+    t.boolean "wifi", default: true
+    t.boolean "parking", default: true
+    t.boolean "pets_allowed", default: false
+    t.boolean "boat", default: true
+    t.boolean "self_check_in", default: true
     t.index ["city"], name: "index_listings_on_city"
     t.index ["country"], name: "index_listings_on_country"
     t.index ["lister_id"], name: "index_listings_on_lister_id"
