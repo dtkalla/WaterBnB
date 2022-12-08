@@ -19,8 +19,8 @@ const ListingIndexItem = (props) => {
             <div className="listing-index-item">
                 <Link className='index-show-list-element' to={`/listings/${listing.id}`}>
                     <img className="listing-index-image" src={image_url} alt="" />
-                    <span>{listing.city}, {listing.country}</span>
-                    <span>${listing.price}/night</span>
+                    <span id='location'>{listing.city}, {listing.country}</span>
+                    <span id='price'>${listing.price}/night</span>
                 </Link>
                 {/* <button onClick={handleClick}>Delete</button> */}
             </div>

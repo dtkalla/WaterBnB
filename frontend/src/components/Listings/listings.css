@@ -6,13 +6,36 @@
 }
 
 
-
 .index-show-list-element {
     display: flex;
     flex-direction: column;
+    text-decoration: none;
+    color: black;
 }
 
+
 .listing-index-item {
-    width: 300px;
-    padding: 20px;
+    width: 250px;
+    padding: 10px;
+}
+
+
+.listing-index-image {
+    border-radius: 20px;
+    padding-bottom: 10px;
+}
+
+
+.listing-index-image-main {
+    width: 40%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+#location {
+    font-weight: 500;
+}
+
+#price {
+    font-size: 15px;
 }
