@@ -2,6 +2,13 @@ import { useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchListing, getListing } from "../../store/listings";
+import parking from './parking.png';
+import pets from './pets.png';
+import wifi from './wifi.png';
+import boat from './boat.png';
+import checkin from './checkin.png';
+import kitchen from './kitchen.png';
+
 
 const ListingShow = () => {
     const { listingId } = useParams();
@@ -27,13 +34,13 @@ const ListingShow = () => {
             
             {/* <Link to='/'>ListingIndex</Link> */}
             <h2>What this place offers:</h2>
-            <ul>
-                {l.petsAllowed ? <li>Pets allowed</li> : ''}
-                {l.parking ? <li>Parking</li> : ''}
-                {l.kitchen ? <li>Kitchen</li> : ''}
-                {l.boat ? <li>Boat</li> : ''}
-                {l.wifi ? <li>Wifi</li> : ''}
-                {l.selfCheckIn ? <li>Self Checkin</li> : ''}
+            <ul className='amenities'>
+                {l.petsAllowed ? <li><img src={pets}/>Pets allowed</li> : ''}
+                {l.parking ? <li><img src={parking}/>Parking</li> : ''}
+                {l.kitchen ? <li><img src={kitchen}/>Kitchen</li> : ''}
+                {l.boat ? <li><img src={boat}/>Boat</li> : ''}
+                {l.wifi ? <li><img src={wifi}/>Wifi</li> : ''}
+                {l.selfCheckIn ? <li><img src={checkin}/>Self Check-in</li> : ''}
             </ul>
         </div>
     )

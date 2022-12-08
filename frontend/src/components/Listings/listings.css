@@ -56,3 +56,20 @@
 #listing-show-page > * {
     padding: 3px;
 }
+
+
+
+.amenities {
+    list-style-type: none;
+}
+
+.amenities li img {
+    width: 25px;
+    padding-right: 5px;
+}
+
+.amenities li {
+    display: flex;
+    align-items: center;
+    padding-bottom: 5px;
+}
