@@ -4,7 +4,7 @@ class Reservation < ApplicationRecord
     validates :reserver_id, :listing_id, :start_date, :end_date, :price, :num_guests, presence: true
     validate :end_date_after_start_date
     validates_numericality_of :price, :num_guests, :greater_than => 0
-    # validates_numericality_of :num_guests, :less_than_or_equal_to => @listing.beds
+    # validates_numericality_of :num_guests, :less_than_or_equal_to => listing.beds
 
     before_validation :ensure_listing
 
