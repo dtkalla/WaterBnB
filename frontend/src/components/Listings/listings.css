@@ -85,6 +85,10 @@
     margin-top: 15px;
 }
 
+.show-page-images:hover {
+    cursor: pointer;
+}
+
 .show-page-small-images {
     display: grid;
     grid-template-columns: auto auto;
