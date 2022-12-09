@@ -9,6 +9,13 @@ class Listing < ApplicationRecord
         primary_key: :id,
         foreign_key: :lister_id
 
+
+    has_many :reservations,
+        class_name: :Reservation,
+        primary_key: :id,
+        foreign_key: :listing_id,
+        dependent: :destroy
+
     # has_many_attached :photos
     
 
