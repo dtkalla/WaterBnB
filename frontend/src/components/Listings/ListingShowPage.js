@@ -8,6 +8,7 @@ import wifi from './wifi.png';
 import boat from './boat.png';
 import checkin from './checkin.png';
 import kitchen from './kitchen.png';
+import ListingPicsModal from '../ListingPicsModal';
 
 
 const ListingShow = () => {
@@ -25,6 +26,7 @@ const ListingShow = () => {
 
     return (
         <div>
+            <ListingPicsModal />
             <div className='solid-line'></div>
             <div className='show-page-images'>
                 <img className="listing-show-image-main" src={l.picturesUrl} alt='' />
