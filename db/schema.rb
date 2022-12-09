@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_09_171828) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_09_192816) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -74,6 +74,19 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_09_171828) do
     t.index ["lister_id"], name: "index_listings_on_lister_id"
   end
 
+  create_table "reservations", force: :cascade do |t|
+    t.bigint "users_id"
+    t.bigint "listings_id"
+    t.integer "price", null: false
+    t.date "start_date", null: false
+    t.date "end_date", null: false
+    t.integer "num_guests", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["listings_id"], name: "index_reservations_on_listings_id"
+    t.index ["users_id"], name: "index_reservations_on_users_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "first_name", null: false
     t.string "email", null: false
@@ -87,4 +100,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_09_171828) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "listings", "users", column: "lister_id"
+  add_foreign_key "reservations", "listings", column: "listings_id"
+  add_foreign_key "reservations", "users", column: "users_id"
 end
