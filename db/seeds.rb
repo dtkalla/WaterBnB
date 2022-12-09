@@ -79,7 +79,7 @@ ApplicationRecord.transaction do
         city: 'San Francisco',
         country: 'California',
         description: 'Stay here while you interview for a tech job in Silicon Valley!', 
-        pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
+        pictures_url: 'https://waterbnb-seeds.s3.amazonaws.com/1_0.png',
         lister_id: 3,
         latitude: 37.7749,
         longitude: -122.4194,
@@ -92,7 +92,7 @@ ApplicationRecord.transaction do
         city: 'Manhattan',
         country: 'New York',
         description: 'Greatest city on earth!', 
-        pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
+        pictures_url: 'https://waterbnb-seeds.s3.amazonaws.com/2_0.png',
         lister_id: 2,
         latitude: 40.7831,
         longitude: -73.9712,
@@ -110,7 +110,7 @@ ApplicationRecord.transaction do
         city: 'Barcelona',
         country: 'Spain',
         description: '¡Bienvenidos a todos!', 
-        pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
+        pictures_url: 'https://waterbnb-seeds.s3.amazonaws.com/3_0.png',
         lister_id: 4,
         latitude: 41.3874,
         longitude: 2.1686,
@@ -125,12 +125,79 @@ ApplicationRecord.transaction do
         city: 'Cape Town',
         country: 'South Africa',
         description: 'Stay at the edge of the world!', 
-        pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
+        pictures_url: 'https://waterbnb-seeds.s3.amazonaws.com/4_0.png',
         lister_id: 3,
         latitude: -33.9249,
         longitude: 18.4241,
         price: 35,
-        lister_name: "Barbara"
+        lister_name: "Barbara",
+        building_type: "condo"
+    )
+
+
+    Listing.create!(
+        city: 'Atlantis',
+        country: 'Atlantis',
+        description: "Stay here -- it'll be a great experience!", 
+        pictures_url: 'https://waterbnb-seeds.s3.amazonaws.com/5_0.png',
+        lister_id: 5,
+        latitude: -48.8767,
+        longitude: -123.3933,
+        price: 1729,
+        lister_name: "Brian",
+        self_check_in: false,
+        boat: false,
+        parking: false,
+        wifi: false,
+        building_type: "sunken palace"
+    )
+
+
+    Listing.create!(
+        city: 'Manhattan',
+        country: 'New York',
+        description: "So much history to see in Harlem!", 
+        pictures_url: 'https://waterbnb-seeds.s3.amazonaws.com/6_0.png',
+        lister_id: 3,
+        latitude: 40.8116,
+        longitude: -73.9465,
+        price: 475,
+        building_type: "apartment",
+        self_check_in: false,
+        parking: false,
+        bedrooms: 1
+    )
+
+
+    
+    Listing.create!(
+        city: 'Bemidji ',
+        country: "Minnesota",
+        description: "Stay here -- it'll be a great experience!", 
+        pictures_url: 'https://waterbnb-seeds.s3.amazonaws.com/7_0.png',
+        lister_id: 1,
+        latitude: 47.4716,
+        longitude: -94.8827,
+        price: 67,
+        building_type: "cabin",
+        pets_allowed: true,
+        type_of_water: "lake",
+        lister_name: "Muhammed"
+    )
+
+
+    Listing.create!(
+        city: 'Isla del Sol',
+        country: "Bolivia",
+        description: "Highest navigable lake on earth!", 
+        pictures_url: 'https://waterbnb-seeds.s3.amazonaws.com/8_0.png',
+        lister_id: 4,
+        latitude: -16.0172,
+        longitude: -69.1780,
+        price: 32,
+        type_of_water: "lake",
+        self_check_in: false,
+        lister_name: "Elisa"
     )
 
 
@@ -230,22 +297,6 @@ ApplicationRecord.transaction do
     #     longitude: -73.9422,
     #     price: 99,
     # )
-
-
-    Listing.create!(
-        city: 'Manhattan',
-        country: 'New York',
-        description: "So much history to see in Harlem!", 
-        pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
-        lister_id: 3,
-        latitude: 40.8116,
-        longitude: -73.9465,
-        price: 475,
-        building_type: "apartment",
-        self_check_in: false,
-        parking: false,
-        bedrooms: 1
-    )
 
 
     # Listing.create!(
@@ -548,24 +599,6 @@ ApplicationRecord.transaction do
     # )
 
 
-    Listing.create!(
-        city: 'Atlantis',
-        country: 'Atlantis',
-        description: "Stay here -- it'll be a great experience!", 
-        pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
-        lister_id: 5,
-        latitude: -48.8767,
-        longitude: -123.3933,
-        price: 1729,
-        lister_name: "Brian",
-        self_check_in: false,
-        boat: false,
-        parking: false,
-        wifi: false,
-        building_type: "sunken palace"
-    )
-
-
     # Listing.create!(
     #     city: 'Luanda',
     #     country: 'Angola',
@@ -816,37 +849,6 @@ ApplicationRecord.transaction do
     #     longitude: -21.9426,
     #     price: 80,
     # )
-
-
-    Listing.create!(
-        city: 'Bemidji ',
-        country: "Minnesota",
-        description: "Stay here -- it'll be a great experience!", 
-        pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
-        lister_id: 1,
-        latitude: 47.4716,
-        longitude: -94.8827,
-        price: 67,
-        building_type: "cabin",
-        pets_allowed: true,
-        type_of_water: "lake",
-        lister_name: "Muhammed"
-    )
-
-
-    Listing.create!(
-        city: 'Isla del Sol',
-        country: "Bolivia",
-        description: "Highest navigable lake on earth!", 
-        pictures_url: 'https://a0.muscache.com/im/pictures/acd82b24-eb27-41be-8487-ba4b5d70568f.jpg?im_w=1200',
-        lister_id: 4,
-        latitude: -16.0172,
-        longitude: -69.1780,
-        price: 32,
-        type_of_water: "lake",
-        self_check_in: false,
-        lister_name: "Elisa"
-    )
 
 
     # Listing.create!(
