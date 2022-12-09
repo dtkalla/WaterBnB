@@ -1,0 +1,146 @@
+.listings-index ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.index-show-list-element {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: black;
+}
+
+
+#listing-show-page {
+    width: 40%;
+    position: relative;
+    left: 10%;
+}
+
+
+.solid-line {
+    border-bottom: 1px;
+    border-bottom-style: solid;
+    height: 0px;
+    color: lightgray;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+
+
+.listing-index-item {
+    width: 250px;
+    padding: 20px;
+}
+
+
+.listing-index-image {
+    border-radius: 20px;
+    padding-bottom: 10px;
+}
+
+
+.listing-index-image-main {
+    width: 20%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.listing-show-image-main {
+    width: 48%;
+    height: auto;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding-right: 5px;
+}
+
+.listing-show-image-small {
+    width: 100%;
+    height: auto;
+    /* padding: 3px; */
+    /* border-top-left-radius: 20px; */
+    /* border-bottom-left-radius: 20px; */
+}
+
+#small-2 {
+    border-top-right-radius: 20px;
+}
+
+
+#small-4 {
+    border-bottom-right-radius: 20px;
+}
+
+.show-page-images {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 15px;
+}
+
+.show-page-small-images {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 5px;
+    width: 50%;
+    height: auto;
+}
+
+#title {
+    font-weight: 500;
+}
+
+#price {
+    font-size: 15px;
+}
+
+#price-number {
+    font-weight: 500;
+}
+
+
+#location {
+    font-size: 14px;
+    color: gray;
+}
+
+
+#listing-show-page {
+    display: flex;
+    flex-direction: column;
+}
+
+
+#listing-show-page > * {
+    padding: 3px;
+}
+
+
+#amenities-container {
+    position: relative;
+    margin-left: 10%;
+    width: 40%;
+}
+
+
+.amenities {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.amenities li img {
+    width: 25px;
+    padding-right: 5px;
+}
+
+.amenities li {
+    display: flex;
+    align-items: center;
+    padding-bottom: 5px;
+}

@@ -14,13 +14,17 @@ function Dropdown( props ) {
         }
     }
 
+    function handleClick2() {
+        setDisplay( 'none' )
+    }
+
     return (
         <div>
             <div className='dropdown-button' onClick={handleClick}>
                     <img id='hamburger' src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1024px-Hamburger_icon.svg.png" />
                     <i className="fa-solid fa-user-circle fa-xl" />
                 </div>
-            <div className='dropdown-menu' onClick={handleClick} style={{display:display}}>
+            <div className='dropdown-menu' onClick={handleClick2} style={{display:display}}>
                 <div id="modal2-background" />
                 <Navigation />
             </div>
