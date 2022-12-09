@@ -6,7 +6,7 @@ class Reservation < ApplicationRecord
     validates_numericality_of :price, :num_guests, :greater_than => 0
     # validates_numericality_of :num_guests, :less_than_or_equal_to => @listing.beds
 
-    # before_validation :ensure_listing
+    before_validation :ensure_listing
 
     belongs_to :listing,
         class_name: :Listing,
@@ -28,8 +28,8 @@ class Reservation < ApplicationRecord
         end
      end
 
-    # def ensure_listing
-    #     @listing ||= Listing.find(@listing_id)
-    # end
+    def ensure_listing
+        @listing ||= Listing.find(listing_id)
+    end
 
 end
