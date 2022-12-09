@@ -1,10 +1,12 @@
 class Reservation < ApplicationRecord
+    require 'date'
+
     validates :reserver_id, :listing_id, :start_date, :end_date, :price, :num_guests, presence: true
-    validates_numericality_of :end_date, :greater_than => :start_date
+    validate :end_date_after_start_date
     validates_numericality_of :price, :num_guests, :greater_than => 0
     # validates_numericality_of :num_guests, :less_than_or_equal_to => @listing.beds
 
-    before_validation :ensure_listing
+    # before_validation :ensure_listing
 
     belongs_to :listing,
         class_name: :Listing,
@@ -18,8 +20,16 @@ class Reservation < ApplicationRecord
 
     private
 
-    def ensure_listing
-        @listing ||= Listing.find(@listing_id)
-    end
+    def end_date_after_start_date
+        return if end_date.blank? || start_date.blank?
+    
+        if end_date <= start_date
+          errors.add(:end_date, "must be after the start date")
+        end
+     end
+
+    # def ensure_listing
+    #     @listing ||= Listing.find(@listing_id)
+    # end
 
 end

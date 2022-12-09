@@ -70,11 +70,12 @@ ApplicationRecord.transaction do
     Listing.destroy_all
   
     puts "Resetting primary keys..."
-    # For easy testing, so that after seeding, the first `User` has `id` of 1
+    # For easy testing, so that after seeding, the first `Listing` has `id` of 1
     ApplicationRecord.connection.reset_pk_sequence!('listings')
   
     puts "Creating listings..."
-    # Create one user with an easy to remember username, email, and password:
+    
+
     l = Listing.create!(
         city: 'San Francisco',
         country: 'California',
@@ -862,6 +863,38 @@ ApplicationRecord.transaction do
     # )
 
     #Add Iguazu
+
+
+    puts "Destroying reservations table..."
+    # Unnecessary if using `rails db:seed:replant`
+    Reservation.destroy_all
+  
+    puts "Resetting primary keys..."
+    # For easy testing, so that after seeding, the first `Listing` has `id` of 1
+    ApplicationRecord.connection.reset_pk_sequence!('reservations')
+  
+    puts "Creating reservations..."
+
+    require 'date'
+
+    Reservation.create!(
+        reserver_id: 2,
+        listing_id: 8,
+        start_date: Date.new(2023,4,25),
+        end_date: Date.new(2023,4,30),
+        num_guests: 1,
+        price: 204
+    )
+
+
+    Reservation.create!(
+        reserver_id: 2,
+        listing_id: 4,
+        start_date: Date.new(2023,2,16),
+        end_date: Date.new(2023,2,20),
+        num_guests: 1,
+        price: 174
+    )
 
     puts "Done!"
   end

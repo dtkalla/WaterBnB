@@ -14,11 +14,7 @@ class Api::ReservationsController < ApplicationController
     end
 
     def index
-        @reservations = []
-        reservations = Reservation.all
-        reservations.each do |reservation|
-            @reservations << reservation if reservation.reserver_id == current_user.id
-        end
+        @reservations = Reservation.all.where(reserver_id: current_user.id)
         render :index
     end
 
