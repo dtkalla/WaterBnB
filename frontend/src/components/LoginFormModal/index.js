@@ -15,6 +15,9 @@ function LoginFormModal() {
           <div className='login-header'>Log In</div>
           <LoginForm />
           <DemoLogin />
+          <br/>
+          <br/>
+          <br/>
         </Modal>
       )}
     </>

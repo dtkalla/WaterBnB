@@ -18,6 +18,7 @@ function SignupFormModal() {
           {/* <span class="close">&times;</span> */}
           <div className='login-header'>Sign Up!</div>
           <SignupForm />
+          <br/>
         </Modal>
         </>
       )}

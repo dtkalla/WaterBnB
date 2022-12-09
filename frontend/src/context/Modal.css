@@ -31,7 +31,7 @@
     position: absolute;
     background-color:white;
     width: 575px;
-    height: 575px;
+    /* height: 575px; */
     border-radius: 10px;
   }
 
