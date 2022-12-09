@@ -29,16 +29,20 @@ const ListingShow = () => {
     function ListingPicsModal() {
         if (showModal) {
             return (
-                <div id='ListingPicsModal'>
-                    <ul>
-                        <img src={l.picturesUrl} alt='' />
-                        <img src={l.pic1} alt='' />
-                        <img src={l.pic2} alt='' />
-                        <img src={l.pic3} alt='' />
-                        <img src={l.pic4} alt='' />
-                    </ul>
-               </div>
-             );
+                <>
+                    <div id="modal3-background" onClick={() => setShowModal(false)} />
+                    <div id='ListingPicsModal'>
+                        <ul>
+                            <img src={l.picturesUrl} alt='' />
+                            <img src={l.pic1} alt='' />
+                            <img src={l.pic2} alt='' />
+                            <img src={l.pic3} alt='' />
+                            <img src={l.pic4} alt='' />
+                        </ul>
+                    </div>
+                </>
+                
+            );
         }
     }
 
