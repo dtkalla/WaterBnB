@@ -9,7 +9,7 @@ class Listing < ApplicationRecord
         primary_key: :id,
         foreign_key: :lister_id
 
-    has_many_attached :photos
+    # has_many_attached :photos
     
 
     def self.map_all_listings
