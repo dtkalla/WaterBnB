@@ -28,11 +28,23 @@ class Api::ReservationsController < ApplicationController
     end
 
     def update
-
+        @reservation = Reservation.find(params[:id])
+        if current_user.id == @reservation.reserver_id
+            @reservation.update(reservation_params)
+            render :show
+        else
+            flash.now[:errors] = ["Something went wrong!"]
+            render :edit
+        end
     end
 
     def destroy
-        
+        @reservation = Reservation.find(params[:id])
+        if @reservation.destroy
+            redirect_to "/users/#{current_user.id}"
+        else
+            render json: { errors: @listing.errors.full_messages}, status: 422
+        end
     end
   
   
