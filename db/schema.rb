@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_08_211956) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_09_171828) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -65,6 +65,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_08_211956) do
     t.boolean "boat", default: true
     t.boolean "self_check_in", default: true
     t.string "lister_name", default: "Barbara"
+    t.string "pic1", default: "https://waterbnb-seeds.s3.amazonaws.com/2_0.png"
+    t.string "pic2", default: "https://waterbnb-seeds.s3.amazonaws.com/3_0.png"
+    t.string "pic3", default: "https://waterbnb-seeds.s3.amazonaws.com/4_0.png"
+    t.string "pic4", default: "https://waterbnb-seeds.s3.amazonaws.com/5_0.png"
     t.index ["city"], name: "index_listings_on_city"
     t.index ["country"], name: "index_listings_on_country"
     t.index ["lister_id"], name: "index_listings_on_lister_id"

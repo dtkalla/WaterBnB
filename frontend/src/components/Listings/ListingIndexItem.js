@@ -22,7 +22,7 @@ const ListingIndexItem = (props) => {
                     <img className="listing-index-image" src={listing.picturesUrl} alt="" />
                     <span id='title'>{listing.listerName}'s {listing.buildingType} near the {listing.typeOfWater}</span>
                     <span id='location'>{listing.city}, {listing.country}</span>
-                    <span id='price'>${listing.price}/night</span>
+                    <span id='price'><span id='price-number'>${listing.price}</span>/night</span>
                 </Link>
                 {/* <button onClick={handleClick}>Delete</button> */}
             </div>

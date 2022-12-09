@@ -32,8 +32,8 @@ export const fetchListings = () => async (dispatch) => {
 export const fetchListing = (listingId) => async (dispatch) => {
     const res = await fetch(`/api/listings/${listingId}`)
     const data = await res.json();
-
-    dispatch(receiveListing(data))
+    // debugger
+    dispatch(receiveListing(data.listing))
 }
 
 
@@ -45,8 +45,7 @@ const listingsReducer = (state = {}, action) => {
         case RECEIVE_LISTINGS:
             return {...newState,...action.listings}
         case RECEIVE_LISTING:
-            newState[action.listing.id] = action.listing
-            return newState
+            return {[action.listing.id]: action.listing}
         default:
             return newState
     }

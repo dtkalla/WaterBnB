@@ -75,7 +75,7 @@ ApplicationRecord.transaction do
   
     puts "Creating listings..."
     # Create one user with an easy to remember username, email, and password:
-    Listing.create!(
+    l = Listing.create!(
         city: 'San Francisco',
         country: 'California',
         description: 'Stay here while you interview for a tech job in Silicon Valley!', 
@@ -86,7 +86,6 @@ ApplicationRecord.transaction do
         price: 112,
         building_type: "apartment"
     )
-
 
     Listing.create!(
         city: 'Manhattan',
