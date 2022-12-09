@@ -146,3 +146,23 @@
     align-items: center;
     padding-bottom: 5px;
 }
+
+
+#ListingPicsModal {
+    margin-left: 8%;
+    position: absolute;
+    width: 85%;
+    max-height: 85%;
+    overflow-y: scroll;
+    top: 65px;
+    border-radius: 20px;
+    background-color: white;
+    border: 1px solid lightgray;
+    z-index: 3;
+}
+
+
+#ListingPicsModal ul img {
+    width: 60%;
+    margin-left: 20%;
+}

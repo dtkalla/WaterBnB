@@ -21,6 +21,7 @@ function ListingPicsModal() {
                     <img src={listing.pic4} alt='' />
                 </ul>
            </div>
+           
          );
     }
 }
