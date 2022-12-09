@@ -25,7 +25,7 @@ const ListingShow = () => {
 
     return (
         <div>
-            <div id='listing-show-page'>
+            <div className='solid-line'></div>
             <div className='show-page-images'>
                 <img className="listing-show-image-main" src={l.picturesUrl} alt='' />
                 <div className='show-page-small-images'>
@@ -35,13 +35,19 @@ const ListingShow = () => {
                     <img className="listing-show-image-small" id='small-4' src={l.pic4} alt='' />
                 </div>
             </div>
-            <b>{l.listerName}'s {l.buildingType} near the {l.typeOfWater}</b>
-            <span>{l.bedrooms} {l.bedrooms > 1 ? "bedrooms" : "bedroom"} · {l.beds} {l.beds > 1 ? "beds" : "bed"} · {l.bathrooms} {l.bathrooms > 1 ? "bathrooms" : "bathroom"}</span>
+
+            <div id='listing-show-page'>
+            
+            <h2>{l.listerName}'s {l.buildingType} near the {l.typeOfWater}</h2>
+            <span>{l.beds + 1} guests · {l.bedrooms} {l.bedrooms > 1 ? "bedrooms" : "bedroom"} · {l.beds} {l.beds > 1 ? "beds" : "bed"} · {l.bathrooms} {l.bathrooms > 1 ? "bathrooms" : "bathroom"}</span>
             <span>{l.city}, {l.country}</span>
+            <div className='solid-line'></div>
             <span>{l.latitude > 0 ? l.latitude + '° N' : -1*l.latitude + '° S'}
             , {l.longitude > 0 ? l.longitude + '° E' : -1*l.longitude + '° W'}</span>
             <span>${l.price} per night</span>
+            <div className='solid-line'></div>
             <span>{l.description}</span>
+            <div className='solid-line'></div>
             </div>
             
             {/* <Link to='/'>ListingIndex</Link> */}

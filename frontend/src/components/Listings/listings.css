@@ -15,10 +15,21 @@
 
 
 #listing-show-page {
-    width: 80%;
+    width: 40%;
     position: relative;
     left: 10%;
 }
+
+
+.solid-line {
+    border-bottom: 1px;
+    border-bottom-style: solid;
+    height: 0px;
+    color: lightgray;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
 
 
 .listing-index-item {
@@ -67,6 +78,9 @@
 .show-page-images {
     display: flex;
     flex-direction: row;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 15px;
 }
 
 .show-page-small-images {
@@ -110,11 +124,14 @@
 #amenities-container {
     position: relative;
     margin-left: 10%;
+    width: 40%;
 }
 
 
 .amenities {
     list-style-type: none;
+    display: grid;
+    grid-template-columns: auto auto;
 }
 
 .amenities li img {
