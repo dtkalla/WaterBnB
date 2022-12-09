@@ -34,7 +34,9 @@
 
 .listing-index-item {
     width: 250px;
+    height: 250px;
     padding: 20px;
+    padding-bottom: 90px;
 }
 
 
@@ -144,3 +146,44 @@
     align-items: center;
     padding-bottom: 5px;
 }
+
+
+#ListingPicsModal {
+    margin-left: 12.5%;
+    position: absolute;
+    width: 75%;
+    max-height: 90%;
+    overflow-y: scroll;
+    top: 50px;
+    border-radius: 20px;
+    background-color: white;
+    border: 1px solid lightgray;
+    z-index: 3;
+}
+
+
+#ListingPicsModal::-webkit-scrollbar {
+    display: none;
+}
+
+#ListingPicsModal {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+
+#ListingPicsModal ul img {
+    width: 60%;
+    margin-left: 20%;
+}
+
+
+#modal3-background {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 3;
+  }

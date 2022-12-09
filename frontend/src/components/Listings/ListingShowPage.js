@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchListing, getListing } from "../../store/listings";
@@ -8,12 +8,15 @@ import wifi from './wifi.png';
 import boat from './boat.png';
 import checkin from './checkin.png';
 import kitchen from './kitchen.png';
+import './listings.css'
 
 
 const ListingShow = () => {
     const { listingId } = useParams();
     const dispatch = useDispatch();
     const l = useSelector(getListing(listingId))
+    const [showModal, setShowModal] = useState(false);
+
 
     useEffect(() => {
         dispatch(fetchListing(listingId))
@@ -23,10 +26,31 @@ const ListingShow = () => {
         return null
     }
 
+    function ListingPicsModal() {
+        if (showModal) {
+            return (
+                <>
+                    <div id="modal3-background" onClick={() => setShowModal(false)} />
+                    <div id='ListingPicsModal'>
+                        <ul>
+                            <img src={l.picturesUrl} alt='' />
+                            <img src={l.pic1} alt='' />
+                            <img src={l.pic2} alt='' />
+                            <img src={l.pic3} alt='' />
+                            <img src={l.pic4} alt='' />
+                        </ul>
+                    </div>
+                </>
+                
+            );
+        }
+    }
+
     return (
         <div>
+            <ListingPicsModal id='listing-pics-modal-container'/>
             <div className='solid-line'></div>
-            <div className='show-page-images'>
+            <div className='show-page-images' onClick={() => setShowModal(true)}>
                 <img className="listing-show-image-main" src={l.picturesUrl} alt='' />
                 <div className='show-page-small-images'>
                     <img className="listing-show-image-small" src={l.pic1} alt='' />

@@ -22,6 +22,7 @@ const ListingIndex = () => {
 
     return (
         <div className='listings-index'>
+            <div className='solid-line'></div>
             <ul id='listings-index-ul'>
                 {listingItems}
             </ul>
