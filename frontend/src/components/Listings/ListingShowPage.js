@@ -26,8 +26,8 @@ const ListingShow = () => {
             <b>{l.listerName}'s {l.buildingType} near the {l.typeOfWater}</b>
             <span>{l.bedrooms} {l.bedrooms > 1 ? "bedrooms" : "bedroom"} · {l.beds} {l.beds > 1 ? "beds" : "bed"} · {l.bathrooms} {l.bathrooms > 1 ? "bathrooms" : "bathroom"}</span>
             <span>{l.city}, {l.country}</span>
-            <span>{l.latitude > 0 ? l.latitude + ' N' : -1*l.latitude + ' S'}
-            , {l.longitude > 0 ? l.longitude + ' E' : -1*l.longitude + ' W'}</span>
+            <span>{l.latitude > 0 ? l.latitude + '° N' : -1*l.latitude + '° S'}
+            , {l.longitude > 0 ? l.longitude + '° E' : -1*l.longitude + '° W'}</span>
             <span>${l.price} per night</span>
             <span>{l.description}</span>
             </div>
