@@ -23,7 +23,7 @@ function App() {
           <Route path="/listings/:listingId">
             <ListingShow />
           </Route>
-          <Route path="/reservations">
+          <Route path="/trips">
             <ReservationsIndex />
           </Route>
         </Switch>
