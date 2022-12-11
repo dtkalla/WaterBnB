@@ -25,7 +25,7 @@ function Navigation(){
       <div className="logged-out-links">
         <ul>
           <li>
-            <Link id='trips' className='dropdown-menu-option' to={`/users/${sessionUser.id}`}>Trips</Link>
+            <Link id='trips' className='dropdown-menu-option' to={'/reservations'}>Reservations</Link>
           </li>
           <li className='dropdown-menu-option' onClick={logout}>
             <span id='logout'>Log Out</span>

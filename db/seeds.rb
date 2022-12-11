@@ -866,6 +866,12 @@ ApplicationRecord.transaction do
 
     #Add Coney Island
 
+    #Add Cano Cristales
+
+    #Add Otavalo
+
+    #Oil rig
+
 
     puts "Destroying reservations table..."
     # Unnecessary if using `rails db:seed:replant`
