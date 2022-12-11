@@ -9,6 +9,7 @@ import boat from './boat.png';
 import checkin from './checkin.png';
 import kitchen from './kitchen.png';
 import './listings.css'
+import ReservationForm from '../Reservations/ReservationForm';
 
 
 const ListingShow = () => {
@@ -59,6 +60,9 @@ const ListingShow = () => {
                     <img className="listing-show-image-small" id='small-4' src={l.pic4} alt='' />
                 </div>
             </div>
+
+            <ReservationForm id='reservation-form' />
+
 
             <div id='listing-show-page'>
             
