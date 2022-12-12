@@ -138,6 +138,7 @@
 
 #num-guests {
     border: 1px solid lightgray;
+    border-top: 0px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     width: 90%;
@@ -175,4 +176,38 @@
 
 .date-input {
     margin-left: 10px;
+}
+
+
+.solid-line-reservations-3 {
+    border-bottom: 1px;
+    border-bottom-style: solid;
+    height: 0px;
+    color: lightgray;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    width: 87%;
+}
+
+.update-info {
+    margin-left: 40px;
+}
+
+.update-fees {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 5px;
+    width: 100%;
+    margin-left: 10%;
+}
+
+
+.solid-line-reservations-update {
+    border-bottom: 1px;
+    border-bottom-style: solid;
+    height: 0px;
+    color: lightgray;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    width: 110%;
 }

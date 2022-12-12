@@ -1,8 +1,14 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import './Reservation.css'
 import { deleteReservation } from '../../store/reservations';
+import { useState } from 'react';
+import { Modal } from '../../context/Modal';
+import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
+import { useSelector } from 'react-redux';
+import { getListing } from '../../store/listings';
+import { updateReservation } from '../../store/reservations';
 
 
 const ReservationIndexItem = (props) => {
@@ -14,9 +20,6 @@ const ReservationIndexItem = (props) => {
         dispatch(deleteReservation(reservation.id))
     }
 
-    const handleClick2 = (e) => {
-        dispatch(deleteReservation(reservation.id))
-    }
 
     const capitalize = (str) => {
         return str[0].toUpperCase() + str.slice(1)
@@ -59,16 +62,19 @@ const ReservationIndexItem = (props) => {
                     </div>
                     <div className='solid-line-reservations'></div>
 
-                    <button className='cancel-reservation-button' onClick={handleClick2}>Change Reservation</button>
+                    <Link to={`trips/${reservation.id}#edit`}>Change Reservation</Link>
                     <br/><br/>
 
                     <button className='cancel-reservation-button' onClick={handleClick}>Cancel Reservation</button>
                     <br/>
                     <span className='small-text'>Free cancelation until {month[reservation.startDate.slice(5,7)]} 1</span>
+                    <br/><br/>
                     
                 </div>
                 <img className="reservation-index-image" src={listing.pictures_url} alt="" />
-                <div>Map goes here</div>
+                <div>
+                    {/* Map goes here */}
+                </div>
             </div>
         )
     }
