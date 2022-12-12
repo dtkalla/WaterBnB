@@ -25,13 +25,13 @@ class Api::ReservationsController < ApplicationController
 
     def update
         @reservation = Reservation.find(params[:id])
-        if current_user.id == @reservation.reserver_id
+        # if current_user.id == @reservation.reserver_id
             @reservation.update(reservation_params)
-            render :show
-        else
-            flash.now[:errors] = ["Something went wrong!"]
-            render :edit
-        end
+        #     render :show
+        # else
+        #     flash.now[:errors] = ["Something went wrong!"]
+        #     render :edit
+        # end
     end
 
     def destroy

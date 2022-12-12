@@ -62,7 +62,9 @@ const ReservationIndexItem = (props) => {
                     </div>
                     <div className='solid-line-reservations'></div>
 
-                    <Link to={`trips/${reservation.id}#edit`}>Change Reservation</Link>
+                    <Link to={`trips/${reservation.id}#edit`}>
+                        <button className='cancel-reservation-button'>Change Reservation</button>
+                    </Link>
                     <br/><br/>
 
                     <button className='cancel-reservation-button' onClick={handleClick}>Cancel Reservation</button>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 // import * as sessionActions from "../../store/session";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
@@ -15,6 +16,7 @@ function ReservationUpdatePage() {
   const sessionUser = useSelector(state => state.session.user);
   const listingId = listing.id
   const reserverId = sessionUser.id
+  const id = reservationId
 
   // const [price, setPrice] = useState("")
   // const [numGuests, setNumGuests] = useState("");
@@ -31,7 +33,7 @@ function ReservationUpdatePage() {
     setErrors([]);
     price = Math.floor((endDate.slice(8) - startDate.slice(8)) * (listing.price + (numGuests-1)*10) * 8 / 7 + (listing.boat ? 20 : 0));
     // numGuests = 1;
-    return dispatch(updateReservation({ startDate, endDate, numGuests, price, listingId, reserverId }))
+    return dispatch(updateReservation({ id, startDate, endDate, numGuests, price, listingId, reserverId }))
       .catch(async (res) => {
         let data;
         try {
