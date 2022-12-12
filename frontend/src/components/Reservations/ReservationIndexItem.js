@@ -33,6 +33,7 @@ const ReservationIndexItem = (props) => {
         '12': 'Dec',
       };
     
+
     if (reservation.id) {
         return (
             <div className="reservation-index-item">

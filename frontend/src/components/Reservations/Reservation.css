@@ -11,8 +11,8 @@
     width: 30%;
     margin-left: 5%;
     margin-right: 5%;
-    margin-top: 2.5%;
-    margin-bottom: 2.5%;    
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;    
 }
 
 .reservation-info {
@@ -80,4 +80,13 @@
 
 #start-end-dates div {
     margin-right: 20px;
+}
+
+
+.fees {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 5px;
+    width: 100%;
+    /* height: auto; */
 }

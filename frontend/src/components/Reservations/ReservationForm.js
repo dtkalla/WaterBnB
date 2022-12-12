@@ -66,6 +66,25 @@ function ReservationForm() {
             </label>
           </div>
         </div>
+
+        <br/>
+        <ul className="fees">
+          <span>
+            ${listing.price} X {(startDate && endDate) ? endDate.slice(8) - startDate.slice(8) : 0} nights
+          </span>
+          <span>
+            {(startDate && endDate) ? '$'+(endDate.slice(8) - startDate.slice(8))*listing.price : '$0'}
+          </span>
+          <span>{listing.boat ? "Boating fee" : ''}</span>
+          <span>{listing.boat ? '$20' : ''}</span>
+          <span>Service fee</span>
+          <span>{'$' + Math.floor(((startDate && endDate) ? endDate.slice(8) - startDate.slice(8) : 0) * listing.price / 7)}</span>
+          <span>Total cost</span>
+          <span>
+            {'$' + Math.floor(((startDate && endDate) ? endDate.slice(8) - startDate.slice(8) : 0) * listing.price * 8 / 7 + (listing.boat ? 20 : 0))}
+          </span>
+        </ul>
+        
         
         <br/>
         <ul className="form-errors">
