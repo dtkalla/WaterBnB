@@ -198,7 +198,7 @@
     grid-template-columns: auto auto;
     gap: 5px;
     width: 100%;
-    margin-left: 10%;
+    margin-left: 0%;
 }
 
 
@@ -214,4 +214,8 @@
 
 #link-back-to-res-show {
     width: 100%;
+}
+
+#reservation-update-form {
+    width: 50%;
 }
