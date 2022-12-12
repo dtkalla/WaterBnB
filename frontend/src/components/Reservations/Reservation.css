@@ -1,0 +1,50 @@
+.reservation-index-item {
+    margin-left: 5%;
+    width: 90%;
+    display: flex;
+    margin-bottom: 30px;
+    border: 1px lightgray solid;
+    border-radius: 20px;
+}
+
+.reservation-index-image {
+    width: 30%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;    
+}
+
+.reservation-info {
+    width: 30%;
+    margin-left: 5%;
+}
+
+
+.solid-line-reservations {
+    border-bottom: 1px;
+    border-bottom-style: solid;
+    height: 0px;
+    color: lightgray;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+#reservation-more-details {
+    display: flex;
+    flex-direction: row;
+}
+
+
+#reservation-more-details span {
+    margin: 5px;
+}
+
+.vertical-line-reservations {
+    border-left: 1px solid lightgray;
+    height: 30px;
+}
+
+.dates {
+    width: 30%;
+}

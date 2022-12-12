@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchReservations, getReservations } from '../../store/reservations';
+import ReservationIndexItem from './ReservationIndexItem';
 
 
 const ReservationsIndex = () => {
@@ -12,7 +13,7 @@ const ReservationsIndex = () => {
     }, [])
 
     const reservationItems = reservations.map((reservation) => {
-        return <div>{reservation.price}</div>
+        return <ReservationIndexItem key={reservation.id} reservation={reservation} />
     })
 
     return (

@@ -872,6 +872,8 @@ ApplicationRecord.transaction do
 
     #Oil rig
 
+    #Crater Lake
+
 
     puts "Destroying reservations table..."
     # Unnecessary if using `rails db:seed:replant`

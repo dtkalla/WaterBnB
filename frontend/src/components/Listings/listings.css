@@ -35,8 +35,8 @@
 .listing-index-item {
     width: 250px;
     height: 250px;
-    padding: 20px;
-    padding-bottom: 90px;
+    margin: 20px;
+    margin-bottom: 90px;
 }
 
 
