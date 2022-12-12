@@ -84,8 +84,7 @@ function ReservationForm() {
         </ul>
         <br/>
         
-        <button type="submit">Agree and Continue</button>
-        <div>By selecting <b>Agree and continue</b>, I agree to WaterBnb's Terms of Service, Payments Terms of Service, and Nondiscrimination Policy and acknowledge the Privacy Policy.</div>
+        <button type="submit">Reserve</button>
       </ul>
       
       

@@ -48,3 +48,16 @@
 .dates {
     width: 30%;
 }
+
+.cancel-reservation {
+    margin-left: 5%;
+    width: 90%;
+    height: 50px;
+    background-color:rgb(230, 30, 77);
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    border: 0;
+    cursor: pointer;
+}
