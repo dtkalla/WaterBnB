@@ -55,48 +55,49 @@ function ReservationForm() {
         <div id='reservation-price'>
           <span><b>${listing.price}</b> night</span>
         </div>
+        <br/>
         <div id='start-end-dates'>
-          <div>
-            <div>Start Date</div>
+          <div id='checkin-div'>
+            <div id='other-small-font'>CHECK-IN</div>
             <label>
-            <input type="date" value={startDate}
+            <input className="date-input" type="date" value={startDate}
             onChange={(e) => setStartDate(e.target.value)} required 
             placeholder={currentDate}
             min={currentDate}/>
             </label>
           </div>
+          <div className='vertical-line-reservations-2'></div>
           <div>
-            <div>End Date</div>
+            <div id='other-small-font'>CHECKOUT</div>
             <label>
-            <input type="date" value={endDate}
+            <input className="date-input" type="date" value={endDate}
             onChange={(e) => {
               setEndDate(e.target.value)
             }} required 
             min={startDate}/>
             </label>
           </div>
-
-          <div>
-            <div>Number of guests</div>
+        </div>
+          <div id='num-guests'>
+            <div id='other-small-font'>GUESTS</div>
             <label>
               <input type="number"
               onChange={(e) => setNumGuests(e.target.value)} required
               min="1" max={listing.beds + 1}  placeholder='1' />
             </label>
           </div>
-        </div>
 
         <br/>
         <ul className="fees">
-          <span>
+          <span className="underline">
             ${listing.price + (numGuests-1)*10} X {(startDate && endDate) ? endDate.slice(8) - startDate.slice(8) : 0} nights
           </span>
           <span>
             {(startDate && endDate) ? '$'+(endDate.slice(8) - startDate.slice(8))*(listing.price + (numGuests-1)*10) : '$0'}
           </span>
-          <span>{listing.boat ? "Boating fee" : ''}</span>
+          <span className="underline">{listing.boat ? "Boating fee" : ''}</span>
           <span>{listing.boat ? '$20' : ''}</span>
-          <span>Service fee</span>
+          <span className="underline">Service fee</span>
           <span>{'$' + Math.floor(((startDate && endDate) ? endDate.slice(8) - startDate.slice(8) : 0) * (listing.price + (numGuests-1)*10) / 7)}</span>
           <div className='solid-line-reservations-2'></div>
           <span></span>

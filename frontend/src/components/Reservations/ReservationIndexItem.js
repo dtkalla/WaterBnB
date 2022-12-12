@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import './Reservation.css'
 import { deleteReservation } from '../../store/reservations';
@@ -11,6 +11,10 @@ const ReservationIndexItem = (props) => {
     const dispatch = useDispatch();
 
     const handleClick = (e) => {
+        dispatch(deleteReservation(reservation.id))
+    }
+
+    const handleClick2 = (e) => {
         dispatch(deleteReservation(reservation.id))
     }
 
@@ -42,7 +46,7 @@ const ReservationIndexItem = (props) => {
                     <span id='title-details'>{capitalize(listing.building_type)} near the {listing.type_of_water} hosted by {listing.lister_name}</span>
                     <div className='solid-line-reservations'></div>
                     <div id='reservation-more-details'>
-                        <span className='dates'>{month[reservation.startDate.slice(5,7)]} {reservation.startDate.slice(8)} - {reservation.startDate[6] == reservation.endDate[6] ? '' : month[reservation.endDate.slice(5,7)] + ' '}{reservation.endDate.slice(8)}</span>
+                        <span className='dates'>{month[reservation.startDate.slice(5,7)]} {reservation.startDate.slice(8)} - {reservation.startDate[6] === reservation.endDate[6] ? '' : month[reservation.endDate.slice(5,7)] + ' '}{reservation.endDate.slice(8)}</span>
                         {/* <span className='dates'>{reservation.endDate}</span> */}
                         <div className='vertical-line-reservations'></div>
                         <span id='location'>{listing.city}, {listing.country}</span>
@@ -55,8 +59,13 @@ const ReservationIndexItem = (props) => {
                     </div>
                     <div className='solid-line-reservations'></div>
 
-                    <button className='reservation-button' onClick={handleClick}>Cancel Reservation</button>
+                    <button className='cancel-reservation-button' onClick={handleClick2}>Change Reservation</button>
+                    <br/><br/>
+
+                    <button className='cancel-reservation-button' onClick={handleClick}>Cancel Reservation</button>
+                    <br/>
                     <span className='small-text'>Free cancelation until {month[reservation.startDate.slice(5,7)]} 1</span>
+                    
                 </div>
                 <img className="reservation-index-image" src={listing.pictures_url} alt="" />
                 <div>Map goes here</div>
