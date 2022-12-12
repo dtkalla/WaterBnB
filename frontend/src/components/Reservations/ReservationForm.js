@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { fetchListing, getListing } from "../../store/listings";
+import { createReservation } from "../../store/reservations";
 
 function ReservationForm() {
   const { listingId } = useParams();
@@ -11,25 +12,30 @@ function ReservationForm() {
   const listing = useSelector(getListing(listingId))
   const sessionUser = useSelector(state => state.session.user);
 
-  const [price, setPrice] = useState("");
-  const [numGuests, setNumGuests] = useState("");
+  const reserverId = sessionUser.id
+
+  // const [price, setPrice] = useState("")
+  // const [numGuests, setNumGuests] = useState("");
+  let price = 0
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
+  const [numGuests, setNumGuests] = useState("")
 
   const [errors, setErrors] = useState([]);
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setErrors([]);
-    return dispatch(sessionActions.signup({ startDate, endDate, numGuests, price }))
-        // return dispatch(createReservation({ price, numGuests, startDate, endDate, listingId, reserverId }))
+    price = Math.floor((endDate.slice(8) - startDate.slice(8)) * (listing.price + (numGuests-1)*10) * 8 / 7 + (listing.boat ? 20 : 0));
+    // numGuests = 1;
+    return dispatch(createReservation({ startDate, endDate, numGuests, price, listingId, reserverId }))
       .catch(async (res) => {
         let data;
         try {
-          // .clone() essentially allows you to read the response body twice
           data = await res.clone().json();
         } catch {
-          data = await res.text(); // Will hit this case if the server is down
+          data = await res.text();
         }
         if (data?.errors) setErrors(data.errors);
         else if (data) setErrors([data]);
@@ -42,7 +48,9 @@ function ReservationForm() {
 
   return (
     <form id='reservation-form' onSubmit={handleSubmit}>
+      {/* <input type="hidden" value={listingId} />
 
+      <input type="hidden" value={reserverId} /> */}
       <ul>
         <div id='reservation-price'>
           <span><b>${listing.price}</b> night</span>
@@ -61,8 +69,19 @@ function ReservationForm() {
             <div>End Date</div>
             <label>
             <input type="date" value={endDate}
-            onChange={(e) => setEndDate(e.target.value)} required 
+            onChange={(e) => {
+              setEndDate(e.target.value)
+            }} required 
             min={startDate}/>
+            </label>
+          </div>
+
+          <div>
+            <div>Number of guests</div>
+            <label>
+              <input type="number"
+              onChange={(e) => setNumGuests(e.target.value)} required
+              min="1" max={listing.beds + 1}  placeholder='1' />
             </label>
           </div>
         </div>
@@ -70,18 +89,20 @@ function ReservationForm() {
         <br/>
         <ul className="fees">
           <span>
-            ${listing.price} X {(startDate && endDate) ? endDate.slice(8) - startDate.slice(8) : 0} nights
+            ${listing.price + (numGuests-1)*10} X {(startDate && endDate) ? endDate.slice(8) - startDate.slice(8) : 0} nights
           </span>
           <span>
-            {(startDate && endDate) ? '$'+(endDate.slice(8) - startDate.slice(8))*listing.price : '$0'}
+            {(startDate && endDate) ? '$'+(endDate.slice(8) - startDate.slice(8))*(listing.price + (numGuests-1)*10) : '$0'}
           </span>
           <span>{listing.boat ? "Boating fee" : ''}</span>
           <span>{listing.boat ? '$20' : ''}</span>
           <span>Service fee</span>
-          <span>{'$' + Math.floor(((startDate && endDate) ? endDate.slice(8) - startDate.slice(8) : 0) * listing.price / 7)}</span>
-          <span>Total cost</span>
+          <span>{'$' + Math.floor(((startDate && endDate) ? endDate.slice(8) - startDate.slice(8) : 0) * (listing.price + (numGuests-1)*10) / 7)}</span>
+          <div className='solid-line-reservations-2'></div>
+          <span></span>
+        <span>Total cost</span>
           <span>
-            {'$' + Math.floor(((startDate && endDate) ? endDate.slice(8) - startDate.slice(8) : 0) * listing.price * 8 / 7 + (listing.boat ? 20 : 0))}
+            {'$' + Math.floor(((startDate && endDate) ? endDate.slice(8) - startDate.slice(8) : 0) * (listing.price + (numGuests-1)*10) * 8 / 7 + (listing.boat ? 20 : 0))}
           </span>
         </ul>
         

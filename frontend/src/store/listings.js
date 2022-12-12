@@ -32,7 +32,7 @@ export const fetchListings = () => async (dispatch) => {
 export const fetchListing = (listingId) => async (dispatch) => {
     const res = await fetch(`/api/listings/${listingId}`)
     const data = await res.json();
-    // debugger
+
     dispatch(receiveListing(data.listing))
 }
 

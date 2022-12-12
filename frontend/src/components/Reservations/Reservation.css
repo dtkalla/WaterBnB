@@ -90,3 +90,13 @@
     width: 100%;
     /* height: auto; */
 }
+
+.solid-line-reservations-2 {
+    border-bottom: 1px;
+    border-bottom-style: solid;
+    height: 0px;
+    color: lightgray;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    width: 115%;
+}

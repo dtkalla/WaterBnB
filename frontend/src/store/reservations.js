@@ -11,6 +11,10 @@ export const receiveReservations = (reservations) => ({
     reservations
 })
 
+export const receiveReservation = (reservation) => ({
+    type: RECEIVE_RESERVATION,
+    reservation
+})
 
 export const removeReservation = (reservationId) => ({
     type: REMOVE_RESERVATION,
@@ -21,6 +25,7 @@ export const removeReservation = (reservationId) => ({
 
 export const getReservations = (state) => state.reservations ? Object.values(state.reservations) : [];
 
+export const getReservation = (reservationId) => (state) => state.reservations ? state.reservations[reservationId] : null
 
 
 
@@ -33,8 +38,41 @@ export const fetchReservations = () => async (dispatch) => {
     dispatch(receiveReservations(data.reservations))
 }
 
+export const fetchResrvation = (reservationId) => async (dispatch) => {
+    const res = await csrfFetch(`/api/reservations/${reservationId}`)
+    const data = await res.json();
+
+    dispatch(receiveReservation(data.reservation))
+}
+
+export const createReservation = (reservation) => async (dispatch) => {
+    const res = await csrfFetch('/api/reservations', {
+        method: 'POST',
+        body: JSON.stringify(reservation),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    const data = await res.json();
+
+    dispatch(receiveReservation(data))
+}
+
+export const updateReservation = (reservation) => async (dispatch) => {
+    const res = await csrfFetch(`/api/reservations/${reservation.id}`, {
+        method: 'PATCH',
+        body: JSON.stringify(reservation),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    const data = await res.json();
+
+    dispatch(receiveReservation(data))
+}
+
 export const deleteReservation = (reservationId) => async (dispatch) => {
-    const res = await fetch(`/api/reservations/${reservationId}`, {
+    const res = await csrfFetch(`/api/reservations/${reservationId}`, {
         method: 'DELETE'
     })
 
