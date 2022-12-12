@@ -54,7 +54,7 @@ const ReservationIndexItem = (props) => {
                     </div>
                     <div className='solid-line-reservations'></div>
 
-                    <button className='cancel-reservation' onClick={handleClick}>Cancel Reservation</button>
+                    <button className='reservation-button' onClick={handleClick}>Cancel Reservation</button>
                     <span className='small-text'>Free cancelation until {month[reservation.startDate.slice(5,7)]} 1</span>
                 </div>
                 <img className="reservation-index-image" src={listing.pictures_url} alt="" />

@@ -1,26 +1,27 @@
 import React, { useState } from "react";
 import * as sessionActions from "../../store/session";
 import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+import { useParams } from "react-router-dom/cjs/react-router-dom.min";
+import { fetchListing, getListing } from "../../store/listings";
 
 function ReservationForm() {
+  const { listingId } = useParams();
   const dispatch = useDispatch();
-  // const sessionUser = useSelector(state => state.session.user);
-  const [email, setEmail] = useState("");
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [password, setPassword] = useState("");
-  //   const [price, setPrice] = useState("");
-//   const [numGuests, setNumGuests] = useState("");
-//   const [startDate, setStartDate] = useState("");
-//   const [endDate, setEndDate] = useState("");
+  const listing = useSelector(getListing(listingId))
+  const sessionUser = useSelector(state => state.session.user);
 
-  // const [confirmPassword, setConfirmPassword] = useState("");
+  const [price, setPrice] = useState("");
+  const [numGuests, setNumGuests] = useState("");
+  const [startDate, setStartDate] = useState("");
+  const [endDate, setEndDate] = useState("");
+
   const [errors, setErrors] = useState([]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setErrors([]);
-    return dispatch(sessionActions.signup({ email, firstName, lastName, password }))
+    return dispatch(sessionActions.signup({ startDate, endDate, numGuests, price }))
         // return dispatch(createReservation({ price, numGuests, startDate, endDate, listingId, reserverId }))
       .catch(async (res) => {
         let data;
@@ -36,55 +37,43 @@ function ReservationForm() {
       });
   };
 
-  let hide = "password"
+  const currentDate = new Date()
+
 
   return (
     <form id='reservation-form' onSubmit={handleSubmit}>
 
       <ul>
-        <div>
-          <div>First Name</div>
-          <label>
-          <input type="text" value={firstName}
-          onChange={(e) => setFirstName(e.target.value)} required 
-          placeholder="First Name"/>
-          </label>
+        <div id='reservation-price'>
+          <span><b>${listing.price}</b> night</span>
         </div>
-        <div>
-          <div>Last Name</div>
-          <label>
-          <input type="text" value={lastName}
-          onChange={(e) => setLastName(e.target.value)} required 
-          placeholder="Last Name"/>
-          </label>
+        <div id='start-end-dates'>
+          <div>
+            <div>Start Date</div>
+            <label>
+            <input type="date" value={startDate}
+            onChange={(e) => setStartDate(e.target.value)} required 
+            placeholder={currentDate}
+            min={currentDate}/>
+            </label>
+          </div>
+          <div>
+            <div>End Date</div>
+            <label>
+            <input type="date" value={endDate}
+            onChange={(e) => setEndDate(e.target.value)} required 
+            min={startDate}/>
+            </label>
+          </div>
         </div>
-        <div>Make sure it matches the name on your government ID.</div>
-        <br/>
-        <div>
-          <div>Email</div>
-          <label>
-          <input type="text" value={email}
-          onChange={(e) => setEmail(e.target.value)} required 
-          placeholder="Email Address"/>
-          </label>
-        </div>
-        <div>We'll email you trip confirmations and receipts.</div>
-        <br/>
-        <div>
-          <div>Password</div>
-          <label>
-          <input type={hide} value={password}
-          onChange={(e) => setPassword(e.target.value)} required 
-          placeholder="Password"/>
-          </label>
-        </div>
+        
         <br/>
         <ul className="form-errors">
           {errors.map(error => <li key={error}>{error}</li>)}
         </ul>
         <br/>
         
-        <button type="submit">Reserve</button>
+        <button className="reservation-button" type="submit">Reserve</button>
       </ul>
       
       

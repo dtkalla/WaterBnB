@@ -49,7 +49,7 @@
     width: 30%;
 }
 
-.cancel-reservation {
+.reservation-button {
     margin-left: 5%;
     width: 90%;
     height: 50px;
@@ -60,4 +60,24 @@
     font-weight: 600;
     border: 0;
     cursor: pointer;
+}
+
+#reservation-price {
+    display: flex;
+    font-size: 17px;
+}
+
+#reservation-price b {
+    font-size: 20px;
+}
+
+
+#start-end-dates {
+    display: flex;
+    /* outline: solid 1px lightgray;
+    border-radius: 20px; */
+}
+
+#start-end-dates div {
+    margin-right: 20px;
 }
