@@ -27,7 +27,7 @@ function App() {
           <Route exact path="/trips">
             <ReservationsIndex />
           </Route>
-          <Route path="/trip/:reservationId">
+          <Route path="/trips/:reservationId">
             <ReservationUpdatePage />
           </Route>
         </Switch>
