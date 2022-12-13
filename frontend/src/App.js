@@ -21,7 +21,7 @@ function App() {
         <Switch>
           <Route exact path="/">
             <ListingIndex />
-            <MapContainer />
+            {/* <MapContainer /> */}
           </Route>
           <Route path="/listings/:listingId">
             <ListingShow />
