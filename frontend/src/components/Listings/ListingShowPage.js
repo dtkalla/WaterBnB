@@ -110,6 +110,9 @@ const ListingShow = () => {
             <ShowMapContainer locations={locations} />
             <h2 id='reviews-title'>Reviews</h2>
             <ReviewsIndex />
+
+            <h2 id='reviews-title'>Leave a Review!</h2>
+            {/* <ReviewForm /> */}
         </div>
     )
 }
