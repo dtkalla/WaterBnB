@@ -102,6 +102,8 @@ const ListingShow = () => {
                 </ul>
             </div>
             <ShowMapContainer locations={locations} />
+
+            {/* ReviewsIndex */}
         </div>
     )
 }
