@@ -1,7 +1,8 @@
+import { getReviews } from "../../store/reviews";
+
 const ReviewsIndex = () => {
     const dispatch = useDispatch();
-    // const listings = useSelector(getListings)
-    // if(listings[0].id === 1) listings.sort(() => Math.random() - 0.5)
+    const reviews = useSelector(getReviews)
 
     // useEffect(() => {
     //     dispatch(fetchListings())
@@ -26,15 +27,15 @@ const ReviewsIndex = () => {
         return <ReviewIndexItem key={review.id} review={review} />
     })
 
-    // return (
-    //     <div className='listings-index'>
-    //         <div className='solid-line'></div>
-    //         <ul id='listings-index-ul'>
-    //             {reviewItems}
-    //         </ul>
+    return (
+        <div className='reviews-index'>
+            {/* <div className='solid-line'></div> */}
+            <ul id='reviews-index-ul'>
+                {reviewItems}
+            </ul>
             
-    //     </div>
-    // )
+        </div>
+    )
 }
 
 
