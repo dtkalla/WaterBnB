@@ -22,7 +22,6 @@ const ReviewsIndex = () => {
 
     return (
         <div className='reviews-index'>
-            {/* <div className='solid-line'></div> */}
             <ul id='reviews-index-ul'>
                 {reviewItems}
             </ul>

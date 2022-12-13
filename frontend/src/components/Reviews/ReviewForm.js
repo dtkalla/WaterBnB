@@ -3,9 +3,7 @@ import * as sessionActions from "../../store/session";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { useParams, useHistory } from "react-router-dom/cjs/react-router-dom.min";
-import { getListing } from "../../store/listings";
 import { createReview } from "../../store/reviews";
-import moment from 'moment';
 
 function ReviewForm() {
   const { listingId } = useParams();
@@ -27,13 +25,7 @@ function ReviewForm() {
   const [errors, setErrors] = useState([]);
 
   const reviewDate = new Date()
-
-  // const year = currentDate.slice(0,4)
-  // const month = currentDate.slice(5,7)
-  // const day = currentDate.slice(8)
-
-  // const reviewDate = new Date(year,month,day)
-
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
