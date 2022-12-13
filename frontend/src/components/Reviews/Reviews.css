@@ -51,3 +51,7 @@
     border: 0;
     cursor: pointer;
 }
+
+.rev-login-notice {
+    margin-left: 5%;
+}
