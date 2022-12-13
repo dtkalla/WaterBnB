@@ -1,9 +1,10 @@
 #google-map-index-image {
-    width: 150px;
+    width: 155px;
+    margin-left: 15px;
 }
 
 .map-modal-elements p {
-    margin: 5px;
+    margin: 3px;
     /* text-decoration: none; */
     color: black;
 }
@@ -16,3 +17,13 @@
     /* margin-right: 10%; */
     width: 50%;
 }
+
+#map-stars {
+    display: flex;
+    justify-content: space-between;
+    width: 170px;
+}
+
+/* .star-3 {
+    font-size: 15px;
+} */
