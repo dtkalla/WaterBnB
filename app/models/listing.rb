@@ -16,7 +16,13 @@ class Listing < ApplicationRecord
         foreign_key: :listing_id,
         dependent: :destroy
 
-    # has_many_attached :photos
+
+    has_many :reviews,
+        class_name: :Review,
+        primary_key: :id,
+        foreign_key: :listing_id,
+        dependent: :destroy
+
     
 
     def self.map_all_listings

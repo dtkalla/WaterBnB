@@ -19,6 +19,13 @@ class User < ApplicationRecord
         dependent: :destroy
 
 
+    has_many :reviews,
+        class_name: :Review,
+        primary_key: :id,
+        foreign_key: :reviewer_id,
+        dependent: :destroy
+
+
     def self.find_by_credentials(email,password)
         user = User.find_by(email: email)
         (user && user.is_password?(password)) ? user : nil
