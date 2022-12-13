@@ -1029,7 +1029,7 @@ ApplicationRecord.transaction do
 
     Review.create!(
         reviewer_id: 4,
-        listing_id: 6,
+        listing_id: 9,
         review_date: Date.new(2018,2,9),
         body: "Muhammed's cottage was perfect for our extended family gathering. It's spacious, full of natural light and incredibly well designed. The beds were so comfy and you can't beat the views. Would definitely recommend this home. We hope to return in the summer to take full advantage of the pool!",
         reviewer_name: "Elisa"
@@ -1038,7 +1038,7 @@ ApplicationRecord.transaction do
 
     Review.create!(
         reviewer_id: 2,
-        listing_id: 6,
+        listing_id: 9,
         review_date: Date.new(2016,3,15),
         body: "Beautiful house and amazing view. Mohammed was a great host and very responsive to anything that came up.",
         reviewer_name: "Anthony"
@@ -1047,7 +1047,7 @@ ApplicationRecord.transaction do
 
     Review.create!(
         reviewer_id: 7,
-        listing_id: 6,
+        listing_id: 9,
         review_date: Date.new(2022,11,18),
         body: "Everything beyond my expectation! House & Living Room 10/10.  Bed Room super clean.  Bath Room nice and clean.",
         reviewer_name: "Charles"
@@ -1174,7 +1174,7 @@ ApplicationRecord.transaction do
     Review.create!(
         reviewer_id: 3,
         listing_id: 7,
-        review_date: Date.new(2021,12,25),
+        review_date: Date.new(2021,12,24),
         body: "I used to be a high-achieving female executive from NYC or LA with no time for love, but my business sent me here on Christmas.  I met a cute guy who organizes the yearly Christmas pageant, realized the error of my ways, and have decided to move here forever.  Merry Christmas!",
         reviewer_name: "Barbara"
     )
