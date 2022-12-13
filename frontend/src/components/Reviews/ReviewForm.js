@@ -4,13 +4,16 @@ import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { useParams, useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { createReview } from "../../store/reviews";
-import StarRating from "./StarRating";
+// import StarRating from "./StarRating";
 
 function ReviewForm() {
   const { listingId } = useParams();
   const history = useHistory();
   const dispatch = useDispatch();
   const sessionUser = useSelector(state => state.session.user);
+
+  const [rating, setRating] = useState(5);
+  const [hover, setHover] = useState(0);
 
   let reviewerId
   let reviewerName
@@ -32,7 +35,7 @@ function ReviewForm() {
     e.preventDefault();
     setErrors([]);
     history.push(`/listings/${listingId}`)
-    return dispatch(createReview({ reviewDate, reviewerId, listingId, body, reviewerName }))
+    return dispatch(createReview({ reviewDate, reviewerId, listingId, body, reviewerName, rating }))
       .catch(async (res) => {
         let data;
         try {
@@ -52,7 +55,23 @@ function ReviewForm() {
     return ( 
       <form id='review-form' onSubmit={handleSubmit}>
         <ul>
-          <StarRating />
+        
+      <div className="star-rating">
+        {[...Array(5)].map((star, index) => {
+          index += 1;
+          return (
+            <button id='star-button' type="button" key={index}
+              className={index <= (hover || rating) ? "on" : "off"}
+              onClick={() => setRating(index)}
+              onMouseEnter={() => setHover(index)}
+              onMouseLeave={() => setHover(rating)}
+            >
+              <span className="star">&#9733;</span>
+            </button>
+          );
+        })}
+      </div>
+  
 
           <textarea className="review-body" type="text" value={body}
             onChange={(e) => {setBody(e.target.value)}} rows='3' />
