@@ -60,9 +60,7 @@ function ReviewForm() {
       <form id='review-form' onSubmit={handleSubmit}>
         <ul>
           <textarea className="review-body" type="text" value={body}
-            onChange={(e) => {
-              setBody(e.target.value)
-            }} />
+            onChange={(e) => {setBody(e.target.value)}} rows='3' />
           <button className="review-button" type="submit">Post Review</button>
         </ul>
         

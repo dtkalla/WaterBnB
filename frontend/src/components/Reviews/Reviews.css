@@ -32,3 +32,22 @@
     height: 40px;
     margin-right: 10px;
 }
+
+.review-body {
+    width: 42%;
+    margin-bottom: 20px;
+    margin-left: 2%;
+}
+
+.review-button {
+    margin-left: 3%;
+    width: 40%;
+    height: 50px;
+    background-color:rgb(230, 30, 77);
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    border: 0;
+    cursor: pointer;
+}
