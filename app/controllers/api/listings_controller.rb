@@ -1,5 +1,5 @@
 class Api::ListingsController < ApplicationController
-    wrap_parameters include: Listing.attribute_names + ['buildingType']
+    wrap_parameters include: Listing.attribute_names + ['buildingType'] + ['numberOfRatings']
     before_action :require_logged_in, only: [:create, :update, :destroy]
   
     # def create

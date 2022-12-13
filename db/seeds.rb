@@ -1215,7 +1215,7 @@ ApplicationRecord.transaction do
     Review.create!(
         reviewer_id: 3,
         listing_id: 8,
-        review_date: Date.new(2020,3,21),
+        review_date: Date.new(2020,6,21),
         body: "Everything was closed due to COVID-19, so I spent a lot of time on the water.  Incredibly peaceful -- I'll remember this trip for the rest of my life.",
         reviewer_name: "Barbara"
     )
