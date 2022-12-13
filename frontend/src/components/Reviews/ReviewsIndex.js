@@ -6,12 +6,14 @@ import ReviewIndexItem from "./ReviewIndexItem";
 
 const ReviewsIndex = () => {
     const { listingId } = useParams()
+    console.log(listingId)
     const dispatch = useDispatch();
     const reviews = useSelector(getReviews)
+    console.log(reviews)
 
     useEffect(() => {
-        dispatch(getReviews(listingId))
-    }, [])
+        dispatch(getReviews())
+    }, [listingId])
 
     const reviewItems = reviews.map((review) => {
         return <ReviewIndexItem key={review.id} review={review} />

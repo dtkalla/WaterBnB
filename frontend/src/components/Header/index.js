@@ -6,7 +6,7 @@ import "./Header.css";
 function Header( props ) {
     return (
         <Link id='logo' to='/'>
-            <img id='logo-img' src="https://companieslogo.com/img/orig/ABNB-4aaade0f.png?t=1633511992" />
+            <img id='logo-img' src="http://clipart-library.com/img/1699067.png" />
             <span id='span-logo'>waterbnb</span>
         </Link>
     )

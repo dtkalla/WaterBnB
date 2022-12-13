@@ -1,5 +1,6 @@
 const ReviewIndexItem = (props) => {
     const review = props.review
+    console.log(review)
 
     if (review.id) {
         return (
