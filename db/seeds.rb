@@ -101,7 +101,9 @@ ApplicationRecord.transaction do
         latitude: 37.7749,
         longitude: -122.4194,
         price: 112,
-        building_type: "apartment"
+        building_type: "apartment",
+        rating: 4.777778,
+        number_of_ratings: 9
     )
 
     Listing.create!(
@@ -118,7 +120,9 @@ ApplicationRecord.transaction do
         beds: 1,
         bedrooms: 1,
         parking: false,
-        boat: false
+        boat: false,
+        rating: 5,
+        number_of_ratings: 2
     )
     
 
@@ -133,7 +137,9 @@ ApplicationRecord.transaction do
         price: 84,
         lister_name: "Elisa",
         beds: 3,
-        type_of_water: "sea"
+        type_of_water: "sea",
+        rating: 4.427864,
+        number_of_ratings: 182
     )
 
 
@@ -147,7 +153,9 @@ ApplicationRecord.transaction do
         longitude: 18.4241,
         price: 35,
         lister_name: "Barbara",
-        building_type: "condo"
+        building_type: "condo",
+        rating: 4.263889,
+        number_of_ratings: 72
     )
 
 
@@ -165,7 +173,9 @@ ApplicationRecord.transaction do
         boat: false,
         parking: false,
         wifi: false,
-        building_type: "sunken palace"
+        building_type: "sunken palace",
+        rating: 3.4,
+        number_of_ratings: 5
     )
 
 
@@ -181,7 +191,9 @@ ApplicationRecord.transaction do
         building_type: "apartment",
         self_check_in: false,
         parking: false,
-        bedrooms: 1
+        bedrooms: 1,
+        rating: 4.913978,
+        number_of_ratings: 93
     )
 
 
@@ -198,7 +210,9 @@ ApplicationRecord.transaction do
         building_type: "cabin",
         pets_allowed: true,
         type_of_water: "lake",
-        lister_name: "Muhammed"
+        lister_name: "Muhammed",
+        rating: 3.666667,
+        number_of_ratings: 3
     )
 
 
@@ -213,7 +227,9 @@ ApplicationRecord.transaction do
         price: 32,
         type_of_water: "lake",
         self_check_in: false,
-        lister_name: "Elisa"
+        lister_name: "Elisa",
+        rating: 5,
+        number_of_ratings: 16
     )
 
 
@@ -227,7 +243,9 @@ ApplicationRecord.transaction do
         longitude: -73.8331,
         price: 144,
         building_type: "cottage",
-        lister_name: "Muhammed"
+        lister_name: "Muhammed",
+        rating: 4.866667,
+        number_of_ratings: 15
     )
 
 
@@ -241,7 +259,9 @@ ApplicationRecord.transaction do
         longitude: -73.9707,
         price: 277,
         building_type: "apartment",
-        lister_name: "Barbara"
+        lister_name: "Barbara",
+        rating: 4.8,
+        number_of_ratings: 10
     )
 
 
