@@ -3,12 +3,13 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
-import { useParams } from "react-router-dom/cjs/react-router-dom.min";
+import { useParams, useHistory } from "react-router-dom/cjs/react-router-dom.min";
 // import { fetchListing, getListing } from "../../store/listings";
 import { getReservation, updateReservation } from "../../store/reservations";
 
 function ReservationUpdatePage() {
   const { reservationId } = useParams();
+  const history = useHistory();
   const dispatch = useDispatch();
   const reservation = useSelector(getReservation(reservationId))
   const listing = reservation.listing
@@ -31,6 +32,7 @@ function ReservationUpdatePage() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setErrors([]);
+    history.push('/trips')
     price = Math.floor((endDate.slice(8) - startDate.slice(8)) * (listing.price + (numGuests-1)*10) * 8 / 7 + (listing.boat ? 20 : 0));
     // numGuests = 1;
     return dispatch(updateReservation({ id, startDate, endDate, numGuests, price, listingId, reserverId }))

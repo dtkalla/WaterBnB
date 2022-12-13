@@ -1,19 +1,19 @@
 import React, { useState } from "react";
 import * as sessionActions from "../../store/session";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
-import { useParams } from "react-router-dom/cjs/react-router-dom.min";
-import { fetchListing, getListing } from "../../store/listings";
+import { useParams, useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { getListing } from "../../store/listings";
 import { createReservation } from "../../store/reservations";
 
 function ReservationForm() {
   const { listingId } = useParams();
+  const history = useHistory();
   const dispatch = useDispatch();
   const listing = useSelector(getListing(listingId))
   const sessionUser = useSelector(state => state.session.user);
 
-  let reserverId = 1900
+  let reserverId
   
   if (sessionUser !== null) {
     reserverId = sessionUser.id
@@ -32,6 +32,7 @@ function ReservationForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setErrors([]);
+    history.push('/trips')
     price = Math.floor((endDate.slice(8) - startDate.slice(8)) * (listing.price + (numGuests-1)*10) * 8 / 7 + (listing.boat ? 20 : 0));
     console.log(9)
     // numGuests = 1;
