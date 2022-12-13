@@ -4,6 +4,7 @@ import LoginFormModal from '../LoginFormModal';
 import './Navigation.css';
 import SignupFormModal from '../SignupFormModal';
 import * as sessionActions from '../../store/session';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 // import DemoLogin from '../DemoLogin';
 // import { NavLink } from 'react-router-dom';
 // import ProfileButton from './ProfileButton';
@@ -21,12 +22,15 @@ function Navigation(){
   let sessionLinks;
   if (sessionUser) {
     sessionLinks = (
-      <div className="logged-in-links">
-        {/* <li>{sessionUser.firstName}</li>
-        <li>{sessionUser.email}</li> */}
-        <li>
-          <div className='dropdown-menu-option' onClick={logout}><span id='logout'>Log Out</span></div>
-        </li>
+      <div className="logged-out-links">
+        <ul>
+          <li>
+            <Link id='trips' className='dropdown-menu-option' to={'/trips'}>My Trips</Link>
+          </li>
+          <li className='dropdown-menu-option' onClick={logout}>
+            <span id='logout'>Log Out</span>
+          </li>
+        </ul>
       </div>
     );
   } else {

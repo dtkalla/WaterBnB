@@ -35,8 +35,8 @@
 .listing-index-item {
     width: 250px;
     height: 250px;
-    padding: 20px;
-    padding-bottom: 90px;
+    margin: 20px;
+    margin-bottom: 90px;
 }
 
 
@@ -190,4 +190,14 @@
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 3;
-  }
+}
+
+
+#reservation-form {
+    position: absolute;
+    left: 50%;
+    margin-top: 30px;
+    width: 38.5%;
+    border-radius: 20px;
+    border: 1px solid lightgrey;
+}

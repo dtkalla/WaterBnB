@@ -864,6 +864,16 @@ ApplicationRecord.transaction do
 
     #Add Iguazu
 
+    #Add Coney Island
+
+    #Add Cano Cristales
+
+    #Add Otavalo
+
+    #Oil rig
+
+    #Crater Lake
+
 
     puts "Destroying reservations table..."
     # Unnecessary if using `rails db:seed:replant`
@@ -891,8 +901,8 @@ ApplicationRecord.transaction do
         reserver_id: 2,
         listing_id: 4,
         start_date: Date.new(2023,2,16),
-        end_date: Date.new(2023,2,20),
-        num_guests: 1,
+        end_date: Date.new(2023,2,26),
+        num_guests: 2,
         price: 174
     )
 

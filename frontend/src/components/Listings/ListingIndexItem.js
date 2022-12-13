@@ -6,7 +6,6 @@ import './listings.css'
 
 const ListingIndexItem = (props) => {
     const listing = props.listing
-    // console.log(listing.picturesUrl)
     // const dispatch = useDispatch()
 
     // const handleClick = (e) => {
