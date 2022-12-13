@@ -34,7 +34,6 @@ function ReservationForm() {
     setErrors([]);
     history.push('/trips')
     price = Math.floor((endDate.slice(8) - startDate.slice(8)) * (listing.price + (numGuests-1)*10) * 8 / 7 + (listing.boat ? 20 : 0));
-    console.log(9)
     // numGuests = 1;
     return dispatch(createReservation({ startDate, endDate, numGuests, price, listingId, reserverId }))
       .catch(async (res) => {

@@ -12,8 +12,6 @@ export const MapContainer = (props) => {
     }
     
     const locations = props.locations
-
-    console.log(locations[0])
     
     const mapStyles = {
         padding: "10px",        
