@@ -13,7 +13,11 @@ function ReservationForm() {
   const listing = useSelector(getListing(listingId))
   const sessionUser = useSelector(state => state.session.user);
 
-  const reserverId = sessionUser.id
+  let reserverId = 1900
+  
+  if (sessionUser !== null) {
+    reserverId = sessionUser.id
+  }
 
   // const [price, setPrice] = useState("")
   // const [numGuests, setNumGuests] = useState("");
@@ -29,6 +33,7 @@ function ReservationForm() {
     e.preventDefault();
     setErrors([]);
     price = Math.floor((endDate.slice(8) - startDate.slice(8)) * (listing.price + (numGuests-1)*10) * 8 / 7 + (listing.boat ? 20 : 0));
+    console.log(9)
     // numGuests = 1;
     return dispatch(createReservation({ startDate, endDate, numGuests, price, listingId, reserverId }))
       .catch(async (res) => {
@@ -47,7 +52,7 @@ function ReservationForm() {
   const currentDate = new Date()
 
 
-  return (
+  return (sessionUser && 
     <form id='reservation-form' onSubmit={handleSubmit}>
       {/* <input type="hidden" value={listingId} />
 
@@ -115,7 +120,7 @@ function ReservationForm() {
         </ul>
         <br/>
         
-        <Link to='/trips'><button className="reservation-button" type="submit">Reserve</button></Link>
+        <button className="reservation-button" type="submit">Reserve</button>
       </ul>
       
       
