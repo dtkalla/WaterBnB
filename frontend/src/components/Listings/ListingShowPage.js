@@ -11,6 +11,7 @@ import kitchen from './kitchen.png';
 import './listings.css'
 import ReservationForm from '../Reservations/ReservationForm';
 import ShowMapContainer from '../MapContainer/ShowMapContainer';
+import ReviewsIndex from '../Reviews/ReviewsIndex';
 
 
 const ListingShow = () => {
@@ -103,7 +104,7 @@ const ListingShow = () => {
             </div>
             <ShowMapContainer locations={locations} />
 
-            {/* ReviewsIndex */}
+            {/* <ReviewsIndex /> */}
         </div>
     )
 }

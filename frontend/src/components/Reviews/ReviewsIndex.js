@@ -1,27 +1,17 @@
+import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { getReviews } from "../../store/reviews";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import ReviewIndexItem from "./ReviewIndexItem";
 
 const ReviewsIndex = () => {
+    const { listingId } = useParams()
     const dispatch = useDispatch();
     const reviews = useSelector(getReviews)
 
-    // useEffect(() => {
-    //     dispatch(fetchListings())
-    // }, [])
-
-
-    // for (let i = 0; i < listings.length; i++) {
-    //     locations.push({
-    //         name: listings[i].id,
-    //         title: listings[i].listerName+"'s "+listings[i].buildingType,
-    //         place: listings[i].city + ', ' + listings[i].country,
-    //         price: listings[i].price,
-    //         pic: listings[i].picturesUrl,
-    //         location: {
-    //             lat: parseFloat(listings[i].latitude),
-    //             lng: parseFloat(listings[i].longitude)
-    //         }
-    //     })
-    // }
+    useEffect(() => {
+        dispatch(getReviews(listingId))
+    }, [])
 
     const reviewItems = reviews.map((review) => {
         return <ReviewIndexItem key={review.id} review={review} />
