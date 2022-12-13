@@ -78,7 +78,12 @@ const ListingShow = () => {
 
             <div id='listing-show-page'>
             
-            <h2>{l.listerName}'s {l.buildingType} near the {l.typeOfWater}</h2>
+            <div id='show-page-title-pic'>
+                <h2>{l.listerName}'s {l.buildingType} near the {l.typeOfWater}</h2>
+                <img id='profile-pic-1' src='https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg' />
+            </div>
+
+            
             <span>{l.beds + 1} guests · {l.bedrooms} {l.bedrooms > 1 ? "bedrooms" : "bedroom"} · {l.beds} {l.beds > 1 ? "beds" : "bed"} · {l.bathrooms} {l.bathrooms > 1 ? "bathrooms" : "bathroom"}</span>
             <span>{l.city}, {l.country}</span>
             <div className='solid-line'></div>
@@ -103,7 +108,7 @@ const ListingShow = () => {
                 </ul>
             </div>
             <ShowMapContainer locations={locations} />
-
+            <h2 id='reviews-title'>Reviews</h2>
             <ReviewsIndex />
         </div>
     )

@@ -2,7 +2,6 @@ import './Reviews.css'
 
 const ReviewIndexItem = (props) => {
     const review = props.review
-    console.log(review)
 
     const month = {
         '01': 'Jan',
@@ -22,10 +21,14 @@ const ReviewIndexItem = (props) => {
     if (review.id) {
         return (
             <div className="review-index-item">
-                <h2 id='reviewer-name'>{review.reviewerName}</h2>
-                <i id='small-review-text'>{month[review.reviewDate.slice(5,7)] + ' ' + review.reviewDate.slice(0,4)}</i>
-                <br/>
-                <br/>
+                <div id='review-info'>
+                    <img id='profile-pic-2' src='https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg' />
+                    <div id='review-name-date'>
+                        <span id='reviewer-name'>{review.reviewerName}</span>
+                        <br/>
+                        <i id='small-review-text'>{month[review.reviewDate.slice(5,7)] + ' ' + review.reviewDate.slice(0,4)}</i>
+                    </div>
+                </div>
                 <span>{review.body}</span>
             </div>
         )

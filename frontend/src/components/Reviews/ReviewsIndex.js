@@ -7,14 +7,12 @@ import { fetchReviews } from "../../store/reviews";
 
 const ReviewsIndex = () => {
     const { listingId } = useParams()
-    console.log(listingId)
     const dispatch = useDispatch();
     const reviews = useSelector(getReviews)
-    console.log(reviews)
 
     useEffect(() => {
         dispatch(fetchReviews(listingId))
-    }, [listingId])
+    }, [])
 
     const reviewItems = reviews.map((review) => {
         return (listingId == review.listingId && <ReviewIndexItem key={review.id} review={review} />)
