@@ -913,5 +913,41 @@ ApplicationRecord.transaction do
         price: 174
     )
 
+
+    puts "Destroying reviews table..."
+    # Unnecessary if using `rails db:seed:replant`
+    Review.destroy_all
+  
+    puts "Resetting primary keys..."
+    # For easy testing, so that after seeding, the first `Listing` has `id` of 1
+    ApplicationRecord.connection.reset_pk_sequence!('reviews')
+  
+    puts "Creating reviews..."
+
+    Review.create!(
+        reviewer_id: 2,
+        listing_id: 1,
+        review_date: Date.new(2021,7,13),
+        body: "This was a great place to stay!  I have specific and not at all generic opinions about it!",
+        reviewer_name: "Anthony"
+    )
+
+    Review.create!(
+        reviewer_id: 2,
+        listing_id: 7,
+        review_date: Date.new(2020,3,20),
+        body: "The place was nice, but COVID-19 kind of ruined the trip...",
+        reviewer_name: "Anthony"
+    )
+
+
+    Review.create!(
+        reviewer_id: 5,
+        listing_id: 2,
+        review_date: Date.new(2019,6,2),
+        body: "Not nearly as cool as Atlantis, tbh.",
+        reviewer_name: "Brian"
+    )
+
     puts "Done!"
   end
