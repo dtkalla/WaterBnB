@@ -21,11 +21,11 @@ const ListingShow = () => {
 
 
     const locations = [{
-        lat: parseFloat(l.latitude),
-        lng: parseFloat(l.longitude),
+        lat: l ? parseFloat(l.latitude) : 40.7531,
+        lng: l ? parseFloat(l.longitude) : -74.0060,
         location: {
-            lat: parseFloat(l.latitude),
-            lng: parseFloat(l.longitude)
+            lat: l ? parseFloat(l.latitude) : 40.7531,
+            lng: l ? parseFloat(l.longitude) : -74.0060
         }
     }]
 

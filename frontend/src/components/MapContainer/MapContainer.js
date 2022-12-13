@@ -31,7 +31,7 @@ export const MapContainer = (props) => {
        googleMapsApiKey='AIzaSyDnX846EEYsa7iPVXacYUrZsHxX9MDIiN0'>
         <GoogleMap className='index-map'
           mapContainerStyle={mapStyles}
-          zoom={11}
+          zoom={10}
           center={defaultCenter}>
          {
             locations.map(item => {
