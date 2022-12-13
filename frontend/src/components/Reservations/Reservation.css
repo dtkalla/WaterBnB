@@ -166,6 +166,7 @@
 
 #reservation-form {
     width: 33%;
+    min-width: 400px;
     margin-left: 5%;
 }
 
