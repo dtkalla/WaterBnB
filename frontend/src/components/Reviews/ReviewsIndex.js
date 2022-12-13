@@ -3,6 +3,7 @@ import { getReviews } from "../../store/reviews";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import ReviewIndexItem from "./ReviewIndexItem";
+import { fetchReviews } from "../../store/reviews";
 
 const ReviewsIndex = () => {
     const { listingId } = useParams()
@@ -12,11 +13,11 @@ const ReviewsIndex = () => {
     console.log(reviews)
 
     useEffect(() => {
-        dispatch(getReviews())
+        dispatch(fetchReviews(listingId))
     }, [listingId])
 
     const reviewItems = reviews.map((review) => {
-        return <ReviewIndexItem key={review.id} review={review} />
+        return (listingId == review.listingId && <ReviewIndexItem key={review.id} review={review} />)
     })
 
     return (

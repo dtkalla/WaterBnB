@@ -104,7 +104,7 @@ const ListingShow = () => {
             </div>
             <ShowMapContainer locations={locations} />
 
-            {/* <ReviewsIndex /> */}
+            <ReviewsIndex />
         </div>
     )
 }

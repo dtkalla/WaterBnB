@@ -1,0 +1,19 @@
+#small-review-text {
+    font-size: 14px;
+    /* margin-bottom: 15px; */
+}
+
+#reviewer-name {
+    margin-bottom: 0px;
+}
+
+
+.review-index-item {
+    margin-left: 2%;
+    width: 40%;
+}
+
+#reviews-index-ul {
+    display: flex;
+    flex-wrap: wrap;
+}

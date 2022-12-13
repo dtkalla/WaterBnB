@@ -29,12 +29,12 @@ export const fetchReviews = (listingId) => async (dispatch) => {
     dispatch(receiveReviews(data.reviews))
 }
 
-export const fetchReview = (reviewId) => async (dispatch) => {
-    const res = await fetch(`/api/reviews/${reviewId}`)
-    const data = await res.json();
+// export const fetchReview = (reviewId) => async (dispatch) => {
+//     const res = await fetch(`/api/reviews/${reviewId}`)
+//     const data = await res.json();
 
-    dispatch(receiveReview(data.review))
-}
+//     dispatch(receiveReview(data.review))
+// }
 
 
 
