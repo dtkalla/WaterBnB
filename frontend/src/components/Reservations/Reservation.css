@@ -224,3 +224,7 @@
 .res-index-map {
     margin: 10px;
 }
+
+.res-login-notice {
+    border: none !important;
+}
