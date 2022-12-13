@@ -9,6 +9,7 @@ const ReviewsIndex = () => {
     const { listingId } = useParams()
     const dispatch = useDispatch();
     const reviews = useSelector(getReviews)
+    console.log(reviews)
 
     useEffect(() => {
         dispatch(fetchReviews(listingId))
