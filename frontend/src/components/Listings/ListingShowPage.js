@@ -10,6 +10,7 @@ import checkin from './checkin.png';
 import kitchen from './kitchen.png';
 import './listings.css'
 import ReservationForm from '../Reservations/ReservationForm';
+import ShowMapContainer from '../MapContainer/ShowMapContainer';
 
 
 const ListingShow = () => {
@@ -18,6 +19,15 @@ const ListingShow = () => {
     const l = useSelector(getListing(listingId))
     const [showModal, setShowModal] = useState(false);
 
+
+    const locations = [{
+        lat: parseFloat(l.latitude),
+        lng: parseFloat(l.longitude),
+        location: {
+            lat: parseFloat(l.latitude),
+            lng: parseFloat(l.longitude)
+        }
+    }]
 
     useEffect(() => {
         dispatch(fetchListing(listingId))
@@ -61,8 +71,9 @@ const ListingShow = () => {
                 </div>
             </div>
 
-            <ReservationForm id='reservation-form' />
-
+            <div className='listing-map'>
+                <ReservationForm id='reservation-form' />
+            </div>
 
             <div id='listing-show-page'>
             
@@ -90,6 +101,7 @@ const ListingShow = () => {
                     {l.selfCheckIn ? <li><img src={checkin}/>Self Check-in</li> : ''}
                 </ul>
             </div>
+            <ShowMapContainer locations={locations} />
         </div>
     )
 }
