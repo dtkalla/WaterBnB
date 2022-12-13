@@ -201,6 +201,34 @@ ApplicationRecord.transaction do
     )
 
 
+    Listing.create!(
+        city: 'Flushing',
+        country: 'New York',
+        description: "Make sure to try the hot pot!", 
+        pictures_url: 'https://waterbnb-seeds.s3.amazonaws.com/9_0.png',
+        lister_id: 1,
+        latitude: 40.7675,
+        longitude: -73.8331,
+        price: 144,
+        building_type: "cottage",
+        lister_name: "Muhammed"
+    )
+
+
+        Listing.create!(
+        city: 'Coney Island',
+        country: 'New York',
+        description: "Heaven on earth for just a nickel!", 
+        pictures_url: 'https://waterbnb-seeds.s3.amazonaws.com/10_0.png',
+        lister_id: 3,
+        latitude: 40.5755,
+        longitude: -73.9707,
+        price: 277,
+        building_type: "apartment",
+        lister_name: "Barbara"
+    )
+
+
     # Listing.create!(
     #     city: 'Buenos Aires',
     #     country: 'Argentina',
@@ -275,28 +303,7 @@ ApplicationRecord.transaction do
     # )
 
 
-    # Listing.create!(
-    #     city: 'Flushing',
-    #     country: 'New York',
-    #     description: "Make sure to try the hot pot!", 
-    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
-    #     lister_id: 1,
-    #     latitude: 40.7675,
-    #     longitude: -73.8331,
-    #     price: 144,
-    # )
 
-
-    # Listing.create!(
-    #     city: 'Crown Heights',
-    #     country: 'New York',
-    #     description: "Stay in the affordable part of Brooklyn", 
-    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
-    #     lister_id: 3,
-    #     latitude: 40.6694,
-    #     longitude: -73.9422,
-    #     price: 99,
-    # )
 
 
     # Listing.create!(
@@ -864,7 +871,7 @@ ApplicationRecord.transaction do
 
     #Add Iguazu
 
-    #Add Coney Island
+    #Add Dumbo
 
     #Add Cano Cristales
 

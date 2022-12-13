@@ -25,6 +25,7 @@ function ReservationUpdatePage() {
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
   const [numGuests, setNumGuests] = useState("")
+  setNumGuests(1)
 
   const [errors, setErrors] = useState([]);
 

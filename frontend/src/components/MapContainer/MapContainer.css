@@ -1,0 +1,18 @@
+#google-map-index-image {
+    width: 150px;
+}
+
+.map-modal-elements p {
+    margin: 5px;
+    /* text-decoration: none; */
+    color: black;
+}
+
+.map-modal-elements {
+    text-decoration: none;
+}
+
+.index-map {
+    /* margin-right: 10%; */
+    width: 50%;
+}

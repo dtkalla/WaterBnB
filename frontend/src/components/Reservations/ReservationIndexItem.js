@@ -9,6 +9,7 @@ import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
 import { useSelector } from 'react-redux';
 import { getListing } from '../../store/listings';
 import { updateReservation } from '../../store/reservations';
+import ResMapContainer from '../MapContainer/ResMapContainer';
 
 
 const ReservationIndexItem = (props) => {
@@ -19,6 +20,15 @@ const ReservationIndexItem = (props) => {
     const handleClick = (e) => {
         dispatch(deleteReservation(reservation.id))
     }
+
+    const locations = [{
+        lat: parseFloat(listing.latitude),
+        lng: parseFloat(listing.longitude),
+        location: {
+            lat: parseFloat(listing.latitude),
+            lng: parseFloat(listing.longitude)
+        }
+    }]
 
 
     const capitalize = (str) => {
@@ -74,8 +84,8 @@ const ReservationIndexItem = (props) => {
                     
                 </div>
                 <img className="reservation-index-image" src={listing.pictures_url} alt="" />
-                <div>
-                    {/* Map goes here */}
+                <div className='res-index-map'>
+                    <ResMapContainer locations={locations} />
                 </div>
             </div>
         )

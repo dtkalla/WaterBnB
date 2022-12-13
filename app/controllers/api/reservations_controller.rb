@@ -14,7 +14,9 @@ class Api::ReservationsController < ApplicationController
     end
 
     def index
-        @reservations = Reservation.all.where(reserver_id: current_user.id)
+        @reservations = Reservation.all
+        .where(reserver_id: current_user.id)
+        .order("start_date")
         render :index
     end
 

@@ -9,6 +9,7 @@ import ListingShow from "./components/Listings/ListingShowPage";
 import './index.css'
 import ReservationsIndex from "./components/Reservations/ReservationsShowPage";
 import ReservationUpdatePage from "./components/Reservations/ReservationUpdatePage";
+import MapContainer from "./components/MapContainer/MapContainer";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Switch>
           <Route exact path="/">
             <ListingIndex />
+            {/* <MapContainer /> */}
           </Route>
           <Route path="/listings/:listingId">
             <ListingShow />

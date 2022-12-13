@@ -1,3 +1,10 @@
+.listings-index {
+    display: flex;
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
+    /* justify-content: center; */
+}
+
 .listings-index ul {
     display: flex;
     flex-direction: row;
@@ -200,4 +207,18 @@
     width: 38.5%;
     border-radius: 20px;
     border: 1px solid lightgrey;
+}
+
+
+.index-map {
+    display: flex;
+    /* justify-self: flex-end; */
+    /* margin-top: 30px; */
+    width: 40%;
+    /* margin-right: 10%; */
+}
+
+.listing-map {
+    /* margin: 5%; */
+    margin-bottom: 0;
 }
