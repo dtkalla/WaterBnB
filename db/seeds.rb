@@ -932,5 +932,22 @@ ApplicationRecord.transaction do
         reviewer_name: "Anthony"
     )
 
+    Review.create!(
+        reviewer_id: 2,
+        listing_id: 7,
+        review_date: Date.new(2020,3,20),
+        body: "The place was nice, but COVID-19 kind of ruined the trip...",
+        reviewer_name: "Anthony"
+    )
+
+
+    Review.create!(
+        reviewer_id: 5,
+        listing_id: 2,
+        review_date: Date.new(2019,6,2),
+        body: "Not nearly as cool as Atlantis, tbh.",
+        reviewer_name: "Brian"
+    )
+
     puts "Done!"
   end
