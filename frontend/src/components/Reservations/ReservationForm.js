@@ -96,20 +96,20 @@ function ReservationForm() {
         <br/>
         <ul className="fees">
           <span className="underline">
-            ${listing.price + (numGuests-1)*10} X {(startDate && endDate) ? endDate.slice(8) - startDate.slice(8) : 0} nights
+            ${listing.price + (numGuests ? (numGuests-1)*10 : 0)} X {(startDate && endDate) ? endDate.slice(8) - startDate.slice(8) : 0} nights
           </span>
           <span>
-            {(startDate && endDate) ? '$'+(endDate.slice(8) - startDate.slice(8))*(listing.price + (numGuests-1)*10) : '$0'}
+            {(startDate && endDate) ? '$'+(endDate.slice(8) - startDate.slice(8))*(listing.price + (numGuests ? (numGuests-1)*10 : 0)) : '$0'}
           </span>
           <span className="underline">{listing.boat ? "Boating fee" : ''}</span>
           <span>{listing.boat ? '$20' : ''}</span>
           <span className="underline">Service fee</span>
-          <span>{'$' + Math.floor(((startDate && endDate) ? endDate.slice(8) - startDate.slice(8) : 0) * (listing.price + (numGuests-1)*10) / 7)}</span>
+          <span>{'$' + Math.floor(((startDate && endDate) ? endDate.slice(8) - startDate.slice(8) : 0) * (listing.price + (numGuests ? (numGuests-1)*10 : 0)) / 7)}</span>
           <div className='solid-line-reservations-2'></div>
           <span></span>
         <span>Total cost</span>
           <span>
-            {'$' + Math.floor(((startDate && endDate) ? endDate.slice(8) - startDate.slice(8) : 0) * (listing.price + (numGuests-1)*10) * 8 / 7 + (listing.boat ? 20 : 0))}
+            {'$' + Math.floor(((startDate && endDate) ? endDate.slice(8) - startDate.slice(8) : 0) * (listing.price + (numGuests ? (numGuests-1)*10 : 0)) * 8 / 7 + (listing.boat ? 20 : 0))}
           </span>
         </ul>
         
