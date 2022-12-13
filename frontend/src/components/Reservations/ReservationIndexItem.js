@@ -22,11 +22,11 @@ const ReservationIndexItem = (props) => {
     }
 
     const locations = [{
-        lat: parseFloat(listing.latitude),
-        lng: parseFloat(listing.longitude),
+        lat: listing ? parseFloat(listing.latitude) : 40.7531,
+        lng: listing ? parseFloat(listing.longitude) : -74.0060,
         location: {
-            lat: parseFloat(listing.latitude),
-            lng: parseFloat(listing.longitude)
+            lat: listing ? parseFloat(listing.latitude) : 40.7531,
+            lng: listing ? parseFloat(listing.longitude) : -74.0060
         }
     }]
 
