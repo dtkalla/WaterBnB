@@ -237,3 +237,35 @@
 #reviews-title {
     margin-left: 5%;
 }
+
+#star {
+    width: 20px;
+    height: 17px;
+    display: flex;
+    flex-direction: row;
+}
+
+#stars {
+    display: flex;
+    font-size: 15px;
+    color: gray;
+}
+
+#location-rating {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#star-2 {
+    width: 25px;
+    height: 22px;
+    display: flex;
+    flex-direction: row;
+}
+
+#stars-2 {
+    display: flex;
+    font-size: 20px;
+    /* color: gray; */
+}
