@@ -1,7 +1,7 @@
 class Review < ApplicationRecord
     validates :reviewer_id, :listing_id, :review_date, :reviewer_name, presence: true
 
-    validates_uniqueness_of :body, :scope => [:reviewer_id, :listing_id, :review_date, :reviewer_name]
+    validates_uniqueness_of :reviewer_id, :scope => [:listing_id, :review_date]
 
     before_validation :ensure_listing
 
