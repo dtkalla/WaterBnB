@@ -13,6 +13,14 @@ class Review < ApplicationRecord
         foreign_key: :reviewer_id,
         class_name: :User
 
+
+    def self.see_reviews
+        reviews = Review.all
+        arr = []
+        reviews.each { |review| arr << [review.reviewer_name, review.body] }
+        arr
+    end
+
     private
     def ensure_listing
         @listing ||= Listing.find(listing_id)

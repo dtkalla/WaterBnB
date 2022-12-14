@@ -932,6 +932,23 @@ ApplicationRecord.transaction do
         reviewer_name: "Anthony"
     )
 
+
+    Review.create!(
+        reviewer_id: 1,
+        listing_id: 1,
+        review_date: Date.new(2022,1,4),
+        body: "West coast best coast!",
+        reviewer_name: "Muhammed"
+    )
+
+    Review.create!(
+        reviewer_id: 4,
+        listing_id: 1,
+        review_date: Date.new(2015,7,4),
+        body: "Lots of fireworks over the Bay on the 4th of July!",
+        reviewer_name: "Elisa"
+    )
+
     Review.create!(
         reviewer_id: 2,
         listing_id: 7,

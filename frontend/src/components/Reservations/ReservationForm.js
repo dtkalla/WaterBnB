@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import { useParams, useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { getListing } from "../../store/listings";
 import { createReservation } from "../../store/reservations";
+import moment from 'moment';
 
 function ReservationForm() {
   const { listingId } = useParams();
@@ -69,8 +70,8 @@ function ReservationForm() {
               <label>
               <input className="date-input" type="date" value={startDate}
               onChange={(e) => setStartDate(e.target.value)} required 
-              placeholder={currentDate}
-              min={currentDate}/>
+              // placeholder={currentDate}
+              min={moment().format("YYYY-MM-DD")}/>
               </label>
             </div>
             <div className='vertical-line-reservations-2'></div>
@@ -81,7 +82,7 @@ function ReservationForm() {
               onChange={(e) => {
                 setEndDate(e.target.value)
               }} required 
-              min={startDate}/>
+              min={startDate ? startDate : moment().format("YYYY-MM-DD")}/>
               </label>
             </div>
           </div>

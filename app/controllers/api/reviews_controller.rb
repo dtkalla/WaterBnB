@@ -12,7 +12,8 @@ class Api::ReviewsController < ApplicationController
     end
 
     def index
-        @reviews = Review.all
+        @reviews = Review.all.sort_by {|review| review.review_date}
+        @reviews = @reviews.reverse
         # .where(reviewer_id: current_user.id)
         render :index
     end
