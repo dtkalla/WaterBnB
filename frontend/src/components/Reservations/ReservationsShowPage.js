@@ -7,6 +7,7 @@ import ReservationIndexItem from './ReservationIndexItem';
 const ReservationsIndex = () => {
     const dispatch = useDispatch();
     const reservations = useSelector(getReservations)
+    reservations.sort((a, b) => (a.startDate > b.startDate) ? 1 : -1)
 
     useEffect(() => {
         dispatch(fetchReservations())

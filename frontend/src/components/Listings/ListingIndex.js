@@ -30,7 +30,7 @@ const ListingIndex = () => {
                 lng: parseFloat(listings[i].longitude)
             }
         })
-        if(listings[0] && listings[0].id === 1 && listings[1].id === 2) listings.sort(() => Math.random() - 0.5) 
+        // if(listings[0] && listings[0].id === 1 && listings[1].id === 2) listings.sort(() => Math.random() - 0.5) 
     }
 
     const listingItems = listings.map((listing) => {

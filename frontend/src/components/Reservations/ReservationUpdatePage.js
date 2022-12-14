@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 // import * as sessionActions from "../../store/session";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import { useDispatch } from "react-redux";
@@ -6,40 +6,28 @@ import { useSelector } from "react-redux";
 import { useParams, useHistory } from "react-router-dom/cjs/react-router-dom.min";
 // import { fetchListing, getListing } from "../../store/listings";
 import { getReservation, updateReservation } from "../../store/reservations";
-import { fetchReservation } from "../../store/reservations";
 
 function ReservationUpdatePage() {
   const { reservationId } = useParams();
+  // console.log(reservationId)
   const history = useHistory();
   const dispatch = useDispatch();
   const reservation = useSelector(getReservation(reservationId))
-
-  const sessionUser = useSelector(state => state.session.user);
-  const [startDate, setStartDate] = useState("");
-  const [endDate, setEndDate] = useState("");
-  const [numGuests, setNumGuests] = useState("")
-  setNumGuests(1)
-  const [errors, setErrors] = useState([]);
-
-  
-  useEffect(() => {
-    dispatch(fetchReservation(reservationId))
-  }, [])
-  
-  if (!reservation) return null;
   const listing = reservation.listing
   const l = listing
+  const sessionUser = useSelector(state => state.session.user);
   const listingId = listing.id
   const reserverId = sessionUser.id
   const id = reservationId
 
-
-  let price = listing.price
-
   // const [price, setPrice] = useState("")
   // const [numGuests, setNumGuests] = useState("");
+  let price = listing.price
+  const [startDate, setStartDate] = useState("");
+  const [endDate, setEndDate] = useState("");
+  const [numGuests, setNumGuests] = useState("")
 
-
+  const [errors, setErrors] = useState([]);
 
 
   const handleSubmit = (e) => {

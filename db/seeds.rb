@@ -51,6 +51,22 @@ ApplicationRecord.transaction do
     )
 
 
+    User.create!(
+        first_name: 'Karen',
+        last_name: 'Smith',
+        email: 'ihateserviceworkers@bigbiz.org',
+        password: 'genericpw'
+    )
+
+
+    User.create!(
+        first_name: 'Charles',
+        last_name: 'Johnson',
+        email: 'charles@johnson.net',
+        password: 'chazzitup'
+    )
+
+
     # 10.times do 
     #   User.create!({
     #     first_name: Faker::Name.firstName,
@@ -952,8 +968,8 @@ ApplicationRecord.transaction do
     Review.create!(
         reviewer_id: 2,
         listing_id: 7,
-        review_date: Date.new(2020,3,20),
-        body: "The place was nice, but COVID-19 kind of ruined the trip...",
+        review_date: Date.new(2020,8,20),
+        body: "The place was nice, and I loved going to Lake Itasca and doing the Bemidji State Park bogwalk!",
         reviewer_name: "Anthony"
     )
 
@@ -964,6 +980,244 @@ ApplicationRecord.transaction do
         review_date: Date.new(2019,6,2),
         body: "Not nearly as cool as Atlantis, tbh.",
         reviewer_name: "Brian"
+    )
+
+    Review.create!(
+        reviewer_id: 1,
+        listing_id: 2,
+        review_date: Date.new(2022,4,27),
+        body: "The location was great -- easy access to Central Park and museums!  The unit gets a lot of natural light and has fantastic sunrises!  The A/C works great.  Host was very responsive.  Would stay again",
+        reviewer_name: "Muhammed"
+    )
+
+
+    Review.create!(
+        reviewer_id: 3,
+        listing_id: 2,
+        review_date: Date.new(2021,9,13),
+        body: "I liked the neighborhood feel and being a short walk from the subway.",
+        reviewer_name: "Barbara"
+    )
+
+
+    Review.create!(
+        reviewer_id: 6,
+        listing_id: 6,
+        review_date: Date.new(2022,5,18),
+        body: "It's a great place to stop in for a work trip.  Vibrant neighborhood culture.  Lots of natural light and the building is gorgeous.  Would stay again.",
+        reviewer_name: "Karen"
+    )
+
+
+    Review.create!(
+        reviewer_id: 7,
+        listing_id: 6,
+        review_date: Date.new(2021,7,22),
+        body: "Paper thin walls.  Terribly hot.  Dirty streets.",
+        reviewer_name: "Charles"
+    )
+
+
+    Review.create!(
+        reviewer_id: 4,
+        listing_id: 6,
+        review_date: Date.new(2019,12,26),
+        body: "A rat got in the building in the middle of the night.  Owner nonresponsive.  Had to wake up neighbors to deal with it.  Would not stay again.",
+        reviewer_name: "Elisa"
+    )
+
+
+    Review.create!(
+        reviewer_id: 4,
+        listing_id: 9,
+        review_date: Date.new(2018,2,9),
+        body: "Muhammed's cottage was perfect for our extended family gathering. It's spacious, full of natural light and incredibly well designed. The beds were so comfy and you can't beat the views. Would definitely recommend this home. We hope to return in the summer to take full advantage of the pool!",
+        reviewer_name: "Elisa"
+    )
+
+
+    Review.create!(
+        reviewer_id: 2,
+        listing_id: 9,
+        review_date: Date.new(2016,3,15),
+        body: "Beautiful house and amazing view. Mohammed was a great host and very responsive to anything that came up.",
+        reviewer_name: "Anthony"
+    )
+
+
+    Review.create!(
+        reviewer_id: 7,
+        listing_id: 9,
+        review_date: Date.new(2022,11,18),
+        body: "Everything beyond my expectation! House & Living Room 10/10.  Bed Room super clean.  Bath Room nice and clean.",
+        reviewer_name: "Charles"
+    )
+
+
+    Review.create!(
+        reviewer_id: 7,
+        listing_id: 10,
+        review_date: Date.new(2020,10,29),
+        body: "I wouldn't want people to book so I could have it again next time!  Just a joke...but seriously, 10/10.",
+        reviewer_name: "Charles"
+    )
+
+
+    Review.create!(
+        reviewer_id: 5,
+        listing_id: 10,
+        review_date: Date.new(2018,5,2),
+        body: "Nice place overlooking the water.  Close to a lot of attractions.  I loved going out on the boat!",
+        reviewer_name: "Elisa"
+    )
+
+
+    Review.create!(
+        reviewer_id: 1,
+        listing_id: 10,
+        review_date: Date.new(2014,4,1),
+        body: "Place is awesome!  It was nice falling asleep to the sounds of the waves.  Completely as advertised.",
+        reviewer_name: "Muhammed"
+    )
+
+
+
+    Review.create!(
+        reviewer_id: 2,
+        listing_id: 3,
+        review_date: Date.new(2016,10,12),
+        body: "Beautiful Gaudi architectural buildings.  What an experience!",
+        reviewer_name: "Anthony"
+    )
+
+
+    Review.create!(
+        reviewer_id: 6,
+        listing_id: 3,
+        review_date: Date.new(2021,8,24),
+        body: "You're never alone in Barcelona.",
+        reviewer_name: "Karen"
+    )
+
+
+    Review.create!(
+        reviewer_id: 1,
+        listing_id: 3,
+        review_date: Date.new(2019,7,2),
+        body: "It rained the whole time.  Ugh!",
+        reviewer_name: "Muhammed"
+    )
+
+
+
+    Review.create!(
+        reviewer_id: 2,
+        listing_id: 4,
+        review_date: Date.new(2021,12,25),
+        body: "Boo!",
+        reviewer_name: "Anthony"
+    )
+
+
+
+    Review.create!(
+        reviewer_id: 4,
+        listing_id: 4,
+        review_date: Date.new(2022,4,15),
+        body: "Pristine views, as well as state-of-the-art accomodations.  10/10, would recommend!",
+        reviewer_name: "Elisa"
+    )
+
+
+
+    Review.create!(
+        reviewer_id: 5,
+        listing_id: 4,
+        review_date: Date.new(2017,4,16),
+        body: "It was great value for a low price.",
+        reviewer_name: "Brian"
+    )
+
+
+
+    Review.create!(
+        reviewer_id: 1,
+        listing_id: 5,
+        review_date: Date.new(2021,2,22),
+        body: "Hard to get to and very humid.  Unforgettable, but overpriced.",
+        reviewer_name: "Muhammed"
+    )
+
+
+
+    Review.create!(
+        reviewer_id: 3,
+        listing_id: 5,
+        review_date: Date.new(2019,7,14),
+        body: "0/10, I can't swim.",
+        reviewer_name: "Barbara"
+    )
+
+
+
+    Review.create!(
+        reviewer_id: 7,
+        listing_id: 5,
+        review_date: Date.new(2017,9,23),
+        body: "Great seafood selection.  This place is to die for!",
+        reviewer_name: "Charles"
+    )
+
+
+
+
+    Review.create!(
+        reviewer_id: 3,
+        listing_id: 7,
+        review_date: Date.new(2021,12,24),
+        body: "I used to be a high-achieving female executive from NYC or LA with no time for love, but my business sent me here on Christmas.  I met a cute guy who organizes the yearly Christmas pageant, realized the error of my ways, and have decided to move here forever.  Merry Christmas!",
+        reviewer_name: "Barbara"
+    )
+
+
+
+
+    Review.create!(
+        reviewer_id: 6,
+        listing_id: 7,
+        review_date: Date.new(2020,5,26),
+        body: "No one wore a mask in the city, except at the local university.  I'm amazed I didn't catch covid.  (The town is beautiful, though!)",
+        reviewer_name: "Karen"
+    )
+
+
+
+    Review.create!(
+        reviewer_id: 7,
+        listing_id: 8,
+        review_date: Date.new(2018,2,6),
+        body: "Linda casa, localizaçao muito proxima ao centro e restaurantes. Sala grande com cozinha e uma vista linda. Banheiro grande e pratico. quarto com cama confortavel e aconchegante. O local é muito silencioso e gostoso de ficar... apos uma viagem de 10 dias, acabamos ficando no apartamento descansando com a linda vista do lugar. Cozinhamos e tinha tudo necessario para preparar as refeiçoes.",
+        reviewer_name: "Charles"
+    )
+
+
+
+    Review.create!(
+        reviewer_id: 2,
+        listing_id: 8,
+        review_date: Date.new(2022,1,7),
+        body: "Unforgettable experience!  The lake and house are beautiful, and I loved going out in the boat every day.  Can't wait to come back!",
+        reviewer_name: "Anthony"
+    )
+
+
+
+    Review.create!(
+        reviewer_id: 3,
+        listing_id: 8,
+        review_date: Date.new(2020,3,21),
+        body: "Everything was closed due to COVID-19, so I spent a lot of time on the water.  Incredibly peaceful -- I'll remember this trip for the rest of my life.",
+        reviewer_name: "Barbara"
     )
 
     puts "Done!"
