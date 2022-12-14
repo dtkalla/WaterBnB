@@ -9,7 +9,6 @@ import { getReservation, updateReservation } from "../../store/reservations";
 
 function ReservationUpdatePage() {
   const { reservationId } = useParams();
-  // console.log(reservationId)
   const history = useHistory();
   const dispatch = useDispatch();
   const reservation = useSelector(getReservation(reservationId))

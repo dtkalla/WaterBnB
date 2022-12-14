@@ -37,6 +37,18 @@ export const fetchReviews = (listingId) => async (dispatch) => {
 // }
 
 
+export const createReview = (review) => async (dispatch) => {
+    const res = await csrfFetch(`/api/listings/${review.listingId}/reviews`, {
+        method: 'POST',
+        body: JSON.stringify(review),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    const data = await res.json();
+    
+    dispatch(receiveReview(data))
+}
 
 
 const reviewsReducer = (state = {}, action) => {
@@ -45,7 +57,8 @@ const reviewsReducer = (state = {}, action) => {
         case RECEIVE_REVIEWS:
             return {...newState,...action.reviews}
         case RECEIVE_REVIEW:
-            return {[action.review.id]: action.review}
+            newState[action.review.id] = action.review
+            return newState
         default:
             return newState
     }

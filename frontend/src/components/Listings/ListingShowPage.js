@@ -12,6 +12,7 @@ import './listings.css'
 import ReservationForm from '../Reservations/ReservationForm';
 import ShowMapContainer from '../MapContainer/ShowMapContainer';
 import ReviewsIndex from '../Reviews/ReviewsIndex';
+import ReviewForm from '../Reviews/ReviewForm';
 
 
 const ListingShow = () => {
@@ -112,7 +113,7 @@ const ListingShow = () => {
             <ReviewsIndex />
 
             <h2 id='reviews-title'>Leave a Review!</h2>
-            {/* <ReviewForm /> */}
+            <ReviewForm />
         </div>
     )
 }
