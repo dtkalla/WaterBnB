@@ -7,6 +7,8 @@ import '../Listings/listings.css'
 import FilteredMapContainer from './FilteredMapContainer';
 import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
 import './Filter.css'
+import MapContainer from '../MapContainer/MapContainer';
+import '../MapContainer/MapContainer.css'
 
 
 
@@ -70,9 +72,9 @@ const FilteredListings = () => {
     
 
     return (
-        <div className='filtered-listings-index'>
-            <ul id='filtered-listings-index-ul'>
-                <div className='filtered-index-map'>
+        <div className='listings-index'>
+            <ul id='listings-index-ul'>
+                <div className='index-map'>
                     <FilteredMapContainer locations={locations} />
                 </div>
                 {listingItems}

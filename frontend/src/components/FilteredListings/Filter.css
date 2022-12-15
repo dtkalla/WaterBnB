@@ -1,12 +1,11 @@
 #filtered-listings-index {
     display: flex;
     flex-direction: row;
-    /* position: sticky; */
 }
 
 .filtered-index-map {
-    /* margin-left: -5%; */
-    width: 50%;
+    display: flex;
+    width: 40%;
 }
 
 #filtered-listings-index-ul {
@@ -14,17 +13,16 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    position: absolute;
-    top: 50px;
+    /* position: absolute;
+    top: 50px; */
     /* width: 50%; */
-    left: -3%;
+    /* left: -3%; */
 }
 
 #filtered-listings-index-ul div {
     /* width: 20%; */
     /* margin-left: 5%; */
     min-width: 200px;
-    /* margin-bottom: 100px; */
 }
 
 /* .filtered-map-container {
@@ -34,3 +32,18 @@
 } */
 
 
+
+.filtered-listing-index-item {
+    width: 250px;
+    height: 250px;
+    margin: 20px;
+    margin-bottom: 90px;
+}
+
+
+.filtered-index-show-list-element {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: black;
+}

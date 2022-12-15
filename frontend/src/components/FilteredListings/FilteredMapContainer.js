@@ -2,6 +2,8 @@ import React from 'react';
 import { GoogleMap, LoadScript, Marker, InfoWindow } from '@react-google-maps/api';
 import { useState } from 'react';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
+import './Filter.css'
+import '../MapContainer/MapContainer.css'
 
 export const FilteredMapContainer = (props) => {
     const [ selected, setSelected ] = useState({});
@@ -13,24 +15,24 @@ export const FilteredMapContainer = (props) => {
     const locations = props.locations
     
     const mapStyles = {
-        // padding: "10px",        
-        height: "90vh",
-        // width: "100%"
+        padding: "10px",        
+        height: "55vh",
+        width: "150%"
     };
       
       const defaultCenter = {
-        lat: 0, lng: 0
+        lat: 10, lng: 0
       }
     
 
       
   
   return (
-     <LoadScript className='filtered-map-container'
+     <LoadScript
        googleMapsApiKey='AIzaSyDnX846EEYsa7iPVXacYUrZsHxX9MDIiN0'>
         <GoogleMap className='filtered-index-map'
           mapContainerStyle={mapStyles}
-          zoom={1.5}
+          zoom={1.3}
           center={defaultCenter}>
          {
             locations.map(item => {
