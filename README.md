@@ -2,7 +2,7 @@
 
 WaterBnb is a water-themed travel booking site -- a clone of AirBnb.  Like AirBnb, WaterBnb allows users to views different listings around the world, make reservations, and leave ratings and reviews.  It uses the Google Maps API to give exact locations and let users search by location.  The splash page is an index of all the listings, with a map centered in New York City by default.
 
-![](images/WaterBnb_spalsh.png)
+![](images/WaterBnb_splash.png)
 
 
 <!-- ## Wireframe:
