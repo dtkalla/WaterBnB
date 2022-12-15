@@ -47,3 +47,32 @@
     text-decoration: none;
     color: black;
 }
+
+#filter-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: -30px;
+    align-items: flex-end;
+}
+
+#filter-icons > * {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: -10px;
+    display: flex;
+    flex-direction: column;
+    height: 30px;
+}
+
+#filter-icons img {
+    width: 30px;
+    align-self: center;
+}
+
+#filter-icons span {
+    font-size: 12px;
+    text-decoration: none;
+    color: black;
+    align-self: center;
+}

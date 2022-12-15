@@ -1,12 +1,13 @@
 import { Header } from "../Header";
 import { Dropdown } from "../Dropdown/Dropdown";
 import './HeaderBar.css'
-import FilteredMapContainer from "../FilteredListings/FilteredMapContainer";
+import Filters from "../FilteredListings/Filters";
 
 const HeaderBar = () => {
     return (
         <div id="header-bar">
             <Header />
+            <Filters />
             <Dropdown />
         </div>
     )
