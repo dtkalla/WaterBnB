@@ -26,7 +26,7 @@ const FilteredListings = () => {
             case 'pets':
                 return listing.petsAllowed ? listing : null
             case 'well_rated':
-                return listing.numberOfRatings > 5 && listing.rating > 4 ? listing : null
+                return listing.numberOfRatings > 5 && listing.rating > 4.5 ? listing : null
             default:
                 if (parseInt(filter.filter)) {
                     return (listing.price <= parseInt(filter.filter)) ? listing : null
@@ -71,11 +71,10 @@ const FilteredListings = () => {
 
     return (
         <div className='filtered-listings-index'>
-            <div className='filtered-index-map'>
-                <FilteredMapContainer locations={locations} />
-            </div>
-            {/* <div className='solid-line'></div> */}
             <ul id='filtered-listings-index-ul'>
+                <div className='filtered-index-map'>
+                    <FilteredMapContainer locations={locations} />
+                </div>
                 {listingItems}
             </ul>
         </div>

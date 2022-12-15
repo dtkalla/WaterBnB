@@ -15,7 +15,7 @@ export const FilteredMapContainer = (props) => {
     const mapStyles = {
         // padding: "10px",        
         height: "90vh",
-        // width: "50%"
+        // width: "100%"
     };
       
       const defaultCenter = {

@@ -1,6 +1,7 @@
 import { Header } from "../Header";
 import { Dropdown } from "../Dropdown/Dropdown";
 import './HeaderBar.css'
+import FilteredMapContainer from "../FilteredListings/FilteredMapContainer";
 
 const HeaderBar = () => {
     return (

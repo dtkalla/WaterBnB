@@ -1,14 +1,11 @@
 #filtered-listings-index {
     display: flex;
     flex-direction: row;
-    position: sticky;
+    /* position: sticky; */
 }
 
 .filtered-index-map {
-    position: sticky !important;
-    top: 0;
-    margin-left: 50%;
-    margin-top: -10px;
+    /* margin-left: -5%; */
     width: 50%;
 }
 
@@ -19,13 +16,13 @@
     justify-content: center;
     position: absolute;
     top: 50px;
-    width: 50%;
-    left: -5%;
+    /* width: 50%; */
+    left: -3%;
 }
 
 #filtered-listings-index-ul div {
-    width: 35%;
-    margin: 5%;
+    /* width: 20%; */
+    /* margin-left: 5%; */
     min-width: 200px;
     /* margin-bottom: 100px; */
 }
@@ -35,13 +32,5 @@
     top: 0;
     width: 10%;
 } */
-/* 
-.filtered-map-container {
-    overflow: hidden;
-    position: sticky;
-    top: 0;
-  } */
 
-  .filtered-index-item {
-    margin-bottom: 50px;
-  }
+
