@@ -55,7 +55,7 @@ const ReservationIndexItem = (props) => {
         return (
             <div className="reservation-index-item">
                 <div className='reservation-info'>
-                    <h1 id='title'>{listing.city}</h1>
+                    <h1 id='title'><Link id='title-link' to={`/listings/${listing.id}`}>{listing.city}</Link></h1>
                     <span id='title-details'>{capitalize(listing.building_type)} near the {listing.type_of_water} hosted by {listing.lister_name}</span>
                     <div className='solid-line-reservations'></div>
                     <div id='reservation-more-details'>
