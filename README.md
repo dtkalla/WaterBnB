@@ -27,6 +27,8 @@ Users (who are logged in) can reserve listings and watch as costs change based o
 
 - #### Search specific locations and see nearby attractions using Google Maps
 
+![](images/Google_map.png)
+
 Users can use Google Maps to search specific locations, with each property having a popup summarizing key information.  Every page uses Google maps, either for or to show the exact location of a specific listing.
 
 The MapContainer object uses locations passed into it that are already fetched elsewhere on the page.  Rather than pass the entire listing object for each location, this passes only the variables the map is going to use (including id so the popup can link to the listing's show page):
