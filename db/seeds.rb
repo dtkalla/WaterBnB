@@ -154,6 +154,7 @@ ApplicationRecord.transaction do
         price: 35,
         lister_name: "Barbara",
         building_type: "condo",
+        pets_allowed: true,
         rating: 4.263889,
         number_of_ratings: 72
     )
@@ -173,6 +174,7 @@ ApplicationRecord.transaction do
         boat: false,
         parking: false,
         wifi: false,
+        pets_allowed: true,
         building_type: "sunken palace",
         rating: 3.4,
         number_of_ratings: 5
@@ -227,6 +229,7 @@ ApplicationRecord.transaction do
         price: 32,
         type_of_water: "lake",
         self_check_in: false,
+        pets_allowed: true,
         lister_name: "Elisa",
         rating: 5,
         number_of_ratings: 16

@@ -11,6 +11,7 @@ import ReservationsIndex from "./components/Reservations/ReservationsShowPage";
 import ReservationUpdatePage from "./components/Reservations/ReservationUpdatePage";
 import MapContainer from "./components/MapContainer/MapContainer";
 import HeaderBar from "./components/HeaderBar/HeaderBar";
+import FilteredListings from "./components/FilteredListings/FilteredListings";
 
 function App() {
   return (
@@ -20,7 +21,6 @@ function App() {
         <Switch>
           <Route exact path="/">
             <ListingIndex />
-            {/* <MapContainer /> */}
           </Route>
           <Route path="/listings/:listingId">
             <ListingShow />
@@ -30,6 +30,9 @@ function App() {
           </Route>
           <Route path="/trips/:reservationId">
             <ReservationUpdatePage />
+          </Route>
+          <Route exact path="/:filter">
+            <FilteredListings />
           </Route>
         </Switch>
     </>

@@ -35,7 +35,7 @@ function LoginForm() {
   // }
 
   return (
-    <form onSubmit={handleSubmit}>     
+    <form id='login-form-modal' onSubmit={handleSubmit}>     
       <ul>
         <div className="entry-input-box">
           <div className="small-text">Email</div>

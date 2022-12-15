@@ -31,7 +31,6 @@ const ListingIndex = () => {
                 lng: parseFloat(listings[i].longitude)
             }
         })
-        // if(listings[0] && listings[0].id === 1 && listings[1].id === 2) listings.sort(() => Math.random() - 0.5) 
     }
 
     const listingItems = listings.map((listing) => {
@@ -40,14 +39,12 @@ const ListingIndex = () => {
 
     return (
         <div className='listings-index'>
-            {/* <div className='solid-line'></div> */}
             <ul id='listings-index-ul'>
                 <div className='index-map'>
                     <MapContainer locations={locations} />
                 </div>
                 {listingItems}
-            </ul>
-            
+            </ul>       
         </div>
     )
 }
