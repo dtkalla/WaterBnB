@@ -3,10 +3,9 @@ class Api::ReviewsController < ApplicationController
   
     def create
       @review = Review.new(review_params)
-      # return 7
       if @review.save
         @listing = Listing.find(@review.listing_id)
-        rating = params[:rating] || 5
+        rating = params[:rating]
         @listing.rating = (@review.listing.rating * @review.listing.number_of_ratings + rating) / (@review.listing.number_of_ratings + 1)
         @listing.number_of_ratings += 1
         @listing.save

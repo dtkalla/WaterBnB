@@ -15,7 +15,6 @@ import '../MapContainer/MapContainer.css'
 const FilteredListings = () => {
     const dispatch = useDispatch();
     const filter = useParams();
-    console.log(filter)
     const listings = useSelector(getListings)
     .filter((listing) => {
         switch(filter.filter) {
