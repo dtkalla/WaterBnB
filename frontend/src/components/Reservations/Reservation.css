@@ -228,3 +228,9 @@
 .res-login-notice {
     border: none !important;
 }
+
+
+#title-link {
+    text-decoration: none;
+    color: black;
+}

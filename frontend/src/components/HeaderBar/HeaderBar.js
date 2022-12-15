@@ -1,5 +1,6 @@
 import { Header } from "../Header";
-import { Dropdown } from "../Dropdown";
+import { Dropdown } from "../Dropdown/Dropdown";
+import './HeaderBar.css'
 
 const HeaderBar = () => {
     return (

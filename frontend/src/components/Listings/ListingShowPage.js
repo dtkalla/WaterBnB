@@ -63,7 +63,6 @@ const ListingShow = () => {
     return (
         <div>
             <ListingPicsModal id='listing-pics-modal-container'/>
-            <div className='solid-line'></div>
             <div className='show-page-images' onClick={() => setShowModal(true)}>
                 <img className="listing-show-image-main" src={l.picturesUrl} alt='' />
                 <div className='show-page-small-images'>

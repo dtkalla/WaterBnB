@@ -19,7 +19,6 @@ const ReservationsIndex = () => {
 
     return (
         <div className='reservations-index'>
-            <div className='solid-line'></div>
             <h1>Upcoming Trips</h1>
             <ul id='reservations-index-ul'>
                 {reservationItems}
