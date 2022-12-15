@@ -22,5 +22,8 @@
     font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
 }
 
-
+#test-map {
+    position: sticky;
+    top: 0;
+}
 

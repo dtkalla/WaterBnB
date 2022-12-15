@@ -4,8 +4,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import ListingIndexItem from '../Listings/ListingIndexItem';
 import { fetchListings, getListings } from '../../store/listings';
 import '../Listings/listings.css'
-import MapContainer from '../MapContainer/MapContainer';
+import FilteredMapContainer from './FilteredMapContainer';
 import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
+import './Filter.css'
 
 
 
@@ -14,8 +15,27 @@ const FilteredListings = () => {
     const filter = useParams();
     console.log(filter)
     const listings = useSelector(getListings)
-    .filter((listing) => listing.typeOfWater == filter.filter ? listing : null)
-    console.log(listings)
+    .filter((listing) => {
+        switch(filter.filter) {
+            case 'ocean':
+                return listing.typeOfWater == 'ocean' ? listing : null
+            case 'lake':
+                return listing.typeOfWater == 'lake' ? listing : null
+            case 'sea':
+                return listing.typeOfWater == 'sea' ? listing : null
+            case 'pets':
+                return listing.petsAllowed ? listing : null
+            case 'well_rated':
+                return listing.numberOfRatings > 5 && listing.rating > 4 ? listing : null
+            default:
+                if (parseInt(filter.filter)) {
+                    return (listing.price <= parseInt(filter.filter)) ? listing : null
+                } else {
+                    return listing
+                }
+        }
+    })
+
 
     useEffect(() => {
         dispatch(fetchListings())
@@ -25,7 +45,7 @@ const FilteredListings = () => {
 
     const listingItems = listings.map((listing) => {
         if (listing) {
-            return <ListingIndexItem key={listing.id} listing={listing} />
+            return <ListingIndexItem className='filter-index-item' key={listing.id} listing={listing} />
         } else {
             return null
         }
@@ -50,15 +70,14 @@ const FilteredListings = () => {
     
 
     return (
-        <div className='listings-index'>
+        <div className='filtered-listings-index'>
+            <div className='filtered-index-map'>
+                <FilteredMapContainer locations={locations} />
+            </div>
             {/* <div className='solid-line'></div> */}
-            <ul id='listings-index-ul'>
-                <div className='index-map'>
-                    <MapContainer locations={locations} />
-                </div>
+            <ul id='filtered-listings-index-ul'>
                 {listingItems}
             </ul>
-            
         </div>
     )
 }
