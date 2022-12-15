@@ -39,6 +39,10 @@
     cursor: pointer;
 }
 
+#login-form-modal {
+    width: 575px;
+}
+
 .form-errors {
     color: red;
     font-size: 14px;

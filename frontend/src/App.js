@@ -22,9 +22,6 @@ function App() {
           <Route exact path="/">
             <ListingIndex />
           </Route>
-          <Route exact path="/:filter">
-            <FilteredListings />
-          </Route>
           <Route path="/listings/:listingId">
             <ListingShow />
           </Route>
@@ -33,6 +30,9 @@ function App() {
           </Route>
           <Route path="/trips/:reservationId">
             <ReservationUpdatePage />
+          </Route>
+          <Route exact path="/:filter">
+            <FilteredListings />
           </Route>
         </Switch>
     </>

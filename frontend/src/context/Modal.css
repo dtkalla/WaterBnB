@@ -12,9 +12,9 @@
   
   #modal-background {
     position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
+    top: 10px;
+    right: 10px;
+    left: 10px;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
   }
@@ -30,7 +30,7 @@
   #modal-content {
     position: absolute;
     background-color:white;
-    width: 575px;
+    /* width: 575px; */
     /* height: 575px; */
     border-radius: 10px;
   }

@@ -27,7 +27,7 @@ const FilteredListings = () => {
                 return listing.typeOfWater == 'sea' ? listing : null
             case 'pets':
                 return listing.petsAllowed ? listing : null
-            case 'well_rated':
+            case 'popular':
                 return listing.numberOfRatings > 5 && listing.rating > 4.5 ? listing : null
             default:
                 if (parseInt(filter.filter)) {
