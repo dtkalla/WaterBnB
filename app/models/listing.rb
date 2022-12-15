@@ -1,8 +1,10 @@
 class Listing < ApplicationRecord
-    validates :city, :country, :latitude, :longitude, :description, :pictures_url, :lister_id, :price, presence: true    
+    validates :city, :country, :latitude, :longitude, :description, :pictures_url, :lister_id, :price, :number_of_ratings, :rating, presence: true    
     validates :latitude , numericality: { greater_than_or_equal_to:  -90, less_than_or_equal_to:  90 }
     validates :longitude, numericality: { greater_than_or_equal_to: -180, less_than_or_equal_to: 180 }
+    validates :rating, numericality: { greater_than_or_equal_to: 1, less_than_or_equal_to: 5 }
     validates :price, numericality: { greater_than: 0 }
+    validates :number_of_ratings, numericality: { greater_than_or_equal_to: 0 }
 
     belongs_to :lister,
         class_name: :User,

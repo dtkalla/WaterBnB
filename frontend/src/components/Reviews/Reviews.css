@@ -55,3 +55,26 @@
 .rev-login-notice {
     margin-left: 5%;
 }
+
+
+
+.star-rating{
+    margin-left: 2%;
+}
+
+#star-button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  .on {
+    color: #000;
+  }
+  .off {
+    color: #ccc;
+  }
+
+.star {
+    font-size: 30px;
+}

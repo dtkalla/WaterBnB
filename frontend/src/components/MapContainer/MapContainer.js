@@ -54,7 +54,7 @@ export const MapContainer = (props) => {
             >
                 <Link to={`/listings/${selected.name}`} className='map-modal-elements'>
                     <img id='google-map-index-image' src={selected.pic} />
-                    <p><b>{selected.title}</b></p>
+                    <p id='map-stars'><b>{selected.title}</b> <span>&#9733; {selected.rating}</span></p>
                     <p>{selected.place}</p>
                     <p><b>${selected.price}</b> night</p>
                     {/* <p>{selected.name}</p> */}

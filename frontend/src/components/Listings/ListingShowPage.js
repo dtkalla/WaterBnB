@@ -13,6 +13,7 @@ import ReservationForm from '../Reservations/ReservationForm';
 import ShowMapContainer from '../MapContainer/ShowMapContainer';
 import ReviewsIndex from '../Reviews/ReviewsIndex';
 import ReviewForm from '../Reviews/ReviewForm';
+import star from '../../assets/star.png'
 
 
 const ListingShow = () => {
@@ -109,10 +110,13 @@ const ListingShow = () => {
                 </ul>
             </div>
             <ShowMapContainer locations={locations} />
-            <h2 id='reviews-title'>Reviews</h2>
+            <h3 id='reviews-title'>
+                <span id='stars-2'><img id='star-2' src={star}/>{l.rating % 1 == 0 ? l.rating : Math.round(l.rating * 100) / 100} · {l.numberOfRatings} ratings</span>
+            </h3>
             <ReviewsIndex />
+            
 
-            <h2 id='reviews-title'>Leave a Review!</h2>
+            <h2 id='reviews-title'>Rate and Review!</h2>
             <ReviewForm />
         </div>
     )
