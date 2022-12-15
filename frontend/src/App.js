@@ -10,13 +10,12 @@ import './index.css'
 import ReservationsIndex from "./components/Reservations/ReservationsShowPage";
 import ReservationUpdatePage from "./components/Reservations/ReservationUpdatePage";
 import MapContainer from "./components/MapContainer/MapContainer";
+import HeaderBar from "./components/HeaderBar/HeaderBar";
 
 function App() {
   return (
     <>
-      <Header />
-      <Dropdown />
-      
+      <HeaderBar />
       {/* <Navigation id='session-Links' /> */}
         <Switch>
           <Route exact path="/">
