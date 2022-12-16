@@ -163,7 +163,7 @@ ApplicationRecord.transaction do
     Listing.create!(
         city: 'Atlantis',
         country: 'Atlantis',
-        description: "Stay here -- it'll be a great experience!", 
+        description: "The city, the myth, the legend: come have an unforgettable experience in the recently rediscovered lost city of Atlantis!", 
         pictures_url: 'https://waterbnb-seeds.s3.amazonaws.com/5_0.png',
         lister_id: 5,
         latitude: -48.8767,
@@ -203,7 +203,7 @@ ApplicationRecord.transaction do
     Listing.create!(
         city: 'Bemidji ',
         country: "Minnesota",
-        description: "Stay here -- it'll be a great experience!", 
+        description: "The birthplace of Paul Bunyan and the Mississippi, plus pretty good shopping.  Make sure to try the wild rice soup!", 
         pictures_url: 'https://waterbnb-seeds.s3.amazonaws.com/7_0.png',
         lister_id: 1,
         latitude: 47.4716,
@@ -255,7 +255,7 @@ ApplicationRecord.transaction do
         Listing.create!(
         city: 'Coney Island',
         country: 'New York',
-        description: "Heaven on earth for just a nickel!", 
+        description: "Heaven at the end of a subway ride!", 
         pictures_url: 'https://waterbnb-seeds.s3.amazonaws.com/10_0.png',
         lister_id: 3,
         latitude: 40.5755,
@@ -1109,7 +1109,7 @@ ApplicationRecord.transaction do
         reviewer_id: 2,
         listing_id: 3,
         review_date: Date.new(2016,10,12),
-        body: "Beautiful Gaudi architectural buildings.  What an experience!",
+        body: "Beautiful Gaudi architectural buildings (although they still haven't finished the Sagrada Familia).  What an experience!",
         reviewer_name: "Anthony"
     )
 
@@ -1118,7 +1118,7 @@ ApplicationRecord.transaction do
         reviewer_id: 6,
         listing_id: 3,
         review_date: Date.new(2021,8,24),
-        body: "You're never alone in Barcelona.",
+        body: 'Great nightlife -- this neighborhood really puts the "bar" in Barcelona!',
         reviewer_name: "Karen"
     )
 
@@ -1198,7 +1198,7 @@ ApplicationRecord.transaction do
         reviewer_id: 3,
         listing_id: 7,
         review_date: Date.new(2021,12,24),
-        body: "I used to be a high-achieving female executive from NYC or LA with no time for love, but my business sent me here on Christmas.  I met a cute guy who organizes the yearly Christmas pageant, realized the error of my ways, and have decided to move here forever.  Merry Christmas!",
+        body: "I used to be a high-achieving female executive from NYC or LA with no time for love, but my business sent me here on Christmas.  I met a cute guy who organizes the yearly Christmas pageant, fell in love, and have impulsively decided to move here for the rest of my life.  Merry Christmas!",
         reviewer_name: "Barbara"
     )
 
@@ -1208,8 +1208,8 @@ ApplicationRecord.transaction do
     Review.create!(
         reviewer_id: 6,
         listing_id: 7,
-        review_date: Date.new(2020,5,26),
-        body: "No one wore a mask in the city, except at the local university.  I'm amazed I didn't catch covid.  (The town is beautiful, though!)",
+        review_date: Date.new(2020,6,26),
+        body: "No one wore a mask in the city, except at the local university.  I'm amazed I didn't catch covid.  (The town is lovely, though!)",
         reviewer_name: "Karen"
     )
 

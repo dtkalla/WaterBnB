@@ -1,13 +1,10 @@
 # Fullstack Project: WaterBnb
 
-WaterBnb is a water-themed travel booking site -- a clone of AirBnb.  Like AirBnb, WaterBnb allows users to views different listings around the world, make reservations, and leave ratings and reviews.  It uses the Google Maps API to give exact locations and let users search by location.  The splash page is an index of all the listings, with a map centered in New York City by default.
+WaterBnb is an affordable water-themed travel booking site -- a clone of AirBnb.  Like AirBnb, WaterBnb allows users to views different listings around the world, make reservations, and leave ratings and reviews.  It uses the Google Maps API to give exact locations and let users search by location.  The splash page is an index of all the listings, with a map centered in New York City by default.
 
 ![](images/WaterBnb_splash.png)
 
 
-<!-- ## Wireframe:
-
-![](images/wireframe.png) -->
 
 ## With WaterBnb, users can:
 
@@ -84,6 +81,8 @@ def create
 end
 ```
 
+Note that people can rate without reviewing (though not vice versa), so most listings have more ratings than reviews.
+
 
 - #### Filter listings by categories and max price
 
@@ -124,8 +123,9 @@ const listings = useSelector(getListings)
 ## Technologies and libraries used:
 - Ruby on Rails
 - JavaScript
-- React
+- React/Redux
 - Google Maps
+- Debugger
 - AWS
 
 ## Implementation Timeline:
@@ -137,10 +137,12 @@ const listings = useSelector(getListings)
 - Thursday: Filters
 
 ## Future Features:
-- Search
-- CRUD functionality for listings
 - More categories (and more seed data to show them)
+- Ratings for specific items (location, communication, boat quality, etc.)
 - Carousel for photos
+- Search function
+- CUD functionality for listings
+- Recenter default index map based on user's location
 
 ## Sources:
 - Photos, descriptions, and amenity icons taken from AirBnb
