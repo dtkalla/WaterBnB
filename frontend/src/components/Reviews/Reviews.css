@@ -78,3 +78,14 @@
 .star {
     font-size: 30px;
 }
+
+#review-form-2 {
+    margin-left: -30px;
+    margin-top: -20px;
+}
+
+.review-body-2 {
+    width: 80%;
+    margin-bottom: 20px;
+    margin-left: 2%;
+}

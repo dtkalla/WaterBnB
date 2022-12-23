@@ -12,7 +12,7 @@ import './listings.css'
 import ReservationForm from '../Reservations/ReservationForm';
 import ShowMapContainer from '../MapContainer/ShowMapContainer';
 import ReviewsIndex from '../Reviews/ReviewsIndex';
-import ReviewForm from '../Reviews/ReviewForm';
+// import ReviewForm from '../Reviews/ReviewForm';
 import star from '../../assets/star.png'
 
 
@@ -115,8 +115,8 @@ const ListingShow = () => {
             <ReviewsIndex />
             
 
-            <h2 id='reviews-title'>Rate and Review!</h2>
-            <ReviewForm />
+            {/* <h2 id='reviews-title'>Rate and Review!</h2> */}
+            {/* <ReviewForm /> */}
         </div>
     )
 }

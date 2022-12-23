@@ -953,6 +953,27 @@ ApplicationRecord.transaction do
     )
 
 
+    Reservation.create!(
+        reserver_id: 2,
+        listing_id: 7,
+        start_date: Date.new(2021,6,6),
+        end_date: Date.new(2021,6,11),
+        num_guests: 1,
+        price: 402
+    )
+
+
+
+    Reservation.create!(
+        reserver_id: 2,
+        listing_id: 5,
+        start_date: Date.new(2020,8,21),
+        end_date: Date.new(2020,8,22),
+        num_guests: 1,
+        price: 1976
+    )
+
+
     puts "Destroying reviews table..."
     # Unnecessary if using `rails db:seed:replant`
     Review.destroy_all
