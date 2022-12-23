@@ -33,6 +33,8 @@ const ReservationIndexItem = (props) => {
 
     const [errors, setErrors] = useState([]);
 
+    const [messages, setMessages] = useState([]);
+
     const reviewDate = new Date()
 
     const reservation = props.reservation
@@ -53,6 +55,7 @@ const ReservationIndexItem = (props) => {
         setErrors([]);
         dispatch(createReview({ reviewDate, reviewerId, listingId, body, reviewerName, rating }))
           .catch(async (res) => {
+            setMessages([]);
             let data;
             try {
               data = await res.clone().json();
@@ -63,6 +66,7 @@ const ReservationIndexItem = (props) => {
             else if (data) setErrors([data]);
             else setErrors([res.statusText]);
           });
+          if (errors.length < 1) setMessages(['Rating/review successfully submitted!']);
           setBody('')
           setRating(5)
           setHover(5)
@@ -138,7 +142,8 @@ const ReservationIndexItem = (props) => {
                     </ul>
         
                 </form>
-                    
+                    {errors && <div className='errors'>{errors[0]}</div>}
+                    {messages && <div className='success'>{messages[0]}</div>}
                 </div>
                 <img className="reservation-index-image" src={listing.pictures_url} alt="" />
                 <div className='res-index-map'>

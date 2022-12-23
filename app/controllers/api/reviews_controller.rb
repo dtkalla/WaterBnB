@@ -9,9 +9,9 @@ class Api::ReviewsController < ApplicationController
         @listing.rating = (@review.listing.rating * @review.listing.number_of_ratings + rating) / (@review.listing.number_of_ratings + 1)
         @listing.number_of_ratings += 1
         @listing.save
-        render :show
+        render json: { messages: ["Rating/review successfully submitted!"]}, status: 200
       else
-        render json: { errors: @review.errors.full_messages}, status: 422
+        render json: { errors: ["You can only rate/review each listing once"]}, status: 422
       end
     end
 

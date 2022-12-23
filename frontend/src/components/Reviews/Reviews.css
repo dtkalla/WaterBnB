@@ -89,3 +89,11 @@
     margin-bottom: 20px;
     margin-left: 2%;
 }
+
+.errors {
+    color: rgb(230, 30, 77);
+}
+
+/* .success {
+    color: rgb(230, 30, 77);
+} */
