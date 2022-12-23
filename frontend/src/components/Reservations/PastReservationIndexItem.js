@@ -51,12 +51,7 @@ const ReservationIndexItem = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         setErrors([]);
-        const tempBody = body
-        setBody('')
-        const tempRating = rating
-        setHover(5)
-        setRating(5)
-        return dispatch(createReview({ reviewDate, reviewerId, listingId, tempBody, reviewerName, tempRating }))
+        dispatch(createReview({ reviewDate, reviewerId, listingId, body, reviewerName, rating }))
           .catch(async (res) => {
             let data;
             try {
@@ -68,6 +63,10 @@ const ReservationIndexItem = (props) => {
             else if (data) setErrors([data]);
             else setErrors([res.statusText]);
           });
+          setBody('')
+          setRating(5)
+          setHover(5)
+          return
       };
 
 
