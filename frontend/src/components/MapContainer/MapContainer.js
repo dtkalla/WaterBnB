@@ -100,7 +100,7 @@ export const MapContainer = (props) => {
                 onClick={() => onSelect(item)}
                 // title={'$'+item.price}
                 icon={button3}
-                
+
                 // onMouseOver={() => onSelect(item)}
                 // onMouseOut={() => setSelected({})}
                 label={'$'+item.price}

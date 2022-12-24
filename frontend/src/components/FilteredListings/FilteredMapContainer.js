@@ -120,7 +120,6 @@ export const FilteredMapContainer = (props) => {
                 position={item.location}
                 onClick={() => onSelect(item)}
                 icon={button4}
-                
                 // onMouseOver={() => onSelect(item)}
                 // onMouseOut={() => setSelected({})}
                 label={'$'+item.price}
