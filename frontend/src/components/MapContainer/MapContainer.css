@@ -13,10 +13,10 @@
     text-decoration: none;
 }
 
-.index-map {
-    /* margin-right: 10%; */
+/* .index-map {
+    margin-right: 10%;
     width: 50%;
-}
+} */
 
 #map-stars {
     display: flex;

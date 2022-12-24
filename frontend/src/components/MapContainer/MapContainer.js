@@ -94,9 +94,12 @@ export const MapContainer = (props) => {
          {
             locations.map(item => {
               return (
-              <Marker key={item.name} 
+              <Marker className='marker' key={item.name} 
                 position={item.location}
                 onClick={() => onSelect(item)}
+                // onMouseOver={() => onSelect(item)}
+                // onMouseOut={() => setSelected({})}
+                // label={'$'+item.price}
               />
               )
             })

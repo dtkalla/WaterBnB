@@ -244,7 +244,7 @@ ApplicationRecord.transaction do
         lister_id: 1,
         latitude: 40.7675,
         longitude: -73.8331,
-        price: 244,
+        price: 212,
         building_type: "cottage",
         lister_name: "Muhammed",
         rating: 4.866667,
