@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { formatDistanceStrict, formatDistance } from 'date-fns'
 // import * as sessionActions from "../../store/session";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import { useDispatch } from "react-redux";
@@ -28,12 +29,23 @@ function ReservationUpdatePage() {
 
   const [errors, setErrors] = useState([]);
 
+  // function resLength() {
+  //   return formatDistanceStrict(new Date(startDate), new Date(endDate))
+  // }
+
+  function diffDays() {
+    return formatDistanceStrict(new Date(startDate), new Date(endDate), {unit: 'day'})
+  }
+
+  function numDays() {
+    return diffDays().split(' ')[0]
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setErrors([]);
     history.push('/trips')
-    price = Math.floor((endDate.slice(8) - startDate.slice(8)) * (listing.price + (numGuests-1)*10) * 8 / 7 + (listing.boat ? 20 : 0));
+    price = Math.floor(numDays() * (listing.price + (numGuests-1)*10) * 8 / 7 + (listing.boat ? 20 : 0));
     // numGuests = 1;
     return dispatch(updateReservation({ id, startDate, endDate, numGuests, price, listingId, reserverId }))
       .catch(async (res) => {
@@ -95,20 +107,20 @@ function ReservationUpdatePage() {
         <br/>
         <ul className="update-fees">
           <span className="underline">
-            ${listing.price + (numGuests-1)*10} X {(startDate && endDate) ? endDate.slice(8) - startDate.slice(8) : 0} nights
+            ${listing.price + (numGuests-1)*10} X {(startDate && endDate) ? numDays() : 0} nights
           </span>
           <span>
-            {(startDate && endDate) ? '$'+(endDate.slice(8) - startDate.slice(8))*(listing.price + (numGuests-1)*10) : '$0'}
+            {(startDate && endDate) ? '$'+ numDays() *(listing.price + (numGuests-1)*10) : '$0'}
           </span>
           <span className="underline">{listing.boat ? "Boating fee" : ''}</span>
           <span>{listing.boat ? '$20' : ''}</span>
           <span className="underline">Service fee</span>
-          <span>{'$' + Math.floor(((startDate && endDate) ? endDate.slice(8) - startDate.slice(8) : 0) * (listing.price + (numGuests-1)*10) / 7)}</span>
+          <span>{'$' + Math.floor(((startDate && endDate) ? numDays() : 0) * (listing.price + (numGuests-1)*10) / 7)}</span>
           <div className='solid-line-reservations-update'></div>
           <span></span>
         <span>Total cost</span>
           <span>
-            {'$' + Math.floor(((startDate && endDate) ? endDate.slice(8) - startDate.slice(8) : 0) * (listing.price + (numGuests-1)*10) * 8 / 7 + (listing.boat ? 20 : 0))}
+            {'$' + Math.floor(((startDate && endDate) ? numDays() : 0) * (listing.price + (numGuests-1)*10) * 8 / 7 + (listing.boat ? 20 : 0))}
           </span>
         </ul>
         
