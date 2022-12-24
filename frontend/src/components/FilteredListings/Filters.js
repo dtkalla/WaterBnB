@@ -30,7 +30,7 @@ const Filters = () => {
                 <form id='price-modal-test'>
                     <div className='price-filter-header'><b>Max Price</b>: <i>${maxPrice}</i></div>
                     <div className="slidecontainer">
-                        <input type="range" min="32" max="2000" value={maxPrice}class="slider" id="myRange" onChange={(e) => setMaxPrice(e.target.value)} />
+                        <input type="range" min="32" max="2000" value={maxPrice}className="slider" id="myRange" onChange={(e) => setMaxPrice(e.target.value)} />
                     </div>
                     <Link to={`/${maxPrice}`} id='price-filter-link' onClick={() => setShowModal(false)}>
                         <div className='filter-submit-button'>

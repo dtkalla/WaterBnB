@@ -73,9 +73,6 @@ const FilteredListings = () => {
     return (
         <div className='listings-index'>
             <ul id='listings-index-ul'>
-                <div className='index-map'>
-                    <FilteredMapContainer locations={locations} />
-                </div>
                 {listingItems}
             </ul>
         </div>
