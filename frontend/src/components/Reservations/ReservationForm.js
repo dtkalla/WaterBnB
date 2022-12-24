@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import * as sessionActions from "../../store/session";
+import { formatDistance, subDays } from 'date-fns'
+
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { useParams, useHistory } from "react-router-dom/cjs/react-router-dom.min";
@@ -32,6 +34,9 @@ function ReservationForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(new Date(startDate))
+    console.log(new Date(endDate))
+    console.log(formatDistance(new Date(startDate), new Date(endDate), { addSuffix: false }))
     setErrors([]);
     history.push('/trips')
     price = Math.floor((endDate.slice(8) - startDate.slice(8)) * (listing.price + (numGuests-1)*10) * 8 / 7 + (listing.boat ? 20 : 0));

@@ -83,7 +83,7 @@ const ReservationIndexItem = (props) => {
                     <br/><br/>
                     
                 </div>
-                <img className="reservation-index-image" src={listing.pictures_url} alt="" />
+                <img className="reservation-index-image" src={`https://waterbnb-seeds.s3.amazonaws.com/${listing.id}_0.png`} alt="" />
                 <div className='res-index-map'>
                     <ResMapContainer locations={locations} />
                 </div>

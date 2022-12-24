@@ -22,7 +22,7 @@ const Filters = () => {
             <Link to='/sea'><img src={sea} /><span>Sea</span></Link>
             <Link to='/lake'><img src={lake} /><span>Lake</span></Link>
             <Link to='/pets'><img src={pets} /><span>Pets</span></Link>
-            <Link to='/popular'><img src={stars} /><span>Popular</span></Link>
+            <Link to='/popular'><img src={stars} /><span>Top-rated</span></Link>
             <div id='price-filter' onClick={() => setShowModal(true)}><img src={price} /><span>Price</span></div>
 
             {showModal && (
