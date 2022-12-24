@@ -12,11 +12,11 @@ function Header( props ) {
             <span id='span-logo'>waterbnb</span>
         </Link>
         <a href="https://github.com/dtkalla" target="_blank">
-            <img class="icons" src="https://cdn-icons-png.flaticon.com/512/25/25231.png"/>
+            <img class="icons-header" src="https://cdn-icons-png.flaticon.com/512/25/25231.png"/>
         </a>
         <br/>
         <a href="https://www.linkedin.com/in/daniel-kalla-496aa7234/" target="_blank">
-            <img class="icons" src="https://cdn-icons-png.flaticon.com/512/174/174857.png"/>
+            <img class="icons-header" src="https://cdn-icons-png.flaticon.com/512/174/174857.png"/>
         </a>
         </div>
         )

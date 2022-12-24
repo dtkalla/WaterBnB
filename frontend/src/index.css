@@ -1,11 +1,26 @@
-/* TODO Add site wide styles */
-/* @import "./components/Listings/Listings.css"; */
+#test-index-map-div {
+    display: flex;
+    flex-direction: row;
+}
 
+#the-actual-map {
+    position: sticky;
+    right: 0px;
+    top: 85px;
+    bottom: 0;
+    width: 30%;
+    height: 70%;
+}
 
+#the-listing-index {
+    width: 55%;
+    height: 70%;
+    overflow-y: scroll;
+}
 
-
-
-
+#the-listing-index::-webkit-scrollbar {
+    display: none;
+}
 
 
 

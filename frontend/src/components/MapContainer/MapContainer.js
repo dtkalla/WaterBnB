@@ -14,8 +14,8 @@ export const MapContainer = (props) => {
     const locations = props.locations
     
     const mapStyles = {
-        padding: "10px",        
-        height: "55vh",
+        // padding: "10px",        
+        height: "87vh",
         width: "150%"
     };
       

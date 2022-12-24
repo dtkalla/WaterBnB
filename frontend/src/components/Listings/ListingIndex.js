@@ -40,9 +40,9 @@ const ListingIndex = () => {
     return (
         <div className='listings-index'>
             <ul id='listings-index-ul'>
-                <div className='index-map'>
+                {/* <div className='index-map'>
                     <MapContainer locations={locations} />
-                </div>
+                </div> */}
                 {listingItems}
             </ul>       
         </div>
