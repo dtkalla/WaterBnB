@@ -116,9 +116,9 @@ ApplicationRecord.transaction do
         longitude: -73.9712,
         price: 357,
         lister_name: "Anthony",
-        building_type: "studio",
-        beds: 1,
-        bedrooms: 1,
+        building_type: "apartment",
+        beds: 2,
+        bedrooms: 2,
         parking: false,
         boat: false,
         rating: 4.25,
@@ -156,7 +156,7 @@ ApplicationRecord.transaction do
         building_type: "condo",
         pets_allowed: true,
         rating: 4.263889,
-        number_of_ratings: 72
+        number_of_ratings: 92
     )
 
 

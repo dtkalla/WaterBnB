@@ -48,10 +48,10 @@ const ListingShow = () => {
                     <div id='ListingPicsModal'>
                         <ul>
                             <img src={`https://waterbnb-seeds.s3.amazonaws.com/${l.id}_0.png`} alt='' />
-                            <img src={`https://waterbnb-seeds.s3.amazonaws.com/1_1.png`} alt='' />
-                            <img src={`https://waterbnb-seeds.s3.amazonaws.com/1_2.png`} alt='' />
-                            <img src={`https://waterbnb-seeds.s3.amazonaws.com/1_3.png`} alt='' />
-                            <img src={`https://waterbnb-seeds.s3.amazonaws.com/1_4.png`} alt='' />
+                            <img src={`https://waterbnb-seeds.s3.amazonaws.com/${l.id}_1.png`} alt='' />
+                            <img src={`https://waterbnb-seeds.s3.amazonaws.com/${l.id}_2.png`} alt='' />
+                            <img src={`https://waterbnb-seeds.s3.amazonaws.com/${l.id}_3.png`} alt='' />
+                            <img src={`https://waterbnb-seeds.s3.amazonaws.com/${l.id}_4.png`} alt='' />
                         </ul>
                     </div>
                 </>
@@ -66,10 +66,10 @@ const ListingShow = () => {
             <div className='show-page-images' onClick={() => setShowModal(true)}>
                 <img className="listing-show-image-main" src={`https://waterbnb-seeds.s3.amazonaws.com/${l.id}_0.png`} alt='' />
                 <div className='show-page-small-images'>
-                    <img className="listing-show-image-small" src={`https://waterbnb-seeds.s3.amazonaws.com/1_1.png`} alt='' />
-                    <img className="listing-show-image-small" id='small-2' src={`https://waterbnb-seeds.s3.amazonaws.com/1_2.png`} alt='' />
-                    <img className="listing-show-image-small" src={`https://waterbnb-seeds.s3.amazonaws.com/1_3.png`} alt='' />
-                    <img className="listing-show-image-small" id='small-4' src={`https://waterbnb-seeds.s3.amazonaws.com/1_4.png`} alt='' />
+                    <img className="listing-show-image-small" src={`https://waterbnb-seeds.s3.amazonaws.com/${l.id}_1.png`} alt='' />
+                    <img className="listing-show-image-small" id='small-2' src={`https://waterbnb-seeds.s3.amazonaws.com/${l.id}_2.png`} alt='' />
+                    <img className="listing-show-image-small" src={`https://waterbnb-seeds.s3.amazonaws.com/${l.id}_3.png`} alt='' />
+                    <img className="listing-show-image-small" id='small-4' src={`https://waterbnb-seeds.s3.amazonaws.com/${l.id}_4.png`} alt='' />
                 </div>
             </div>
 
