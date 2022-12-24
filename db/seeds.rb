@@ -96,7 +96,7 @@ ApplicationRecord.transaction do
         city: 'San Francisco',
         country: 'California',
         description: 'Stay here while you interview for a tech job in Silicon Valley!', 
-        pictures_url: 'https://waterbnb-seeds.s3.amazonaws.com/1_0.png',
+        pictures_url: 'https://waterbnb-seeds.s3.amazonaws.com/1_0a.png',
         lister_id: 3,
         latitude: 37.7749,
         longitude: -122.4194,
