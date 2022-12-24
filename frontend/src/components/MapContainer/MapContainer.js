@@ -3,6 +3,7 @@ import { GoogleMap, LoadScript, Marker, InfoWindow } from '@react-google-maps/ap
 import { useState } from 'react';
 import './MapContainer.css'
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
+import button3 from './button3.png'
 
 export const MapContainer = (props) => {
     const [ selected, setSelected ] = useState({});
@@ -97,9 +98,12 @@ export const MapContainer = (props) => {
               <Marker className='marker' key={item.name} 
                 position={item.location}
                 onClick={() => onSelect(item)}
+                // title={'$'+item.price}
+                icon={button3}
+                
                 // onMouseOver={() => onSelect(item)}
                 // onMouseOut={() => setSelected({})}
-                // label={'$'+item.price}
+                label={'$'+item.price}
               />
               )
             })

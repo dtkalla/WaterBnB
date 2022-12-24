@@ -85,6 +85,20 @@
     width: 100%;
     margin: 10px;
   }
+
+.slider {
+    width: 93%;
+}
+
+#min-max {
+    display: flex;
+    justify-content: space-between;
+}
+
+#min-max p {
+    margin: 2%;
+    margin-top: -10px;
+}
   
   /* .slider {
     -webkit-appearance: none;
@@ -121,7 +135,7 @@
 
 
 #price-modal-test {
-    width: 155px;
+    width: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -132,7 +146,7 @@
 }
 
 .filter-submit-button {
-    width: 120px;
+    width: 465px;
     background-color: rgb(230, 30, 77);
     border-radius: 20px;
     margin: 10px;

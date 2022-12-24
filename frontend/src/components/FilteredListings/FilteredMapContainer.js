@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Link, useParams } from 'react-router-dom/cjs/react-router-dom.min';
 import './Filter.css'
 import '../MapContainer/MapContainer.css'
+import button4 from './button4.png'
 
 export const FilteredMapContainer = (props) => {
   const filter = useParams();
@@ -118,6 +119,11 @@ export const FilteredMapContainer = (props) => {
               <Marker key={item.name} 
                 position={item.location}
                 onClick={() => onSelect(item)}
+                icon={button4}
+                
+                // onMouseOver={() => onSelect(item)}
+                // onMouseOut={() => setSelected({})}
+                label={'$'+item.price}
               />
               )
             })

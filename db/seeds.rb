@@ -168,7 +168,7 @@ ApplicationRecord.transaction do
         lister_id: 5,
         latitude: -48.8767,
         longitude: -123.3933,
-        price: 1729,
+        price: 1000,
         lister_name: "Brian",
         self_check_in: false,
         boat: false,

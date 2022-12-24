@@ -27,3 +27,10 @@
 /* .star-3 {
     font-size: 15px;
 } */
+
+.marker {
+    border: solid 1px black;
+    width: 30px;
+    height: 20px;
+    background-color: black;
+}
