@@ -100,7 +100,7 @@ ApplicationRecord.transaction do
         lister_id: 3,
         latitude: 37.7749,
         longitude: -122.4194,
-        price: 112,
+        price: 312,
         building_type: "apartment",
         rating: 4.777778,
         number_of_ratings: 9
@@ -114,15 +114,15 @@ ApplicationRecord.transaction do
         lister_id: 2,
         latitude: 40.7831,
         longitude: -73.9712,
-        price: 257,
+        price: 357,
         lister_name: "Anthony",
         building_type: "studio",
         beds: 1,
         bedrooms: 1,
         parking: false,
         boat: false,
-        rating: 5,
-        number_of_ratings: 2
+        rating: 4.25,
+        number_of_ratings: 4
     )
     
 
@@ -244,7 +244,7 @@ ApplicationRecord.transaction do
         lister_id: 1,
         latitude: 40.7675,
         longitude: -73.8331,
-        price: 144,
+        price: 244,
         building_type: "cottage",
         lister_name: "Muhammed",
         rating: 4.866667,

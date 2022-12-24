@@ -6,10 +6,11 @@
 #the-actual-map {
     position: sticky;
     right: 0px;
-    top: 85px;
+    top: 60px;
     bottom: 0;
     width: 30%;
     height: 70%;
+    margin-bottom: -10px;
 }
 
 #the-listing-index {

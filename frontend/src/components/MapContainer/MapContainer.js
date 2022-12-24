@@ -15,12 +15,69 @@ export const MapContainer = (props) => {
     
     const mapStyles = {
         // padding: "10px",        
-        height: "87vh",
+        height: "91vh",
         width: "150%"
     };
+    
+    const styles = [
+      {
+          "featureType": "all",
+          "elementType": "labels.text",
+          "stylers": [
+              {
+                  "color": "#878787"
+              }
+          ]
+      },
+      {
+          "featureType": "all",
+          "elementType": "labels.text.stroke",
+          "stylers": [
+              {
+                  "visibility": "off"
+              }
+          ]
+      },
+      {
+          "featureType": "landscape",
+          "elementType": "all",
+          "stylers": [
+              {
+                  "color": "#f9f5ed"
+              }
+          ]
+      },
+      {
+          "featureType": "road.highway",
+          "elementType": "all",
+          "stylers": [
+              {
+                  "color": "#f5f5f5"
+              }
+          ]
+      },
+      {
+          "featureType": "road.highway",
+          "elementType": "geometry.stroke",
+          "stylers": [
+              {
+                  "color": "#c9c9c9"
+              }
+          ]
+      },
+      {
+          "featureType": "water",
+          "elementType": "all",
+          "stylers": [
+              {
+                  "color": "#aee0f4"
+              }
+          ]
+      }
+  ]
       
       const defaultCenter = {
-        lat: 40.7531, lng: -74.0060
+        lat: 40.6958, lng: -73.9171
       }
     
 
@@ -31,8 +88,9 @@ export const MapContainer = (props) => {
        googleMapsApiKey='AIzaSyDnX846EEYsa7iPVXacYUrZsHxX9MDIiN0'>
         <GoogleMap className='index-map'
           mapContainerStyle={mapStyles}
-          zoom={10}
-          center={defaultCenter}>
+          zoom={11}
+          center={defaultCenter}
+          options={{styles: styles}}>
          {
             locations.map(item => {
               return (
