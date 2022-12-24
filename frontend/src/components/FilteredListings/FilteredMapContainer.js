@@ -116,7 +116,7 @@ export const FilteredMapContainer = (props) => {
          {
             locations.map(item => {
               return (
-              <Marker key={item.name} 
+              <Marker key={item.id} 
                 position={item.location}
                 onClick={() => onSelect(item)}
                 icon={button4}

@@ -93,7 +93,7 @@ export const ResMapContainer = (props) => {
          {
             locations.map(item => {
               return (
-              <Marker key={item.name} 
+              <Marker key={item.id} 
                 position={item.location}              />
               )
             })

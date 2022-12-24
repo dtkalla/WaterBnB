@@ -95,7 +95,7 @@ export const MapContainer = (props) => {
          {
             locations.map(item => {
               return (
-              <Marker className='marker' key={item.name} 
+              <Marker className='marker' key={item.id} 
                 position={item.location}
                 onClick={() => onSelect(item)}
                 // title={'$'+item.price}

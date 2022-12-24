@@ -34,7 +34,7 @@ function App() {
 
     for (let i = 0; i < listings.length; i++) {
         locations.push({
-            name: listings[i].id,
+            id: listings[i].id,
             title: listings[i].listerName+"'s " + listings[i].buildingType,
             rating: (parseFloat(listings[i].rating).toFixed(1)),
             place: listings[i].city + ', ' + listings[i].country,
