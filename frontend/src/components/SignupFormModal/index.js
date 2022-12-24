@@ -15,7 +15,7 @@ function SignupFormModal() {
       {showModal && (
         <>
         <Modal onClose={() => setShowModal(false)}>
-          {/* <span class="close">&times;</span> */}
+          {/* <span className="close">&times;</span> */}
           <div className='login-header'>Sign Up!</div>
           <SignupForm />
           <br/>

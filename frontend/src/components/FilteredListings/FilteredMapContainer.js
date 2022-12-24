@@ -1,27 +1,104 @@
 import React from 'react';
 import { GoogleMap, LoadScript, Marker, InfoWindow } from '@react-google-maps/api';
 import { useState } from 'react';
-import { Link } from 'react-router-dom/cjs/react-router-dom.min';
+import { Link, useParams } from 'react-router-dom/cjs/react-router-dom.min';
 import './Filter.css'
 import '../MapContainer/MapContainer.css'
 
 export const FilteredMapContainer = (props) => {
-    const [ selected, setSelected ] = useState({});
+  const filter = useParams();
+  const [ selected, setSelected ] = useState({});
 
-    const onSelect = item => {
-        setSelected(item);
+  const onSelect = item => {
+      setSelected(item);
+  }
+  
+  const locations = props.locations.filter((location) => {
+    switch(filter.filter) {
+        case 'ocean':
+            return location.typeOfWater == 'ocean' ? location : null
+        case 'lake':
+            return location.typeOfWater == 'lake' ? location : null
+        case 'sea':
+            return location.typeOfWater == 'sea' ? location : null
+        case 'pets':
+            return location.petsAllowed ? location : null
+        case 'popular':
+            return location.numberOfRatings > 5 && location.rating > 4.5 ? location : null
+        default:
+            if (parseInt(filter.filter)) {
+                return (location.price <= parseInt(filter.filter)) ? location : null
+            } else {
+                return location
+            }
+          }
+        })
+  
+  const mapStyles = {
+      // padding: "10px",        
+      height: "91vh",
+      width: "150%"
+  };
+  
+  const styles = [
+    {
+        "featureType": "all",
+        "elementType": "labels.text",
+        "stylers": [
+            {
+                "color": "#878787"
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels.text.stroke",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "all",
+        "stylers": [
+            {
+                "color": "#f9f5ed"
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "all",
+        "stylers": [
+            {
+                "color": "#f5f5f5"
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "color": "#c9c9c9"
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "all",
+        "stylers": [
+            {
+                "color": "#aee0f4"
+            }
+        ]
     }
-    
-    const locations = props.locations
-    
-    const mapStyles = {
-        padding: "10px",        
-        height: "55vh",
-        width: "150%"
-    };
+]
       
       const defaultCenter = {
-        lat: 10, lng: 0
+        lat: 10, lng: -60
       }
     
 
@@ -32,8 +109,9 @@ export const FilteredMapContainer = (props) => {
        googleMapsApiKey='AIzaSyDnX846EEYsa7iPVXacYUrZsHxX9MDIiN0'>
         <GoogleMap className='filtered-index-map'
           mapContainerStyle={mapStyles}
-          zoom={1.3}
-          center={defaultCenter}>
+          zoom={1.5}
+          center={defaultCenter}
+          options={{styles: styles}}>
          {
             locations.map(item => {
               return (

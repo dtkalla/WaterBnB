@@ -10,6 +10,7 @@ import './index.css'
 import ReservationsIndex from "./components/Reservations/ReservationsShowPage";
 import ReservationUpdatePage from "./components/Reservations/ReservationUpdatePage";
 import MapContainer from "./components/MapContainer/MapContainer";
+import FilteredMapContainer from "./components/FilteredListings/FilteredMapContainer";
 import HeaderBar from "./components/HeaderBar/HeaderBar";
 import FilteredListings from "./components/FilteredListings/FilteredListings";
 import { useDispatch } from "react-redux";
@@ -24,10 +25,12 @@ function App() {
   const dispatch = useDispatch();
     const listings = useSelector(getListings)
 
+    console.log(listings)
+
     useEffect(() => {
         dispatch(fetchListings())
     }, [])
-  const locations = []
+    const locations = []
 
     for (let i = 0; i < listings.length; i++) {
         locations.push({
@@ -40,7 +43,10 @@ function App() {
             location: {
                 lat: parseFloat(listings[i].latitude),
                 lng: parseFloat(listings[i].longitude)
-            }
+            },
+            typeOfWater: listings[i].typeOfWater,
+            numberOfRatings: listings[i].numberOfRatings,
+            petsAllowed: listings[i].petsAllowed
         })
     }
 
@@ -69,7 +75,14 @@ function App() {
             <ReservationUpdatePage />
           </Route>
           <Route exact path="/:filter">
-            <FilteredListings />
+            <div id='test-index-map-div'>
+              <div id='the-listing-index'>
+                <FilteredListings />
+              </div>
+              <div id='the-actual-map'>
+                <FilteredMapContainer locations={locations} />
+              </div>
+            </div>
           </Route>
         </Switch>
     </>
