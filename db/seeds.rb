@@ -252,7 +252,7 @@ ApplicationRecord.transaction do
     )
 
 
-        Listing.create!(
+    Listing.create!(
         city: 'Coney Island',
         country: 'New York',
         description: "Heaven at the end of a subway ride!", 
@@ -268,16 +268,56 @@ ApplicationRecord.transaction do
     )
 
 
-    # Listing.create!(
-    #     city: 'Chicago',
-    #     country: 'Illinois',
-    #     description: "Midwest MidBEST!", 
-    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
-    #     lister_id: 1,
-    #     latitude: 41.8781,
-    #     longitude: -87.6298,
-    #     price: 163,
-    # )
+
+    Listing.create!(
+        city: 'Venice',
+        country: 'Italy',
+        description: "Ride a gondola along the Grand Canal!", 
+        pictures_url: 'https://waterbnb-seeds.s3.amazonaws.com/10_0.png',
+        lister_id: 3,
+        # latitude: 40.5755,
+        # longitude: -73.9707,
+        price: 126,
+        building_type: "house",
+        type_of_water: "sea",
+        lister_name: "Barbara",
+        rating: 4.95,
+        number_of_ratings: 40
+    )
+
+
+
+    Listing.create!(
+        city: 'Chicago',
+        country: 'Illinois',
+        description: "Midwest MidBEST!", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
+        lister_id: 1,
+        latitude: 41.8781,
+        longitude: -87.6298,
+        building_type: 'apartment'
+        type_of_water: "lake",
+        price: 163,
+        rating: 3.8,
+        number_of_ratings: 15,
+        lister_name: 'Muhammed'
+    )
+
+
+    Listing.create!(
+        city: 'Odessa',
+        country: 'Ukraine',
+        description: "Come discover the beauty of Ukraine!", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
+        lister_id: 5,
+        latitude: 46.4825,
+        longitude: 30.7233,
+        price: 54,
+        type_of_water: "sea",
+        rating: 4.9,
+        number_of_ratings: 7,
+        lister_name: 'Brian',
+        )
 
 
     # Listing.create!(
@@ -1274,9 +1314,91 @@ ApplicationRecord.transaction do
     Review.create!(
         reviewer_id: 3,
         listing_id: 8,
-        review_date: Date.new(2020,6,21),
+        review_date: Date.new(2020,8,2),
         body: "Everything was closed due to COVID-19, so I spent a lot of time on the water.  Incredibly peaceful -- I'll remember this trip for the rest of my life.",
         reviewer_name: "Barbara"
+    )
+
+
+    Review.create!(
+        reviewer_id: 5,
+        listing_id: 11,
+        review_date: Date.new(2018,5,1),
+        body: "Staying in Venice and going down the Grand Canal was a dream come true!  Barbara was excellent, and food was unforgettable, and the house was centrally located.  10/10, would highly recommend!",
+        reviewer_name: "Barbara"
+    )
+
+
+    Review.create!(
+        reviewer_id: 4,
+        listing_id: 11,
+        review_date: Date.new(2021,4,18),
+        body: "I grew up in a city, so I'm used to hearing the sounds of cars.  You never realize how annoying they are until you go to a city without them.  Walking and riding boats everywhere was so tranquil, and the vacation much needed.",
+        reviewer_name: "Elisa"
+    )
+
+
+    Review.create!(
+        reviewer_id: 1,
+        listing_id: 11,
+        review_date: Date.new(2020,2,17),
+        body: "Great location, tasty food, beautiful city.  I saw the piazza flooding while I was there, but people just went on with their days.",
+        reviewer_name: "Muhammed"
+    )
+
+
+    Review.create!(
+        reviewer_id: 5,
+        listing_id: 12,
+        review_date: Date.new(2022,3,19),
+        body: "Sucks.  Enough said.",
+        reviewer_name: "Brian"
+    )
+
+
+    Review.create!(
+        reviewer_id: 2,
+        listing_id: 12,
+        review_date: Date.new(2014,4,29),
+        body: "New York of the Midwest!  Great location (and easy to get around), exactly as advertised.  I especially enjoyed the Riverwalk!",
+        reviewer_name: "Barbara"
+    )
+
+
+    Review.create!(
+        reviewer_id: 7,
+        listing_id: 12,
+        review_date: Date.new(2016,9,1),
+        body: "Best pizza in the world, hands-down!",
+        reviewer_name: "Charles"
+    )
+
+
+    Review.create!(
+        reviewer_id: 6,
+        listing_id: 13,
+        review_date: Date.new(2018,11,21),
+        body: "Brian was a great hose, but hardly anyone here spoek English!  Not a great place to visit for an American.",
+        reviewer_name: "Karen"
+    )
+
+
+    Review.create!(
+        reviewer_id: 3,
+        listing_id: 13,
+        review_date: Date.new(2022,5,30),
+        body: "I didn't actually stay here -- I just reserved the place to get money to Brain to help relocate his family -- but he was SO gracious and sweet!  Slava Ukraini!",
+        reviewer_name: "Barbara"
+    )
+
+
+
+    Review.create!(
+        reviewer_id: 2,
+        listing_id: 13,
+        review_date: Date.new(2019,1,3),
+        body: "I wasn't originally planning to visit Ukraine, but I had a few extra days in Poland and thought I'd check it out and I'm so glad I did!  It's a much more beautiful city than I expected and full of culture.",
+        reviewer_name: "Anthony"
     )
 
     puts "Done!"
