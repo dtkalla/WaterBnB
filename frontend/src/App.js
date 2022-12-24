@@ -12,15 +12,52 @@ import ReservationUpdatePage from "./components/Reservations/ReservationUpdatePa
 import MapContainer from "./components/MapContainer/MapContainer";
 import HeaderBar from "./components/HeaderBar/HeaderBar";
 import FilteredListings from "./components/FilteredListings/FilteredListings";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+import { useEffect } from "react";
+import { getListings } from "./store/listings";
+import { fetchListings } from "./store/listings";
+import './components/MapContainer/MapContainer.css'
+
 
 function App() {
+  const dispatch = useDispatch();
+    const listings = useSelector(getListings)
+
+    useEffect(() => {
+        dispatch(fetchListings())
+    }, [])
+  const locations = []
+
+    for (let i = 0; i < listings.length; i++) {
+        locations.push({
+            name: listings[i].id,
+            title: listings[i].listerName+"'s " + listings[i].buildingType,
+            rating: (parseFloat(listings[i].rating).toFixed(1)),
+            place: listings[i].city + ', ' + listings[i].country,
+            price: listings[i].price,
+            pic: listings[i].picturesUrl,
+            location: {
+                lat: parseFloat(listings[i].latitude),
+                lng: parseFloat(listings[i].longitude)
+            }
+        })
+    }
+
   return (
     <>
       <HeaderBar />
       {/* <Navigation id='session-Links' /> */}
         <Switch>
           <Route exact path="/">
-            <ListingIndex />
+            <div id='test-index-map-div'>
+              <div id='the-listing-index'>
+                <ListingIndex />
+              </div>
+              <div id='the-actual-map'>
+                <MapContainer locations={locations} />
+              </div>
+            </div>
           </Route>
           <Route path="/listings/:listingId">
             <ListingShow />

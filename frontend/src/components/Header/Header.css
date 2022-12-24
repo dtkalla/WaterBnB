@@ -25,7 +25,7 @@
     align-items: center;
 }
 
-#header-bar-7 a img {
-    width: 35px;
-    margin-left: 15px;
+.icons-header {
+    width: 25px;
+    margin-left: 10px;
 }
