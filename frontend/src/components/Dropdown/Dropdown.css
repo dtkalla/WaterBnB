@@ -14,3 +14,8 @@
     margin-top: -10px;
 }
 
+#profile-dropdown-pic {
+    width: 30px;
+    border-radius: 50%;
+}
+
