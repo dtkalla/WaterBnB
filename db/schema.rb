@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_13_200825) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_25_053408) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -71,6 +71,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_13_200825) do
     t.string "pic4", default: "https://waterbnb-seeds.s3.amazonaws.com/5_0.png"
     t.decimal "rating", precision: 8, scale: 6, default: "5.0"
     t.integer "number_of_ratings", default: 0
+    t.string "profile_pic", default: "https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg"
     t.index ["city"], name: "index_listings_on_city"
     t.index ["country"], name: "index_listings_on_country"
     t.index ["lister_id"], name: "index_listings_on_lister_id"
@@ -97,6 +98,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_13_200825) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.date "review_date"
+    t.string "profile_pic", default: "https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg"
     t.index ["listing_id"], name: "index_reviews_on_listing_id"
     t.index ["reviewer_id"], name: "index_reviews_on_reviewer_id"
   end
@@ -109,6 +111,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_13_200825) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "last_name", null: false
+    t.string "profile_pic", default: "https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"

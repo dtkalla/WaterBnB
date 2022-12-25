@@ -22,7 +22,7 @@ const ReviewIndexItem = (props) => {
         return (
             <div className="review-index-item">
                 <div id='review-info'>
-                    <img id='profile-pic-2' src='https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg' />
+                    <img id='profile-pic-2' src={review.profilePic} />
                     <div id='review-name-date'>
                         <span id='reviewer-name'>{review.reviewerName}</span>
                         <br/>

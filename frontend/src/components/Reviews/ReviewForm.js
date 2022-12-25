@@ -17,10 +17,12 @@ function ReviewForm() {
 
   let reviewerId
   let reviewerName
+  let profilePic
   
   if (sessionUser !== null) {
     reviewerId = sessionUser.id
     reviewerName = sessionUser.firstName
+    profilePic = sessionUser.profilePic
   }
 
 
@@ -35,7 +37,7 @@ function ReviewForm() {
     e.preventDefault();
     setErrors([]);
     history.push(`/listings/${listingId}`)
-    return dispatch(createReview({ reviewDate, reviewerId, listingId, body, reviewerName, rating }))
+    return dispatch(createReview({ reviewDate, reviewerId, listingId, body, reviewerName, rating, profilePic }))
       .catch(async (res) => {
         let data;
         try {

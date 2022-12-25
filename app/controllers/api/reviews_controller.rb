@@ -1,5 +1,5 @@
 class Api::ReviewsController < ApplicationController
-    wrap_parameters include: Review.attribute_names + ['reviewerName'] + ['reviewerId'] + ['listingId'] + ['reviewDate']
+    wrap_parameters include: Review.attribute_names + ['reviewerName'] + ['reviewerId'] + ['listingId'] + ['reviewDate'] + ['profilePic']
   
     def create
       @review = Review.new(review_params)
@@ -29,7 +29,7 @@ class Api::ReviewsController < ApplicationController
     private
   
     def review_params
-      params.require(:review).permit(:review_date, :reviewer_id, :listing_id, :body, :reviewer_name, :rating)
+      params.require(:review).permit(:review_date, :reviewer_id, :listing_id, :body, :reviewer_name, :rating, :profile_pic)
     end
   end
   

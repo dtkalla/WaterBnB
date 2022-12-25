@@ -15,55 +15,78 @@ ApplicationRecord.transaction do
   
     puts "Creating users..."
     # Create one user with an easy to remember username, email, and password:
+    muhammed = 'https://waterbnb-seeds.s3.amazonaws.com/muhammed.png'
     User.create!(
         first_name: 'Muhammed',
         last_name: 'Li',
         email: 'common@name.net', 
         password: 'password',
+        profile_pic: muhammed
     )
 
+    
+    anthony = 'https://waterbnb-seeds.s3.amazonaws.com/anthony.png'
     User.create!(
         first_name: 'Anthony',
         last_name: 'Bourdain',
         email: 'anthony@travel.org', 
         password: 'password2',
+        profile_pic: anthony
     )
+
     
+
+    barbara = 'https://waterbnb-seeds.s3.amazonaws.com/barbara.png'
     User.create!(
         first_name: 'Barbara',
         last_name: 'Corcoran',
         email: 'barb@money.com', 
         password: 'crush_the_proletariat',
+        profile_pic: barbara
     )
 
+
+
+    elisa = 'https://waterbnb-seeds.s3.amazonaws.com/elisa.png'
     User.create!(
         first_name: 'Elisa',
         last_name: 'Arias',
         email: 'earias@yahoo.com', 
         password: 'contrasena',
+        profile_pic: elisa
     )
 
+
+
+    brian = 'https://waterbnb-seeds.s3.amazonaws.com/brian.png'
     User.create!(
         first_name: 'Brian',
-        last_name: 'Yu',
+        last_name: 'Johnson',
         email: 'yu@hotmail.fr',
-        password: 'mahjong7'
+        password: 'mahjong7',
+        profile_pic: brian
     )
 
 
+
+
+    karen = 'https://waterbnb-seeds.s3.amazonaws.com/karen.png'
     User.create!(
         first_name: 'Karen',
         last_name: 'Smith',
         email: 'ihateserviceworkers@bigbiz.org',
-        password: 'genericpw'
+        password: 'genericpw',
+        profile_pic: karen
     )
 
 
+    charles = 'https://waterbnb-seeds.s3.amazonaws.com/charles.png'
     User.create!(
         first_name: 'Charles',
-        last_name: 'Johnson',
+        last_name: 'Yu',
         email: 'charles@johnson.net',
-        password: 'chazzitup'
+        password: 'chazzitup',
+        profile_pic: charles
     )
 
 
@@ -103,7 +126,9 @@ ApplicationRecord.transaction do
         price: 312,
         building_type: "apartment",
         rating: 4.777778,
-        number_of_ratings: 9
+        number_of_ratings: 9,
+        lister_name: 'Barbara',
+        profile_pic: barbara
     )
 
     Listing.create!(
@@ -122,7 +147,8 @@ ApplicationRecord.transaction do
         parking: false,
         boat: false,
         rating: 4.25,
-        number_of_ratings: 4
+        number_of_ratings: 4,
+        profile_pic: anthony
     )
     
 
@@ -136,6 +162,7 @@ ApplicationRecord.transaction do
         longitude: 2.1686,
         price: 167,
         lister_name: "Elisa",
+        profile_pic: elisa,
         beds: 3,
         type_of_water: "sea",
         rating: 4.427864,
@@ -152,11 +179,11 @@ ApplicationRecord.transaction do
         latitude: -33.9249,
         longitude: 18.4241,
         price: 35,
-        lister_name: "Barbara",
         building_type: "condo",
         pets_allowed: true,
         rating: 4.263889,
-        number_of_ratings: 92
+        number_of_ratings: 92,
+        profile_pic: barbara
     )
 
 
@@ -170,6 +197,7 @@ ApplicationRecord.transaction do
         longitude: -123.3933,
         price: 1000,
         lister_name: "Brian",
+        profile_pic: brian,
         self_check_in: false,
         boat: false,
         parking: false,
@@ -187,6 +215,7 @@ ApplicationRecord.transaction do
         description: "So much history to see in Harlem!", 
         pictures_url: 'https://waterbnb-seeds.s3.amazonaws.com/6_0.png',
         lister_id: 3,
+        profile_pic: barbara,
         latitude: 40.8116,
         longitude: -73.9465,
         price: 475,
@@ -213,6 +242,7 @@ ApplicationRecord.transaction do
         pets_allowed: true,
         type_of_water: "lake",
         lister_name: "Muhammed",
+        profile_pic: muhammed,
         rating: 3.666667,
         number_of_ratings: 3
     )
@@ -231,6 +261,7 @@ ApplicationRecord.transaction do
         self_check_in: false,
         pets_allowed: true,
         lister_name: "Elisa",
+        profile_pic: elisa,
         rating: 5,
         number_of_ratings: 16
     )
@@ -247,6 +278,7 @@ ApplicationRecord.transaction do
         price: 212,
         building_type: "cottage",
         lister_name: "Muhammed",
+        profile_pic: muhammed,
         rating: 4.866667,
         number_of_ratings: 15
     )
@@ -262,7 +294,7 @@ ApplicationRecord.transaction do
         longitude: -73.9707,
         price: 277,
         building_type: "apartment",
-        lister_name: "Barbara",
+        profile_pic: barbara,
         rating: 4.8,
         number_of_ratings: 10
     )
@@ -279,7 +311,7 @@ ApplicationRecord.transaction do
         longitude: 12.3155,
         price: 126,
         type_of_water: "sea",
-        lister_name: "Barbara",
+        profile_pic: barbara,
         rating: 4.95,
         number_of_ratings: 40
     )
@@ -299,7 +331,8 @@ ApplicationRecord.transaction do
         price: 193,
         rating: 3.8,
         number_of_ratings: 15,
-        lister_name: 'Muhammed'
+        lister_name: 'Muhammed',
+        profile_pic: muhammed
     )
 
 
@@ -316,6 +349,7 @@ ApplicationRecord.transaction do
         rating: 4.857143,
         number_of_ratings: 7,
         lister_name: 'Brian',
+        profile_pic: brian,
         pets_allowed: true
         )
 
@@ -331,6 +365,7 @@ ApplicationRecord.transaction do
         building_type: "research center",
         price: 90,
         lister_name: "Muhammed",
+        profile_pic: muhammed,
         boat: false
     )
 
@@ -346,7 +381,8 @@ ApplicationRecord.transaction do
         longitude: 147.1803,
         building_type: "private room",
         price: 35,
-        lister_name: "Charles"
+        lister_name: "Charles",
+        profile_pic: charles,
     )
 
 
@@ -361,6 +397,7 @@ ApplicationRecord.transaction do
         longitude: 55.2708,
         price: 616,
         lister_name: "Charles",
+        profile_pic: charles,
         bedrooms: 4,
         beds: 6,
         bathrooms: 3
@@ -389,6 +426,12 @@ ApplicationRecord.transaction do
 
 
 
+
+
+
+
+    # Devils Tower oil rig
+    # 28.2089, -88.7375
 
 
 
@@ -1058,7 +1101,8 @@ ApplicationRecord.transaction do
         listing_id: 1,
         review_date: Date.new(2021,7,13),
         body: "This was a great place to stay!  I have specific and not at all generic opinions about it!",
-        reviewer_name: "Anthony"
+        reviewer_name: "Anthony",
+        profile_pic: anthony
     )
 
 
@@ -1067,7 +1111,8 @@ ApplicationRecord.transaction do
         listing_id: 1,
         review_date: Date.new(2022,1,4),
         body: "West coast best coast!",
-        reviewer_name: "Muhammed"
+        reviewer_name: "Muhammed",
+        profile_pic: muhammed
     )
 
     Review.create!(
@@ -1075,7 +1120,8 @@ ApplicationRecord.transaction do
         listing_id: 1,
         review_date: Date.new(2015,7,4),
         body: "Lots of fireworks over the Bay on the 4th of July!",
-        reviewer_name: "Elisa"
+        reviewer_name: "Elisa",
+        profile_pic: elisa
     )
 
     Review.create!(
@@ -1083,7 +1129,8 @@ ApplicationRecord.transaction do
         listing_id: 7,
         review_date: Date.new(2020,8,20),
         body: "The place was nice, and I loved going to Lake Itasca and doing the Bemidji State Park bogwalk!",
-        reviewer_name: "Anthony"
+        reviewer_name: "Anthony",
+        profile_pic: anthony
     )
 
 
@@ -1092,7 +1139,8 @@ ApplicationRecord.transaction do
         listing_id: 2,
         review_date: Date.new(2019,6,2),
         body: "Not nearly as cool as Atlantis, tbh.",
-        reviewer_name: "Brian"
+        reviewer_name: "Brian",
+        profile_pic: brian
     )
 
     Review.create!(
@@ -1100,7 +1148,8 @@ ApplicationRecord.transaction do
         listing_id: 2,
         review_date: Date.new(2022,4,27),
         body: "The location was great -- easy access to Central Park and museums!  The unit gets a lot of natural light and has fantastic sunrises!  The A/C works great.  Host was very responsive.  Would stay again",
-        reviewer_name: "Muhammed"
+        reviewer_name: "Muhammed",
+        profile_pic: muhammed
     )
 
 
@@ -1109,7 +1158,8 @@ ApplicationRecord.transaction do
         listing_id: 2,
         review_date: Date.new(2021,9,13),
         body: "I liked the neighborhood feel and being a short walk from the subway.",
-        reviewer_name: "Barbara"
+        reviewer_name: "Barbara",
+        profile_pic: barbara
     )
 
 
@@ -1118,7 +1168,8 @@ ApplicationRecord.transaction do
         listing_id: 6,
         review_date: Date.new(2022,5,18),
         body: "It's a great place to stop in for a work trip.  Vibrant neighborhood culture.  Lots of natural light and the building is gorgeous.  Would stay again.",
-        reviewer_name: "Karen"
+        reviewer_name: "Karen",
+        profile_pic: karen
     )
 
 
@@ -1127,7 +1178,8 @@ ApplicationRecord.transaction do
         listing_id: 6,
         review_date: Date.new(2021,7,22),
         body: "Paper thin walls.  Terribly hot.  Dirty streets.",
-        reviewer_name: "Charles"
+        reviewer_name: "Charles",
+        profile_pic: charles
     )
 
 
@@ -1136,7 +1188,8 @@ ApplicationRecord.transaction do
         listing_id: 6,
         review_date: Date.new(2019,12,26),
         body: "A rat got in the building in the middle of the night.  Owner nonresponsive.  Had to wake up neighbors to deal with it.  Would not stay again.",
-        reviewer_name: "Elisa"
+        reviewer_name: "Elisa",
+        profile_pic: elisa
     )
 
 
@@ -1145,7 +1198,8 @@ ApplicationRecord.transaction do
         listing_id: 9,
         review_date: Date.new(2018,2,9),
         body: "Muhammed's cottage was perfect for our extended family gathering. It's spacious, full of natural light and incredibly well designed. The beds were so comfy and you can't beat the views. Would definitely recommend this home. We hope to return in the summer to take full advantage of the pool!",
-        reviewer_name: "Elisa"
+        reviewer_name: "Elisa",
+        profile_pic: elisa
     )
 
 
@@ -1154,7 +1208,8 @@ ApplicationRecord.transaction do
         listing_id: 9,
         review_date: Date.new(2016,3,15),
         body: "Beautiful house and amazing view. Mohammed was a great host and very responsive to anything that came up.",
-        reviewer_name: "Anthony"
+        reviewer_name: "Anthony",
+        profile_pic: anthony
     )
 
 
@@ -1163,7 +1218,8 @@ ApplicationRecord.transaction do
         listing_id: 9,
         review_date: Date.new(2022,11,18),
         body: "Everything beyond my expectation! House & Living Room 10/10.  Bed Room super clean.  Bath Room nice and clean.",
-        reviewer_name: "Charles"
+        reviewer_name: "Charles",
+        profile_pic: charles
     )
 
 
@@ -1172,7 +1228,8 @@ ApplicationRecord.transaction do
         listing_id: 10,
         review_date: Date.new(2020,10,29),
         body: "I wouldn't want people to book so I could have it again next time!  Just a joke...but seriously, 10/10.",
-        reviewer_name: "Charles"
+        reviewer_name: "Charles",
+        profile_pic: charles
     )
 
 
@@ -1181,7 +1238,8 @@ ApplicationRecord.transaction do
         listing_id: 10,
         review_date: Date.new(2018,5,2),
         body: "Nice place overlooking the water.  Close to a lot of attractions.  I loved going out on the boat!",
-        reviewer_name: "Elisa"
+        reviewer_name: "Elisa",
+        profile_pic: elisa
     )
 
 
@@ -1190,7 +1248,8 @@ ApplicationRecord.transaction do
         listing_id: 10,
         review_date: Date.new(2014,4,1),
         body: "Place is awesome!  It was nice falling asleep to the sounds of the waves.  Completely as advertised.",
-        reviewer_name: "Muhammed"
+        reviewer_name: "Muhammed",
+        profile_pic: muhammed
     )
 
 
@@ -1200,7 +1259,8 @@ ApplicationRecord.transaction do
         listing_id: 3,
         review_date: Date.new(2016,10,12),
         body: "Beautiful Gaudi architectural buildings (although they still haven't finished the Sagrada Familia).  What an experience!",
-        reviewer_name: "Anthony"
+        reviewer_name: "Anthony",
+        profile_pic: anthony
     )
 
 
@@ -1209,7 +1269,8 @@ ApplicationRecord.transaction do
         listing_id: 3,
         review_date: Date.new(2021,8,24),
         body: 'Great nightlife -- this neighborhood really puts the "bar" in Barcelona!',
-        reviewer_name: "Karen"
+        reviewer_name: "Karen",
+        profile_pic: karen
     )
 
 
@@ -1218,7 +1279,8 @@ ApplicationRecord.transaction do
         listing_id: 3,
         review_date: Date.new(2019,7,2),
         body: "It rained the whole time.  Ugh!",
-        reviewer_name: "Muhammed"
+        reviewer_name: "Muhammed",
+        profile_pic: muhammed
     )
 
 
@@ -1228,7 +1290,8 @@ ApplicationRecord.transaction do
         listing_id: 4,
         review_date: Date.new(2021,12,25),
         body: "Boo!",
-        reviewer_name: "Anthony"
+        reviewer_name: "Anthony",
+        profile_pic: anthony
     )
 
 
@@ -1238,7 +1301,8 @@ ApplicationRecord.transaction do
         listing_id: 4,
         review_date: Date.new(2022,4,15),
         body: "Pristine views, as well as state-of-the-art accomodations.  10/10, would recommend!",
-        reviewer_name: "Elisa"
+        reviewer_name: "Elisa",
+        profile_pic: elisa
     )
 
 
@@ -1248,7 +1312,8 @@ ApplicationRecord.transaction do
         listing_id: 4,
         review_date: Date.new(2017,4,16),
         body: "It was great value for a low price.",
-        reviewer_name: "Brian"
+        reviewer_name: "Brian",
+        profile_pic: brian
     )
 
 
@@ -1258,7 +1323,8 @@ ApplicationRecord.transaction do
         listing_id: 5,
         review_date: Date.new(2021,2,22),
         body: "Hard to get to and very humid.  Unforgettable, but overpriced.",
-        reviewer_name: "Muhammed"
+        reviewer_name: "Muhammed",
+        profile_pic: muhammed
     )
 
 
@@ -1268,7 +1334,8 @@ ApplicationRecord.transaction do
         listing_id: 5,
         review_date: Date.new(2019,7,14),
         body: "0/10, I can't swim.",
-        reviewer_name: "Barbara"
+        reviewer_name: "Barbara",
+        profile_pic: barbara
     )
 
 
@@ -1278,7 +1345,8 @@ ApplicationRecord.transaction do
         listing_id: 5,
         review_date: Date.new(2017,9,23),
         body: "Great seafood selection.  This place is to die for!",
-        reviewer_name: "Charles"
+        reviewer_name: "Charles",
+        profile_pic: charles
     )
 
 
@@ -1289,7 +1357,8 @@ ApplicationRecord.transaction do
         listing_id: 7,
         review_date: Date.new(2021,12,24),
         body: "I used to be a high-achieving female executive from NYC or LA with no time for love, but my business sent me here on Christmas.  I met a cute guy who organizes the yearly Christmas pageant, fell in love, and have impulsively decided to move here for the rest of my life.  Merry Christmas!",
-        reviewer_name: "Barbara"
+        reviewer_name: "Barbara",
+        profile_pic: barbara
     )
 
 
@@ -1300,7 +1369,8 @@ ApplicationRecord.transaction do
         listing_id: 7,
         review_date: Date.new(2020,6,26),
         body: "No one wore a mask in the city, except at the local university.  I'm amazed I didn't catch covid.  (The town is lovely, though!)",
-        reviewer_name: "Karen"
+        reviewer_name: "Karen",
+        profile_pic: karen
     )
 
 
@@ -1310,7 +1380,8 @@ ApplicationRecord.transaction do
         listing_id: 8,
         review_date: Date.new(2018,2,6),
         body: "Linda casa, localizaçao muito proxima ao centro e restaurantes. Sala grande com cozinha e uma vista linda. Banheiro grande e pratico. quarto com cama confortavel e aconchegante. O local é muito silencioso e gostoso de ficar... apos uma viagem de 10 dias, acabamos ficando no apartamento descansando com a linda vista do lugar. Cozinhamos e tinha tudo necessario para preparar as refeiçoes.",
-        reviewer_name: "Charles"
+        reviewer_name: "Charles",
+        profile_pic: charles
     )
 
 
@@ -1320,7 +1391,8 @@ ApplicationRecord.transaction do
         listing_id: 8,
         review_date: Date.new(2022,1,7),
         body: "Unforgettable experience!  The lake and house are beautiful, and I loved going out in the boat every day.  Can't wait to come back!",
-        reviewer_name: "Anthony"
+        reviewer_name: "Anthony",
+        profile_pic: anthony
     )
 
 
@@ -1330,16 +1402,18 @@ ApplicationRecord.transaction do
         listing_id: 8,
         review_date: Date.new(2020,8,2),
         body: "Everything was closed due to COVID-19, so I spent a lot of time on the water.  Incredibly peaceful -- I'll remember this trip for the rest of my life.",
-        reviewer_name: "Barbara"
+        reviewer_name: "Barbara",
+        profile_pic: barbara
     )
 
 
     Review.create!(
-        reviewer_id: 5,
+        reviewer_id: 2,
         listing_id: 11,
         review_date: Date.new(2018,5,1),
         body: "Staying in Venice and going down the Grand Canal was a dream come true!  Barbara was excellent, and food was unforgettable, and the house was centrally located.  10/10, would highly recommend!",
-        reviewer_name: "Barbara"
+        reviewer_name: "Anthony",
+        profile_pic: anthony
     )
 
 
@@ -1348,7 +1422,8 @@ ApplicationRecord.transaction do
         listing_id: 11,
         review_date: Date.new(2021,4,18),
         body: "I grew up in a city, so I'm used to hearing the sounds of cars.  You never realize how annoying they are until you go to a city without them.  Walking and riding boats everywhere was so tranquil, and the vacation much needed.",
-        reviewer_name: "Elisa"
+        reviewer_name: "Elisa",
+        profile_pic: elisa
     )
 
 
@@ -1357,7 +1432,8 @@ ApplicationRecord.transaction do
         listing_id: 11,
         review_date: Date.new(2020,2,17),
         body: "Great location, tasty food, beautiful city.  I saw the piazza flooding while I was there, but people just went on with their days.",
-        reviewer_name: "Muhammed"
+        reviewer_name: "Muhammed",
+        profile_pic: muhammed
     )
 
 
@@ -1366,7 +1442,8 @@ ApplicationRecord.transaction do
         listing_id: 12,
         review_date: Date.new(2022,3,19),
         body: "Sucks.  Enough said.",
-        reviewer_name: "Brian"
+        reviewer_name: "Brian",
+        profile_pic: brian
     )
 
 
@@ -1375,7 +1452,8 @@ ApplicationRecord.transaction do
         listing_id: 12,
         review_date: Date.new(2014,4,29),
         body: "New York of the Midwest!  Great location (and easy to get around), exactly as advertised.  I especially enjoyed the Riverwalk!",
-        reviewer_name: "Barbara"
+        reviewer_name: "Barbara",
+        profile_pic: barbara
     )
 
 
@@ -1384,7 +1462,8 @@ ApplicationRecord.transaction do
         listing_id: 12,
         review_date: Date.new(2016,9,1),
         body: "Best pizza in the world, hands-down!",
-        reviewer_name: "Charles"
+        reviewer_name: "Charles",
+        profile_pic: charles
     )
 
 
@@ -1393,7 +1472,8 @@ ApplicationRecord.transaction do
         listing_id: 13,
         review_date: Date.new(2018,11,21),
         body: "Brian was a great hose, but hardly anyone here spoek English!  Not a great place to visit for an American.",
-        reviewer_name: "Karen"
+        reviewer_name: "Karen",
+        profile_pic: karen
     )
 
 
@@ -1402,7 +1482,8 @@ ApplicationRecord.transaction do
         listing_id: 13,
         review_date: Date.new(2022,5,30),
         body: "I didn't actually stay here -- I just reserved the place to get money to Brain to help relocate his family -- but he was SO gracious and sweet!  Slava Ukraini!",
-        reviewer_name: "Barbara"
+        reviewer_name: "Barbara",
+        profile_pic: barbara
     )
 
 
@@ -1412,7 +1493,8 @@ ApplicationRecord.transaction do
         listing_id: 13,
         review_date: Date.new(2019,1,3),
         body: "I wasn't originally planning to visit Ukraine, but I had a few extra days in Poland and thought I'd check it out and I'm so glad I did!  It's a much more beautiful city than I expected and full of culture.",
-        reviewer_name: "Anthony"
+        reviewer_name: "Anthony",
+        profile_pic: anthony
     )
 
     puts "Done!"

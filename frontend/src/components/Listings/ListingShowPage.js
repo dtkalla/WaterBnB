@@ -81,7 +81,7 @@ const ListingShow = () => {
             
             <div id='show-page-title-pic'>
                 <h2>{l.listerName}'s {l.buildingType} near the {l.typeOfWater}</h2>
-                <img id='profile-pic-1' src='https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg' />
+                <img id='profile-pic-1' src={l.profilePic} />
             </div>
 
             
