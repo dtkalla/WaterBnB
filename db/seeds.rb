@@ -316,7 +316,7 @@ ApplicationRecord.transaction do
         rating: 4.857143,
         number_of_ratings: 7,
         lister_name: 'Brian',
-        pets: true
+        pets_allowed: true
         )
 
 
