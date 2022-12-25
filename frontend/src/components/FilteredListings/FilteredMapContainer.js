@@ -136,12 +136,11 @@ export const FilteredMapContainer = (props) => {
             //   pixelOffset='0'
               onCloseClick={() => setSelected({})}
             >
-                <Link to={`/listings/${selected.name}`} className='map-modal-elements'>
+                <Link to={`/listings/${selected.id}`} className='map-modal-elements'>
                     <img id='google-map-index-image' src={`https://waterbnb-seeds.s3.amazonaws.com/${selected.id}_0.png`} />
                     <p id='map-stars'><b>{selected.title}</b> <span>&#9733; {selected.rating}</span></p>
                     <p>{selected.place}</p>
                     <p><b>${selected.price}</b> night</p>
-                    {/* <p>{selected.name}</p> */}
                 </Link>
             </InfoWindow>
             )
