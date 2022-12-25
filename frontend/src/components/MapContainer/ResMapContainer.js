@@ -24,7 +24,62 @@ export const ResMapContainer = (props) => {
       }
     
 
-      
+      const styles = [
+        {
+            "featureType": "all",
+            "elementType": "labels.text",
+            "stylers": [
+                {
+                    "color": "#878787"
+                }
+            ]
+        },
+        {
+            "featureType": "all",
+            "elementType": "labels.text.stroke",
+            "stylers": [
+                {
+                    "visibility": "off"
+                }
+            ]
+        },
+        {
+            "featureType": "landscape",
+            "elementType": "all",
+            "stylers": [
+                {
+                    "color": "#f9f5ed"
+                }
+            ]
+        },
+        {
+            "featureType": "road.highway",
+            "elementType": "all",
+            "stylers": [
+                {
+                    "color": "#f5f5f5"
+                }
+            ]
+        },
+        {
+            "featureType": "road.highway",
+            "elementType": "geometry.stroke",
+            "stylers": [
+                {
+                    "color": "#c9c9c9"
+                }
+            ]
+        },
+        {
+            "featureType": "water",
+            "elementType": "all",
+            "stylers": [
+                {
+                    "color": "#aee0f4"
+                }
+            ]
+        }
+    ]    
   
   return (
      <LoadScript
@@ -32,13 +87,14 @@ export const ResMapContainer = (props) => {
         <GoogleMap className='index-map'
           mapContainerStyle={mapStyles}
           zoom={11}
-          center={defaultCenter}>
+          center={defaultCenter}
+          options={{styles: styles}}
+          >
          {
             locations.map(item => {
               return (
               <Marker key={item.name} 
-                position={item.location}
-              />
+                position={item.location}              />
               )
             })
          }
