@@ -234,3 +234,9 @@
     text-decoration: none;
     color: black;
 }
+
+.current-res-info {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}

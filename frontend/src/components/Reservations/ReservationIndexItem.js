@@ -10,6 +10,7 @@ import { useSelector } from 'react-redux';
 import { getListing } from '../../store/listings';
 import { updateReservation } from '../../store/reservations';
 import ResMapContainer from '../MapContainer/ResMapContainer';
+import { format, subDays } from 'date-fns'
 
 
 const ReservationIndexItem = (props) => {
@@ -51,6 +52,9 @@ const ReservationIndexItem = (props) => {
       };
     
 
+      const startDate = new Date(reservation.startDate)
+      const endDate = new Date(reservation.endDate)
+
     if (reservation.id) {
         return (
             <div className="reservation-index-item">
@@ -59,7 +63,7 @@ const ReservationIndexItem = (props) => {
                     <span id='title-details'>{capitalize(listing.building_type)} near the {listing.type_of_water} hosted by {listing.lister_name}</span>
                     <div className='solid-line-reservations'></div>
                     <div id='reservation-more-details'>
-                        <span className='dates'>{month[reservation.startDate.slice(5,7)]} {parseInt(reservation.startDate.slice(8))} - {reservation.startDate[6] === reservation.endDate[6] ? '' : month[reservation.endDate.slice(5,7)] + ' '}{parseInt(reservation.endDate.slice(8))}</span>
+                        <span className='dates'>{format(startDate, 'MMM')} {format(startDate, 'd')} - {startDate[6] === endDate[6] ? '' : format(endDate, 'MMM') + ' '}{format(endDate, 'd')}</span>
                         {/* <span className='dates'>{reservation.endDate}</span> */}
                         <div className='vertical-line-reservations'></div>
                         <span id='location'>{listing.city}, {listing.country}</span>
@@ -79,7 +83,7 @@ const ReservationIndexItem = (props) => {
 
                     <button className='cancel-reservation-button' onClick={handleClick}>Cancel Reservation</button>
                     <br/>
-                    <span className='small-text'>Free cancelation until {month[reservation.startDate.slice(5,7)]} 1</span>
+                    <span className='small-text'>Free cancelation until {format(subDays(startDate, 7), 'MMM d')}</span>
                     <br/><br/>
                     
                 </div>

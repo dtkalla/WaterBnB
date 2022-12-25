@@ -7,6 +7,7 @@ import { useSelector } from "react-redux";
 import { useParams, useHistory } from "react-router-dom/cjs/react-router-dom.min";
 // import { fetchListing, getListing } from "../../store/listings";
 import { getReservation, updateReservation } from "../../store/reservations";
+import {format} from 'date-fns'
 
 function ReservationUpdatePage() {
   const { reservationId } = useParams();
@@ -19,9 +20,12 @@ function ReservationUpdatePage() {
   const listingId = listing.id
   const reserverId = sessionUser.id
   const id = reservationId
+  const currentStartDate = new Date(reservation.startDate)
+  const currentEndDate = new Date(reservation.endDate)
+  const currentPrice = reservation.price
+  const currentNumGuests = reservation.numGuests
 
-  // const [price, setPrice] = useState("")
-  // const [numGuests, setNumGuests] = useState("");
+
   let price = listing.price
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
@@ -71,6 +75,12 @@ function ReservationUpdatePage() {
       <ul>
         <div id='reservation-price'>
           <span><b>${listing.price}</b> night</span>
+        </div>
+        <div className="current-res-info">
+          <p><b>Current reservation:</b></p>
+          <p>{format(currentStartDate, 'MMM')} {format(currentStartDate, 'd')} - {currentStartDate[6] === currentEndDate[6] ? '' : format(currentEndDate, 'MMM') + ' '}{format(currentEndDate, 'd')}</p>
+          <p>{currentNumGuests} guest{currentNumGuests == 1 ? '' : 's'}</p>
+          <p>${currentPrice}</p>
         </div>
         <br/>
         <div id='start-end-dates'>
