@@ -320,45 +320,51 @@ ApplicationRecord.transaction do
         )
 
 
-        # Listing.create!(
-    #     city: 'Bouvet Island',
-    #     country: 'Norway',
-    #     description: "It's actually illegal to visit, and good luck getting here!", 
-    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
-    #     lister_id: 1,
-    #     latitude: -54.4208,
-    #     longitude: 3.3464,
-    #     price: 90,
-    #     lister_name: "Muhammed"
-    # )
+        Listing.create!(
+        city: 'Bouvet Island',
+        country: 'Norway',
+        description: "It's actually illegal to visit without permission of the Norwegian government, and good luck getting here!", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
+        lister_id: 1,
+        latitude: -54.4208,
+        longitude: 3.3464,
+        building_type: "research center",
+        price: 90,
+        lister_name: "Muhammed",
+        boat: false
+    )
 
 
 
-    # Listing.create!(
-    #     city: 'Port Moresby',
-    #     country: 'Papua New Guinea',
-    #     description: "Come learn about the most diverse country you've never heard of!", 
-    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
-    #     lister_id: 7,
-    #     latitude: -9.4438,
-    #     longitude: 147.1803,
-    #     price: 35,
-        # lister_name: "Charles"
-    # )
+    Listing.create!(
+        city: 'Port Moresby',
+        country: 'Papua New Guinea',
+        description: "Come learn about the most diverse country you've never heard of!", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
+        lister_id: 7,
+        latitude: -9.4438,
+        longitude: 147.1803,
+        building_type: "private room",
+        price: 35,
+        lister_name: "Charles"
+    )
 
 
 
-        # Listing.create!(
-    #     city: 'Dubai',
-    #     country: 'United Arab Emirates',
-    #     description: "The world is your oyster here (if you have the money)!", 
-    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
-    #     lister_id: 7,
-    #     latitude: 25.2048,
-    #     longitude: 55.2708,
-        # price: 816,
-        # lister_name: "Charles"
-    # )
+        Listing.create!(
+        city: 'Dubai',
+        country: 'United Arab Emirates',
+        description: "The world is your oyster here (if you have the money)!", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
+        lister_id: 7,
+        latitude: 25.2048,
+        longitude: 55.2708,
+        price: 616,
+        lister_name: "Charles",
+        bedrooms: 4,
+        beds: 6,
+        bathrooms: 3
+    )
 
 
 
