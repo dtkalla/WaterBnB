@@ -366,7 +366,9 @@ ApplicationRecord.transaction do
         price: 90,
         lister_name: "Muhammed",
         profile_pic: muhammed,
-        boat: false
+        boat: false,
+        number_of_ratings: 3,
+        rating: 3.666667
     )
 
 
@@ -383,6 +385,8 @@ ApplicationRecord.transaction do
         price: 35,
         lister_name: "Charles",
         profile_pic: charles,
+        number_of_ratings: 4,
+        rating: 4.5
     )
 
 
@@ -400,7 +404,9 @@ ApplicationRecord.transaction do
         profile_pic: charles,
         bedrooms: 4,
         beds: 6,
-        bathrooms: 3
+        bathrooms: 3,
+        number_of_ratings: 11,
+        rating: 4.636364
     )
 
 
@@ -1495,6 +1501,96 @@ ApplicationRecord.transaction do
         body: "I wasn't originally planning to visit Ukraine, but I had a few extra days in Poland and thought I'd check it out and I'm so glad I did!  It's a much more beautiful city than I expected and full of culture.",
         reviewer_name: "Anthony",
         profile_pic: anthony
+    )
+
+
+    Review.create!(
+        reviewer_id: 7,
+        listing_id: 14,
+        review_date: Date.new(2019,7,31),
+        body: "I heard Bouvet Island was cold, so I just packed t-shirts and shorts to show how manly I am.  Turns out, it's very cold.  Don't be an idiot like me.",
+        reviewer_name: "Charles",
+        profile_pic: charles
+    )
+
+
+    Review.create!(
+        reviewer_id: 4,
+        listing_id: 14,
+        review_date: Date.new(2022,3,16),
+        body: "I've loved penguins ever since the first time I saw them in a zoo, so when I saw an opportunity to study them on Bouvet Island, I jumped at the chance!  No a lot of human company, but some of the cutest animals I've ever seen <3",
+        reviewer_name: "Elisa",
+        profile_pic: elisa
+    )
+
+
+    Review.create!(
+        reviewer_id: 5,
+        listing_id: 14,
+        review_date: Date.new(2015,4,7),
+        body: "I didn't realize that visiting here was illegal, so I two days into my trip I was arrested and ended up spending 2 years in a Norwegian prison!  Norway has surprisingly nice prisons, and it was a great chance to disconnect and finally become fluent in Norwegian.  Hard to get to, but definitely worth it!",
+        reviewer_name: "Brian",
+        profile_pic: brian
+    )
+
+
+
+    Review.create!(
+        reviewer_id: 2,
+        listing_id: 15,
+        review_date: Date.new(2017,6,3),
+        body: "After Reading Jared Diamond's 'The World Until Yesterday', I knew I had to check out Papua New Guinea, and it didn't disappoint.  The location is absolutely stunning, and everyone is so friendly!  The room is small, but trust me, you'll want to spend most of your time outside on the beach!",
+        reviewer_name: "Anthony",
+        profile_pic: anthony
+    )
+
+    Review.create!(
+        reviewer_id: 3,
+        listing_id: 15,
+        review_date: Date.new(2023,1,4),
+        body: "Magnificent location and gorgeous scenery.",
+        reviewer_name: "Barbara",
+        profile_pic: barbara
+    )
+
+
+    Review.create!(
+        reviewer_id: 5,
+        listing_id: 15,
+        review_date: Date.new(2020,2,18),
+        body: "I got infected with malaria while here -- bring quinine.",
+        reviewer_name: "Brian",
+        profile_pic: brian
+    )
+
+
+    Review.create!(
+        reviewer_id: 2,
+        listing_id: 16,
+        review_date: Date.new(2022,2,20),
+        body: "I came to Dubai to see the World Fair.  The Fair itself was mostly disappointing, but the city was great and Charles was a fantastic host.",
+        reviewer_name: "Anthony",
+        profile_pic: anthony
+    )
+
+
+    Review.create!(
+        reviewer_id: 5,
+        listing_id: 16,
+        review_date: Date.new(2022,11,11),
+        body: "Overpriced but beautiful",
+        reviewer_name: "Brian",
+        profile_pic: brian
+    )
+
+
+    Review.create!(
+        reviewer_id: 6,
+        listing_id: 16,
+        review_date: Date.new(2018,10,4),
+        body: "The venders here are very aggressive and will definitely overcharge you.",
+        reviewer_name: "Karen",
+        profile_pic: karen
     )
 
     puts "Done!"
