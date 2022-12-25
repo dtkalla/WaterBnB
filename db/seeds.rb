@@ -134,7 +134,7 @@ ApplicationRecord.transaction do
         lister_id: 4,
         latitude: 41.3874,
         longitude: 2.1686,
-        price: 84,
+        price: 167,
         lister_name: "Elisa",
         beds: 3,
         type_of_water: "sea",
@@ -226,7 +226,7 @@ ApplicationRecord.transaction do
         lister_id: 4,
         latitude: -16.0172,
         longitude: -69.1780,
-        price: 32,
+        price: 35,
         type_of_water: "lake",
         self_check_in: false,
         pets_allowed: true,
@@ -320,6 +320,72 @@ ApplicationRecord.transaction do
         )
 
 
+        # Listing.create!(
+    #     city: 'Bouvet Island',
+    #     country: 'Norway',
+    #     description: "It's actually illegal to visit, and good luck getting here!", 
+    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
+    #     lister_id: 1,
+    #     latitude: -54.4208,
+    #     longitude: 3.3464,
+    #     price: 90,
+    #     lister_name: "Muhammed"
+    # )
+
+
+
+    # Listing.create!(
+    #     city: 'Port Moresby',
+    #     country: 'Papua New Guinea',
+    #     description: "Come learn about the most diverse country you've never heard of!", 
+    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
+    #     lister_id: 7,
+    #     latitude: -9.4438,
+    #     longitude: 147.1803,
+    #     price: 35,
+        # lister_name: "Charles"
+    # )
+
+
+
+        # Listing.create!(
+    #     city: 'Dubai',
+    #     country: 'United Arab Emirates',
+    #     description: "The world is your oyster here (if you have the money)!", 
+    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
+    #     lister_id: 7,
+    #     latitude: 25.2048,
+    #     longitude: 55.2708,
+        # price: 816,
+        # lister_name: "Charles"
+    # )
+
+
+
+    
+    # Listing.create!(
+    #     city: 'Singapore',
+    #     country: 'Singapore',
+    #     description: "City-states are making a comeback!", 
+    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
+    #     lister_id: 6,
+    #     latitude: 1.3521,
+    #     longitude: 103.8198,
+    #     price: 503,
+    #       lister_name: "Karen"
+    # )
+
+
+
+
+
+
+
+
+
+
+
+
     # Listing.create!(
     #     city: 'Duluth',
     #     country: 'Minnesota',
@@ -331,18 +397,6 @@ ApplicationRecord.transaction do
     #     price: 92,
     # )
 
-
-
-    # Listing.create!(
-    #     city: 'Dubai',
-    #     country: 'United Arab Emirates',
-    #     description: "The world is your oyster here (if you have the money)!", 
-    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
-    #     lister_id: 3,
-    #     latitude: 25.2048,
-    #     longitude: 55.2708,
-    #     price: 816,
-    # )
     
     
 
@@ -373,17 +427,6 @@ ApplicationRecord.transaction do
 
 
 
-    
-    # Listing.create!(
-    #     city: 'Odessa',
-    #     country: 'Ukraine',
-    #     description: "Stay here -- it'll be a great experience!", 
-    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
-    #     lister_id: 3,
-    #     latitude: 46.4825,
-    #     longitude: 30.7233,
-    #     price: 54,
-    # )
 
 
     # Listing.create!(
@@ -473,31 +516,6 @@ ApplicationRecord.transaction do
     # )
 
 
-
-    # Listing.create!(
-    #     city: 'Bouvet Island',
-    #     country: 'Norway',
-    #     description: "It's actually illegal to visit, and good luck getting here!", 
-    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
-    #     lister_id: 1,
-    #     latitude: -54.4208,
-    #     longitude: 3.3464,
-    #     price: 90,
-    #     lister_name: "Muhammed"
-    # )
-
-
-
-    # Listing.create!(
-    #     city: 'Port Moresby',
-    #     country: 'Papua New Guinea',
-    #     description: "Come learn about the most diverse country you've never heard of!", 
-    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
-    #     lister_id: 3,
-    #     latitude: -9.4438,
-    #     longitude: 147.1803,
-    #     price: 21,
-    # )
 
 
     
@@ -661,16 +679,6 @@ ApplicationRecord.transaction do
     # )
 
 
-    # Listing.create!(
-    #     city: 'Singapore',
-    #     country: 'Singapore',
-    #     description: "City-states are making a comeback!", 
-    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
-    #     lister_id: 3,
-    #     latitude: 1.3521,
-    #     longitude: 103.8198,
-    #     price: 103,
-    # )
 
 
     # Listing.create!(
