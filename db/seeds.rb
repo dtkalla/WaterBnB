@@ -92,7 +92,7 @@ ApplicationRecord.transaction do
     puts "Creating listings..."
     
 
-    l = Listing.create!(
+    Listing.create!(
         city: 'San Francisco',
         country: 'California',
         description: 'Stay here while you interview for a tech job in Silicon Valley!', 
@@ -275,10 +275,9 @@ ApplicationRecord.transaction do
         description: "Ride a gondola along the Grand Canal!", 
         pictures_url: 'https://waterbnb-seeds.s3.amazonaws.com/10_0.png',
         lister_id: 3,
-        # latitude: 40.5755,
-        # longitude: -73.9707,
+        latitude: 45.4408,
+        longitude: 12.3155,
         price: 126,
-        building_type: "house",
         type_of_water: "sea",
         lister_name: "Barbara",
         rating: 4.95,
@@ -295,9 +294,9 @@ ApplicationRecord.transaction do
         lister_id: 1,
         latitude: 41.8781,
         longitude: -87.6298,
-        building_type: 'apartment'
+        building_type: 'apartment',
         type_of_water: "lake",
-        price: 163,
+        price: 193,
         rating: 3.8,
         number_of_ratings: 15,
         lister_name: 'Muhammed'
@@ -314,9 +313,10 @@ ApplicationRecord.transaction do
         longitude: 30.7233,
         price: 54,
         type_of_water: "sea",
-        rating: 4.9,
+        rating: 4.857143,
         number_of_ratings: 7,
         lister_name: 'Brian',
+        pets: true
         )
 
 
