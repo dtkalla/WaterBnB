@@ -114,9 +114,6 @@ const ListingShow = () => {
             </h3>
             <ReviewsIndex />
             
-
-            {/* <h2 id='reviews-title'>Rate and Review!</h2> */}
-            {/* <ReviewForm /> */}
         </div>
     )
 }

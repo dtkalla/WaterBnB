@@ -92,7 +92,7 @@ ApplicationRecord.transaction do
     puts "Creating listings..."
     
 
-    l = Listing.create!(
+    Listing.create!(
         city: 'San Francisco',
         country: 'California',
         description: 'Stay here while you interview for a tech job in Silicon Valley!', 
@@ -252,7 +252,7 @@ ApplicationRecord.transaction do
     )
 
 
-        Listing.create!(
+    Listing.create!(
         city: 'Coney Island',
         country: 'New York',
         description: "Heaven at the end of a subway ride!", 
@@ -268,66 +268,56 @@ ApplicationRecord.transaction do
     )
 
 
-    # Listing.create!(
-    #     city: 'Buenos Aires',
-    #     country: 'Argentina',
-    #     description: 'Algun lema escrito mas tarde', 
-    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
-    #     lister_id: 3,
-    #     latitude: -34.6037,
-    #     longitude: -58.3816,
-    #     price: 149,
-    #     lister_name: "Barbara"
-    # )
+
+    Listing.create!(
+        city: 'Venice',
+        country: 'Italy',
+        description: "Ride a gondola along the Grand Canal!", 
+        pictures_url: 'https://waterbnb-seeds.s3.amazonaws.com/10_0.png',
+        lister_id: 3,
+        latitude: 45.4408,
+        longitude: 12.3155,
+        price: 126,
+        type_of_water: "sea",
+        lister_name: "Barbara",
+        rating: 4.95,
+        number_of_ratings: 40
+    )
 
 
-    # Listing.create!(
-    #     city: 'Bouvet Island',
-    #     country: 'Norway',
-    #     description: "It's actually illegal to visit, and good luck getting here!", 
-    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
-    #     lister_id: 1,
-    #     latitude: -54.4208,
-    #     longitude: 3.3464,
-    #     price: 90,
-    #     lister_name: "Muhammed"
-    # )
+
+    Listing.create!(
+        city: 'Chicago',
+        country: 'Illinois',
+        description: "Midwest MidBEST!", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
+        lister_id: 1,
+        latitude: 41.8781,
+        longitude: -87.6298,
+        building_type: 'apartment',
+        type_of_water: "lake",
+        price: 193,
+        rating: 3.8,
+        number_of_ratings: 15,
+        lister_name: 'Muhammed'
+    )
 
 
-    # Listing.create!(
-    #     city: 'Dubai',
-    #     country: 'United Arab Emirates',
-    #     description: "The world is your oyster here (if you have the money)!", 
-    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
-    #     lister_id: 3,
-    #     latitude: 25.2048,
-    #     longitude: 55.2708,
-    #     price: 316,
-    # )
-
-
-    # Listing.create!(
-    #     city: 'Port Moresby',
-    #     country: 'Papua New Guinea',
-    #     description: "Come learn about the most diverse country you've never heard of!", 
-    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
-    #     lister_id: 3,
-    #     latitude: -9.4438,
-    #     longitude: 147.1803,
-    #     price: 21,
-    # )
-
-
-    # Listing.create!(
-    #     city: 'Chicago',
-    #     country: 'Illinois',
-    #     description: "Midwest MidBEST!", 
-    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
-    #     lister_id: 1,
-    #     latitude: 41.8781,
-    #     longitude: -87.6298,
-    #     price: 92,
-    # )
+    Listing.create!(
+        city: 'Odessa',
+        country: 'Ukraine',
+        description: "Come discover the beauty of Ukraine!", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
+        lister_id: 5,
+        latitude: 46.4825,
+        longitude: 30.7233,
+        price: 54,
+        type_of_water: "sea",
+        rating: 4.857143,
+        number_of_ratings: 7,
+        lister_name: 'Brian',
+        pets: true
+        )
 
 
     # Listing.create!(
@@ -343,8 +333,33 @@ ApplicationRecord.transaction do
 
 
 
+    # Listing.create!(
+    #     city: 'Dubai',
+    #     country: 'United Arab Emirates',
+    #     description: "The world is your oyster here (if you have the money)!", 
+    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
+    #     lister_id: 3,
+    #     latitude: 25.2048,
+    #     longitude: 55.2708,
+    #     price: 816,
+    # )
+    
+    
+
+    # Listing.create!(
+    #     city: 'Buenos Aires',
+    #     country: 'Argentina',
+    #     description: 'Algun lema escrito mas tarde', 
+    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
+    #     lister_id: 3,
+    #     latitude: -34.6037,
+    #     longitude: -58.3816,
+    #     price: 149,
+    #     lister_name: "Barbara"
+    # )
 
 
+    
     # Listing.create!(
     #     city: 'San Francisco',
     #     country: 'California',
@@ -354,6 +369,20 @@ ApplicationRecord.transaction do
     #     latitude: 37.7609,
     #     longitude: -122.4350,
     #     price: 137,
+    # )
+
+
+
+    
+    # Listing.create!(
+    #     city: 'Odessa',
+    #     country: 'Ukraine',
+    #     description: "Stay here -- it'll be a great experience!", 
+    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
+    #     lister_id: 3,
+    #     latitude: 46.4825,
+    #     longitude: 30.7233,
+    #     price: 54,
     # )
 
 
@@ -367,6 +396,171 @@ ApplicationRecord.transaction do
     #     longitude: -122.3321,
     #     price: 206,
     # )
+
+
+    
+    # Listing.create!(
+    #     city: 'Saint-Malo',
+    #     country: 'France',
+    #     description: "Stay here -- it'll be a great experience!", 
+    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
+    #     lister_id: 4,
+    #     latitude: 48.6493,
+    #     longitude: -2.0257,
+    #     price: 73,
+    # )
+
+
+    
+    # Listing.create!(
+    #     city: 'Abidjan',
+    #     country: "Côte d'Ivoire",
+    #     description: "Stay here -- it'll be a great experience!", 
+    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
+    #     lister_id: 3,
+    #     latitude: 5.3600,
+    #     longitude: -4.0083,
+    #     price: 38,
+    # )
+
+
+    # Listing.create!(
+    #     city: 'Valencia',
+    #     country: 'Spain',
+    #     description: "Stay here -- it'll be a great experience!", 
+    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
+    #     lister_id: 4,
+    #     latitude: 39.4699,
+    #     longitude: -0.3763,
+    #     price: 94,
+    # )
+
+
+    # Listing.create!(
+    #     city: 'Lagos',
+    #     country: 'Nigeria',
+    #     description: "The heart of Africa", 
+    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
+    #     lister_id: 1,
+    #     latitude: 6.5244,
+    #     longitude: 3.3792,
+    #     price: 14,
+    # )
+
+
+
+    # Listing.create!(
+    #     city: 'San Sebastian',
+    #     country: 'Spain',
+    #     description: "Also known as Donostia", 
+    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
+    #     lister_id: 4,
+    #     latitude: 43.3183,
+    #     longitude: -1.9812,
+    #     price: 78,
+    # )
+
+
+    # Listing.create!(
+    #     city: 'Marseille',
+    #     country: 'France',
+    #     description: "J'ai pas pense quoi dire ici.", 
+    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
+    #     lister_id: 1,
+    #     latitude: 43.2965,
+    #     longitude: 5.3698,
+    #     price: 103,
+    # )
+
+
+
+    # Listing.create!(
+    #     city: 'Bouvet Island',
+    #     country: 'Norway',
+    #     description: "It's actually illegal to visit, and good luck getting here!", 
+    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
+    #     lister_id: 1,
+    #     latitude: -54.4208,
+    #     longitude: 3.3464,
+    #     price: 90,
+    #     lister_name: "Muhammed"
+    # )
+
+
+
+    # Listing.create!(
+    #     city: 'Port Moresby',
+    #     country: 'Papua New Guinea',
+    #     description: "Come learn about the most diverse country you've never heard of!", 
+    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
+    #     lister_id: 3,
+    #     latitude: -9.4438,
+    #     longitude: 147.1803,
+    #     price: 21,
+    # )
+
+
+    
+    # Listing.create!(
+    #     city: 'San Francisco (west)',
+    #     country: 'California',
+    #     description: "Stay here -- it'll be a great experience!", 
+    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
+    #     lister_id: 3,
+    #     latitude: 37.7180,
+    #     longitude: -122.4772,
+    #     price: 284,
+    # )
+
+
+    # Listing.create!(
+    #     city: 'San Francisco (east)',
+    #     country: 'California',
+    #     description: "Stay here -- it'll be a great experience!", 
+    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
+    #     lister_id: 3,
+    #     latitude: 37.7277,
+    #     longitude: -122.3932,
+    #     price: 411,
+    # )
+
+
+    # Listing.create!(
+    #     city: 'Staten Island',
+    #     country: 'New York',
+    #     description: "Stay here -- it'll be a great experience!", 
+    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
+    #     lister_id: 3,
+    #     latitude: 40.6427,
+    #     longitude: -74.0799,
+    #     price: 108,
+    # )
+
+
+    # Listing.create!(
+    #     city: 'Bronx',
+    #     country: 'New York',
+    #     description: "Stay here -- it'll be a great experience!", 
+    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
+    #     lister_id: 3,
+    #     latitude: 40.8553,
+    #     longitude: -73.8640,
+    #     price: 93,
+    # )
+
+    # Add Copenhagen
+
+
+
+    
+
+
+
+
+
+
+
+
 
 
     # Listing.create!(
@@ -417,29 +611,6 @@ ApplicationRecord.transaction do
     # )
 
 
-    # Listing.create!(
-    #     city: 'Venice',
-    #     country: 'Italy',
-    #     description: "No need for a car -- take a gondola!", 
-    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
-    #     lister_id: 1,
-    #     latitude: 45.4408,
-    #     longitude: 12.3155,
-    #     price: 86,
-    # )
-
-
-    # Listing.create!(
-    #     city: 'Lagos',
-    #     country: 'Nigeria',
-    #     description: "The heart of Africa", 
-    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
-    #     lister_id: 1,
-    #     latitude: 6.5244,
-    #     longitude: 3.3792,
-    #     price: 14,
-    # )
-
 
     # Listing.create!(
     #     city: 'Dakar',
@@ -464,29 +635,6 @@ ApplicationRecord.transaction do
     #     price: 28,
     # )
 
-
-    # Listing.create!(
-    #     city: 'San Sebastian',
-    #     country: 'Spain',
-    #     description: "Also known as Donostia", 
-    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
-    #     lister_id: 4,
-    #     latitude: 43.3183,
-    #     longitude: -1.9812,
-    #     price: 78,
-    # )
-
-
-    # Listing.create!(
-    #     city: 'Marseille',
-    #     country: 'France',
-    #     description: "J'ai pas pense quoi dire ici.", 
-    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
-    #     lister_id: 1,
-    #     latitude: 43.2965,
-    #     longitude: 5.3698,
-    #     price: 103,
-    # )
 
 
     # Listing.create!(
@@ -681,17 +829,6 @@ ApplicationRecord.transaction do
     # )
 
 
-    # Listing.create!(
-    #     city: 'Odessa',
-    #     country: 'Ukraine',
-    #     description: "Stay here -- it'll be a great experience!", 
-    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
-    #     lister_id: 3,
-    #     latitude: 46.4825,
-    #     longitude: 30.7233,
-    #     price: 54,
-    # )
-
 
     # Listing.create!(
     #     city: 'Ajaccio',
@@ -704,53 +841,6 @@ ApplicationRecord.transaction do
     #     price: 41,
     # )
 
-
-    # Listing.create!(
-    #     city: 'San Francisco (west)',
-    #     country: 'California',
-    #     description: "Stay here -- it'll be a great experience!", 
-    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
-    #     lister_id: 3,
-    #     latitude: 37.7180,
-    #     longitude: -122.4772,
-    #     price: 284,
-    # )
-
-
-    # Listing.create!(
-    #     city: 'San Francisco (east)',
-    #     country: 'California',
-    #     description: "Stay here -- it'll be a great experience!", 
-    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
-    #     lister_id: 3,
-    #     latitude: 37.7277,
-    #     longitude: -122.3932,
-    #     price: 411,
-    # )
-
-
-    # Listing.create!(
-    #     city: 'Staten Island',
-    #     country: 'New York',
-    #     description: "Stay here -- it'll be a great experience!", 
-    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
-    #     lister_id: 3,
-    #     latitude: 40.6427,
-    #     longitude: -74.0799,
-    #     price: 108,
-    # )
-
-
-    # Listing.create!(
-    #     city: 'Bronx',
-    #     country: 'New York',
-    #     description: "Stay here -- it'll be a great experience!", 
-    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
-    #     lister_id: 3,
-    #     latitude: 40.8553,
-    #     longitude: -73.8640,
-    #     price: 93,
-    # )
 
 
     # Listing.create!(
@@ -837,29 +927,6 @@ ApplicationRecord.transaction do
     # )
 
 
-    # Listing.create!(
-    #     city: 'Saint-Malo',
-    #     country: 'France',
-    #     description: "Stay here -- it'll be a great experience!", 
-    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
-    #     lister_id: 4,
-    #     latitude: 48.6493,
-    #     longitude: -2.0257,
-    #     price: 73,
-    # )
-
-
-    # Listing.create!(
-    #     city: 'Valencia',
-    #     country: 'Spain',
-    #     description: "Stay here -- it'll be a great experience!", 
-    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
-    #     lister_id: 4,
-    #     latitude: 39.4699,
-    #     longitude: -0.3763,
-    #     price: 94,
-    # )
-
 
     # Listing.create!(
     #     city: 'Lisbon',
@@ -870,18 +937,6 @@ ApplicationRecord.transaction do
     #     latitude: 38.7223,
     #     longitude: -9.1393,
     #     price: 58,
-    # )
-
-
-    # Listing.create!(
-    #     city: 'Abidjan',
-    #     country: "Côte d'Ivoire",
-    #     description: "Stay here -- it'll be a great experience!", 
-    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
-    #     lister_id: 3,
-    #     latitude: 5.3600,
-    #     longitude: -4.0083,
-    #     price: 38,
     # )
 
 
@@ -1259,9 +1314,91 @@ ApplicationRecord.transaction do
     Review.create!(
         reviewer_id: 3,
         listing_id: 8,
-        review_date: Date.new(2020,6,21),
+        review_date: Date.new(2020,8,2),
         body: "Everything was closed due to COVID-19, so I spent a lot of time on the water.  Incredibly peaceful -- I'll remember this trip for the rest of my life.",
         reviewer_name: "Barbara"
+    )
+
+
+    Review.create!(
+        reviewer_id: 5,
+        listing_id: 11,
+        review_date: Date.new(2018,5,1),
+        body: "Staying in Venice and going down the Grand Canal was a dream come true!  Barbara was excellent, and food was unforgettable, and the house was centrally located.  10/10, would highly recommend!",
+        reviewer_name: "Barbara"
+    )
+
+
+    Review.create!(
+        reviewer_id: 4,
+        listing_id: 11,
+        review_date: Date.new(2021,4,18),
+        body: "I grew up in a city, so I'm used to hearing the sounds of cars.  You never realize how annoying they are until you go to a city without them.  Walking and riding boats everywhere was so tranquil, and the vacation much needed.",
+        reviewer_name: "Elisa"
+    )
+
+
+    Review.create!(
+        reviewer_id: 1,
+        listing_id: 11,
+        review_date: Date.new(2020,2,17),
+        body: "Great location, tasty food, beautiful city.  I saw the piazza flooding while I was there, but people just went on with their days.",
+        reviewer_name: "Muhammed"
+    )
+
+
+    Review.create!(
+        reviewer_id: 5,
+        listing_id: 12,
+        review_date: Date.new(2022,3,19),
+        body: "Sucks.  Enough said.",
+        reviewer_name: "Brian"
+    )
+
+
+    Review.create!(
+        reviewer_id: 2,
+        listing_id: 12,
+        review_date: Date.new(2014,4,29),
+        body: "New York of the Midwest!  Great location (and easy to get around), exactly as advertised.  I especially enjoyed the Riverwalk!",
+        reviewer_name: "Barbara"
+    )
+
+
+    Review.create!(
+        reviewer_id: 7,
+        listing_id: 12,
+        review_date: Date.new(2016,9,1),
+        body: "Best pizza in the world, hands-down!",
+        reviewer_name: "Charles"
+    )
+
+
+    Review.create!(
+        reviewer_id: 6,
+        listing_id: 13,
+        review_date: Date.new(2018,11,21),
+        body: "Brian was a great hose, but hardly anyone here spoek English!  Not a great place to visit for an American.",
+        reviewer_name: "Karen"
+    )
+
+
+    Review.create!(
+        reviewer_id: 3,
+        listing_id: 13,
+        review_date: Date.new(2022,5,30),
+        body: "I didn't actually stay here -- I just reserved the place to get money to Brain to help relocate his family -- but he was SO gracious and sweet!  Slava Ukraini!",
+        reviewer_name: "Barbara"
+    )
+
+
+
+    Review.create!(
+        reviewer_id: 2,
+        listing_id: 13,
+        review_date: Date.new(2019,1,3),
+        body: "I wasn't originally planning to visit Ukraine, but I had a few extra days in Poland and thought I'd check it out and I'm so glad I did!  It's a much more beautiful city than I expected and full of culture.",
+        reviewer_name: "Anthony"
     )
 
     puts "Done!"
