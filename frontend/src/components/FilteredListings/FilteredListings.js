@@ -24,6 +24,8 @@ const FilteredListings = () => {
                 return listing.typeOfWater == 'lake' ? listing : null
             case 'sea':
                 return listing.typeOfWater == 'sea' ? listing : null
+            case 'falls':
+                return listing.typeOfWater == 'falls' ? listing : null
             case 'pets':
                 return listing.petsAllowed ? listing : null
             case 'popular':
