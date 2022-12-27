@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_25_053408) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_27_170437) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -46,7 +46,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_25_053408) do
     t.string "city", null: false
     t.string "country", null: false
     t.text "description", null: false
-    t.string "pictures_url", null: false
     t.bigint "lister_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -65,10 +64,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_25_053408) do
     t.boolean "boat", default: true
     t.boolean "self_check_in", default: true
     t.string "lister_name", default: "Barbara"
-    t.string "pic1", default: "https://waterbnb-seeds.s3.amazonaws.com/2_0.png"
-    t.string "pic2", default: "https://waterbnb-seeds.s3.amazonaws.com/3_0.png"
-    t.string "pic3", default: "https://waterbnb-seeds.s3.amazonaws.com/4_0.png"
-    t.string "pic4", default: "https://waterbnb-seeds.s3.amazonaws.com/5_0.png"
     t.decimal "rating", precision: 8, scale: 6, default: "5.0"
     t.integer "number_of_ratings", default: 0
     t.string "profile_pic", default: "https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg"

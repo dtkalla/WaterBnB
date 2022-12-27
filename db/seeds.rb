@@ -119,7 +119,6 @@ ApplicationRecord.transaction do
         city: 'San Francisco',
         country: 'California',
         description: 'Stay here while you interview for a tech job in Silicon Valley!', 
-        pictures_url: 'https://waterbnb-seeds.s3.amazonaws.com/1_0a.png',
         lister_id: 3,
         latitude: 37.7749,
         longitude: -122.4194,
@@ -135,7 +134,6 @@ ApplicationRecord.transaction do
         city: 'Manhattan',
         country: 'New York',
         description: 'Greatest city on earth!', 
-        pictures_url: 'https://waterbnb-seeds.s3.amazonaws.com/2_0.png',
         lister_id: 2,
         latitude: 40.7831,
         longitude: -73.9712,
@@ -156,7 +154,6 @@ ApplicationRecord.transaction do
         city: 'Barcelona',
         country: 'Spain',
         description: '¡Bienvenidos a todos!', 
-        pictures_url: 'https://waterbnb-seeds.s3.amazonaws.com/3_0.png',
         lister_id: 4,
         latitude: 41.3874,
         longitude: 2.1686,
@@ -174,7 +171,6 @@ ApplicationRecord.transaction do
         city: 'Cape Town',
         country: 'South Africa',
         description: 'Stay at the edge of the world!', 
-        pictures_url: 'https://waterbnb-seeds.s3.amazonaws.com/4_0.png',
         lister_id: 3,
         latitude: -33.9249,
         longitude: 18.4241,
@@ -191,7 +187,6 @@ ApplicationRecord.transaction do
         city: 'Atlantis',
         country: 'Atlantis',
         description: "The city, the myth, the legend: come have an unforgettable experience in the recently rediscovered lost city of Atlantis!", 
-        pictures_url: 'https://waterbnb-seeds.s3.amazonaws.com/5_0.png',
         lister_id: 5,
         latitude: -48.8767,
         longitude: -123.3933,
@@ -213,7 +208,6 @@ ApplicationRecord.transaction do
         city: 'Manhattan',
         country: 'New York',
         description: "So much history to see in Harlem!", 
-        pictures_url: 'https://waterbnb-seeds.s3.amazonaws.com/6_0.png',
         lister_id: 3,
         profile_pic: barbara,
         latitude: 40.8116,
@@ -233,7 +227,6 @@ ApplicationRecord.transaction do
         city: 'Bemidji ',
         country: "Minnesota",
         description: "The birthplace of Paul Bunyan and the Mississippi, plus pretty good shopping.  Make sure to try the wild rice soup!", 
-        pictures_url: 'https://waterbnb-seeds.s3.amazonaws.com/7_0.png',
         lister_id: 1,
         latitude: 47.4716,
         longitude: -94.8827,
@@ -252,7 +245,6 @@ ApplicationRecord.transaction do
         city: 'Isla del Sol',
         country: "Bolivia",
         description: "Highest navigable lake on earth!", 
-        pictures_url: 'https://waterbnb-seeds.s3.amazonaws.com/8_0.png',
         lister_id: 4,
         latitude: -16.0172,
         longitude: -69.1780,
@@ -271,7 +263,6 @@ ApplicationRecord.transaction do
         city: 'Flushing',
         country: 'New York',
         description: "Make sure to try the hot pot!", 
-        pictures_url: 'https://waterbnb-seeds.s3.amazonaws.com/9_0.png',
         lister_id: 1,
         latitude: 40.7675,
         longitude: -73.8331,
@@ -288,7 +279,6 @@ ApplicationRecord.transaction do
         city: 'Coney Island',
         country: 'New York',
         description: "Heaven at the end of a subway ride!", 
-        pictures_url: 'https://waterbnb-seeds.s3.amazonaws.com/10_0.png',
         lister_id: 3,
         latitude: 40.5755,
         longitude: -73.9707,
@@ -305,7 +295,6 @@ ApplicationRecord.transaction do
         city: 'Venice',
         country: 'Italy',
         description: "Ride a gondola along the Grand Canal!", 
-        pictures_url: 'https://waterbnb-seeds.s3.amazonaws.com/10_0.png',
         lister_id: 3,
         latitude: 45.4408,
         longitude: 12.3155,
@@ -322,7 +311,6 @@ ApplicationRecord.transaction do
         city: 'Chicago',
         country: 'Illinois',
         description: "Midwest MidBEST!", 
-        pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
         lister_id: 1,
         latitude: 41.8781,
         longitude: -87.6298,
@@ -340,7 +328,6 @@ ApplicationRecord.transaction do
         city: 'Odessa',
         country: 'Ukraine',
         description: "Come discover the beauty of Ukraine!", 
-        pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
         lister_id: 5,
         latitude: 46.4825,
         longitude: 30.7233,
@@ -358,7 +345,6 @@ ApplicationRecord.transaction do
         city: 'Bouvet Island',
         country: 'Norway',
         description: "It's actually illegal to visit without permission of the Norwegian government, and good luck getting here!", 
-        pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
         lister_id: 1,
         latitude: -54.4208,
         longitude: 3.3464,
@@ -377,11 +363,11 @@ ApplicationRecord.transaction do
         city: 'Port Moresby',
         country: 'Papua New Guinea',
         description: "Come learn about the most diverse country you've never heard of!", 
-        pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
         lister_id: 7,
         latitude: -9.4438,
         longitude: 147.1803,
         building_type: "private room",
+        type_of_water: "sea",
         price: 35,
         lister_name: "Charles",
         profile_pic: charles,
@@ -395,13 +381,13 @@ ApplicationRecord.transaction do
         city: 'Dubai',
         country: 'United Arab Emirates',
         description: "The world is your oyster here (if you have the money)!", 
-        pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
         lister_id: 7,
         latitude: 25.2048,
         longitude: 55.2708,
         price: 616,
         lister_name: "Charles",
         profile_pic: charles,
+        type_of_water: "sea",
         bedrooms: 4,
         beds: 6,
         bathrooms: 3,
@@ -416,7 +402,6 @@ ApplicationRecord.transaction do
         city: 'Singapore',
         country: 'Singapore',
         description: "City-states are making a comeback!", 
-        pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
         lister_id: 6,
         latitude: 1.3521,
         longitude: 103.8198,
@@ -425,7 +410,10 @@ ApplicationRecord.transaction do
         bedrooms: 2,
         beds: 4,
         lister_name: "Karen",
-        profile_pic: karen
+        profile_pic: karen,
+        type_of_water: 'sea',
+        number_of_ratings: 12,
+        rating: 4.416667
     )
 
 
@@ -433,7 +421,6 @@ ApplicationRecord.transaction do
         city: 'San Francisco',
         country: 'California',
         description: "Have a gay old time!", 
-        pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
         lister_id: 3,
         latitude: 37.7609,
         longitude: -122.4350,
@@ -441,7 +428,9 @@ ApplicationRecord.transaction do
         price: 237,
         lister_name: "Barbara",
         boat: false,
-        profile_pic: barbara
+        profile_pic: barbara,
+        number_of_ratings: 8,
+        rating: 4.375
     )
 
 
@@ -452,7 +441,6 @@ ApplicationRecord.transaction do
         city: 'Seattle',
         country: 'Washington',
         description: "Make sure to rent a bike and explore the city!", 
-        pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
         lister_id: 1,
         latitude: 47.6062,
         longitude: -122.3321,
@@ -460,7 +448,9 @@ ApplicationRecord.transaction do
         type_of_water: "sea",
         building_type: "cottage",
         lister_name: "Muhammed",
-        profile_pic: muhammed
+        profile_pic: muhammed,
+        number_of_ratings: 4,
+        rating: 4.75
     )
 
 
@@ -469,31 +459,153 @@ ApplicationRecord.transaction do
         city: 'Flores',
         country: 'Guatemala',
         description: "Close to the famous Tikal ruins!", 
-        pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
         lister_id: 4,
-        latitude: 16.9181,
-        longitude: -89.8926,
+        latitude: 16.9308,
+        longitude: -89.8925,
         price: 79,
         bedrooms: 3,
         beds: 5,
         pets_allowed: true,
         type_of_water: "lake",
         lister_name: "Elisa",
-        profile_pic: elisa
+        profile_pic: elisa,
+        number_of_ratings: 6,
+        rating: 4.5
     )
 
 
+    # Listing.create!(
+    #     city: 'Puerto Iguazu',
+    #     country: 'Argentina',
+    #     description: "We make Niagara look like a kitchen faucet!", 
+    #     lister_id: 4,
+    #     latitude: -25.5972,
+    #     longitude: -54.5786,
+    #     price: 89,
+    #     type_of_water: "falls"
+    #     lister_name: "Elisa",
+    #     profile_pic: elisa,
+    #     building_type: "cabin",
+    #     boat: false,
+    #     bedrooms: 2,
+    #     beds: 3,
+    #     number_of_ratings: 17,
+    #     rating: 4.882353
+    # )
+
+    
+    # Listing.create!(
+    #     city: 'Kampala',
+    #     country: 'Uganda',
+    #     description: "On the beautiful shores of Lake Victoria!", 
+    #     lister_id: 7,
+    #     lister_name: "Charles",
+    #     profile_pic: charles,
+    #     latitude: 0.3476,
+    #     longitude: 32.5825,
+        # building_type: "condo",
+    #     price: 54,
+    #     type_of_water: "lake",
+    #     number_of_ratings: 3,
+    #     rating: 4
+    # )
+
+
+    #  Listing.create!(
+    #     city: 'Montreux',
+    #     country: 'Switzerland',
+    #     description: "Across the lake from Geneva, and much more relaxing!", 
+    #     lister_id: 1,
+    #     lister_name: 'Muhammed',
+    #     profile_pic: muhammed,
+    #     latitude: 46.4312,
+    #     longitude: 6.9107,
+    #     price: 114,
+    #     number_of_ratings: 14,
+    #     rating: 4.428571,
+    #     type_of_water: "lake",
+        # building_type: "condo",
+    #   beds: 3,
+    #   bathrooms: 2
+    # )
+
+
+    # Listing.create!(
+    #     city: 'Livingstone',
+    #     country: 'Zambia',
+    #     description: "Th gateway to Victoria Falls!", 
+    #     lister_id: 5,
+    #     lister_name: "Brian",
+    #     profile_pic: brian,
+    #     latitude: -17.8520,
+    #     longitude: 25.8285,
+    #     price: 43,
+    #     number_of_ratings: 9,
+    #     rating: 4.444444,
+    #     type_of_water: "falls",
+    #     boat: false
+    # )
 
 
 
+    
 
 
 
+    # Listing.create!(
+    #     city: 'Dakar',
+    #     country: 'Senegal',
+    #     description: "Venez ici, tout le monde !", 
+    #     lister_id: 3,
+    #     lister_name: "Barbara",
+    #     profile_pic: barbara,
+    #     latitude: 14.7167,
+    #     longitude: -17.4677,
+    #     price: 41,
+    #     number_of_ratings: 5,
+    #     rating: 4.2
+    # )
 
-
-
-    # Devils Tower oil rig
+ # Devils Tower oil rig
     # 28.2089, -88.7375
+
+
+    # Guatape
+# 6.2338° N, 75.1592° W
+
+    #Baku
+    # 40.4093° N, 49.8671° E
+
+
+    #Ruby Falls
+    # 35.0192° N, 85.3397° W
+
+
+    # Istanbul
+    # 41.0082° N, 28.9784° E
+    # "Not Constantinople, not Turkey"
+
+    # Algiers
+
+
+    #Angel Falls
+    #Niagara
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
 
 
 
@@ -693,18 +805,6 @@ ApplicationRecord.transaction do
 
 
     # Listing.create!(
-    #     city: 'Flores',
-    #     country: 'Guatemala',
-    #     description: "Close to the famous Tikal ruins!", 
-    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
-    #     lister_id: 4,
-    #     latitude: 16.9181,
-    #     longitude: -89.8926,
-    #     price: 31,
-    # )
-
-
-    # Listing.create!(
     #     city: 'Tokyo',
     #     country: 'Japan',
     #     description: "Stay at the biggest city on earth and climb Mount Fuji!", 
@@ -717,16 +817,6 @@ ApplicationRecord.transaction do
 
 
 
-    # Listing.create!(
-    #     city: 'Dakar',
-    #     country: 'Senegal',
-    #     description: "Venez ici, tout le monde !", 
-    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
-    #     lister_id: 3,
-    #     latitude: 14.7167,
-    #     longitude: -17.4677,
-    #     price: 19,
-    # )
 
 
     # Listing.create!(
@@ -913,19 +1003,6 @@ ApplicationRecord.transaction do
 
 
     # Listing.create!(
-    #     city: 'Montreux',
-    #     country: 'Switzerland',
-    #     description: "Stay here -- it'll be a great experience!", 
-    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
-    #     lister_id: 1,
-    #     latitude: 46.4312,
-    #     longitude: 6.9107,
-    #     price: 104,
-    # )
-
-
-
-    # Listing.create!(
     #     city: 'Ajaccio',
     #     country: 'France',
     #     description: "Stay here -- it'll be a great experience!", 
@@ -947,18 +1024,6 @@ ApplicationRecord.transaction do
     #     latitude: 29.9511,
     #     longitude: -90.0715,
     #     price: 117,
-    # )
-
-
-    # Listing.create!(
-    #     city: 'Kampala',
-    #     country: 'Uganda',
-    #     description: "Stay here -- it'll be a great experience!", 
-    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
-    #     lister_id: 1,
-    #     latitude: 0.3476,
-    #     longitude: 32.5825,
-    #     price: 13,
     # )
 
 
@@ -1623,6 +1688,126 @@ ApplicationRecord.transaction do
         body: "The venders here are very aggressive and will definitely overcharge you.",
         reviewer_name: "Karen",
         profile_pic: karen
+    )
+
+
+    Review.create!(
+        reviewer_id: 7,
+        listing_id: 17,
+        review_date: Date.new(2021,11,27),
+        body: "Great stay for my family for a week long vacation. Amazing location and walked to metro station every day.",
+        reviewer_name: "Charles",
+        profile_pic: charles
+    )
+
+
+    Review.create!(
+        reviewer_id: 3,
+        listing_id: 17,
+        review_date: Date.new(2018,10,8),
+        body: "Room was outstanding. Housekeeping was regular (everyday except weekends). The surrounding areas has many shops (food) to go around too.",
+        reviewer_name: "Barbara",
+        profile_pic: barbara
+    )
+
+
+    Review.create!(
+        reviewer_id: 5,
+        listing_id: 17,
+        review_date: Date.new(2021,3,6),
+        body: "Great apartment for a family holiday in Singapore. It has all enmities and in spacious, clean and comfortable. Highly recommend it.",
+        reviewer_name: "Brian",
+        profile_pic: brian
+    )
+
+
+    Review.create!(
+        reviewer_id: 6,
+        listing_id: 18,
+        review_date: Date.new(2019,7,14),
+        body: "Barbara's Victorian in the Castro has been one of my favorite Airbnb experiences so far! It's extremely tastefully designed, well-located in the lively Castro neighborhood, and Brian was very easy to reach. The hot tub in the Japanese-esque backyard was the cherry on top of the cake at the end of our long days walking up and down SF's steep streets. We will definitely be back!",
+        reviewer_name: "Karen",
+        profile_pic: karen
+    )
+
+
+    Review.create!(
+        reviewer_id: 2,
+        listing_id: 18,
+        review_date: Date.new(2017,2,28),
+        body: "Wow! This place is really special. The owners keep this Airbnb very well maintained and very well decorated. It's so beautiful and has a hot tub to top it all off! What a treat. We had such a great time staying here.",
+        reviewer_name: "Anthony",
+        profile_pic: anthony
+    )
+
+
+    Review.create!(
+        reviewer_id: 4,
+        listing_id: 18,
+        review_date: Date.new(2022,3,15),
+        body: "Beautiful spot. I loved everything about it. Would highly recommend.",
+        reviewer_name: "Elisa",
+        profile_pic: elisa
+    )
+
+
+    Review.create!(
+        reviewer_id: 3,
+        listing_id: 19,
+        review_date: Date.new(2015,1,18),
+        body: "Lovely home with beautiful surroundings! Really comfortable beds, relaxing, and everything we needed for the weekend. Great stay!",
+        reviewer_name: "Barbara",
+        profile_pic: barbara
+    )
+
+
+    Review.create!(
+        reviewer_id: 5,
+        listing_id: 19,
+        review_date: Date.new(2022,4,7),
+        body: "This is a charming and well situated home. The neighborhood is quiet and yet you can get to downtown quickly.",
+        reviewer_name: "Brian",
+        profile_pic: brian
+    )
+
+
+    Review.create!(
+        reviewer_id: 4,
+        listing_id: 19,
+        review_date: Date.new(2019,11,22),
+        body: "I loved this charming home. Excellent location, very safe and wonderful views. Loved it. Would definitely stay here again.",
+        reviewer_name: "Elisa",
+        profile_pic: elisa
+    )
+
+
+    Review.create!(
+        reviewer_id: 7,
+        listing_id: 20,
+        review_date: Date.new(2021,7,19),
+        body: "The place was incredibly nice, I was amazed of how good it was compared to what I paid",
+        reviewer_name: "Charles",
+        profile_pic: charles
+    )
+
+
+    Review.create!(
+        reviewer_id: 2,
+        listing_id: 20,
+        review_date: Date.new(2018,9,28),
+        body: "This is an Airbnb in Flores you must get if you're in a larger group or just want to have a great space in general! Beautifully decorated and loved the space in a super-walkable area",
+        reviewer_name: "Anthony",
+        profile_pic: anthony
+    )
+
+
+    Review.create!(
+        reviewer_id: 1,
+        listing_id: 20,
+        review_date: Date.new(2021,5,19),
+        body: "Me encanto aquí! Lo recomiendo por un grupo grande o alguien que quiere un lugar nuevo o quien respeta la arquitectura :) muy bonito todo y la dueña del waterbnb comunico súper bien!",
+        reviewer_name: "Muhammed",
+        profile_pic: muhammed
     )
 
     puts "Done!"
