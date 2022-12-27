@@ -145,5 +145,5 @@ const listings = useSelector(getListings)
 - Recenter default index map based on user's location
 
 ## Sources:
-- Photos, descriptions, and amenity icons taken from AirBnb
+- Photos, descriptions, some reviews, and amenity icons taken from AirBnb
 - Filter Icons taken from [here](https://www.flaticon.com/)
