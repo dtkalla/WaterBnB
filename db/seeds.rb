@@ -412,19 +412,75 @@ ApplicationRecord.transaction do
 
 
     
-    # Listing.create!(
-    #     city: 'Singapore',
-    #     country: 'Singapore',
-    #     description: "City-states are making a comeback!", 
-    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
-    #     lister_id: 6,
-    #     latitude: 1.3521,
-    #     longitude: 103.8198,
-    #     price: 503,
-    #       lister_name: "Karen"
-    # )
+    Listing.create!(
+        city: 'Singapore',
+        country: 'Singapore',
+        description: "City-states are making a comeback!", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
+        lister_id: 6,
+        latitude: 1.3521,
+        longitude: 103.8198,
+        building_type: "apartment",
+        price: 503,
+        bedrooms: 2,
+        beds: 4,
+        lister_name: "Karen",
+        profile_pic: karen
+    )
 
 
+   Listing.create!(
+        city: 'San Francisco',
+        country: 'California',
+        description: "Have a gay old time!", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
+        lister_id: 3,
+        latitude: 37.7609,
+        longitude: -122.4350,
+        building_type: "apartment",
+        price: 237,
+        lister_name: "Barbara",
+        boat: false,
+        profile_pic: barbara
+    )
+
+
+
+
+
+    Listing.create!(
+        city: 'Seattle',
+        country: 'Washington',
+        description: "Make sure to rent a bike and explore the city!", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
+        lister_id: 1,
+        latitude: 47.6062,
+        longitude: -122.3321,
+        price: 156,
+        type_of_water: "sea",
+        building_type: "cottage",
+        lister_name: "Muhammed",
+        profile_pic: muhammed
+    )
+
+
+
+     Listing.create!(
+        city: 'Flores',
+        country: 'Guatemala',
+        description: "Close to the famous Tikal ruins!", 
+        pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
+        lister_id: 4,
+        latitude: 16.9181,
+        longitude: -89.8926,
+        price: 79,
+        bedrooms: 3,
+        beds: 5,
+        pets_allowed: true,
+        type_of_water: "lake",
+        lister_name: "Elisa",
+        profile_pic: elisa
+    )
 
 
 
@@ -469,31 +525,7 @@ ApplicationRecord.transaction do
 
 
     
-    # Listing.create!(
-    #     city: 'San Francisco',
-    #     country: 'California',
-    #     description: "Have a gay old time!", 
-    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
-    #     lister_id: 3,
-    #     latitude: 37.7609,
-    #     longitude: -122.4350,
-    #     price: 137,
-    # )
-
-
-
-
-
-    # Listing.create!(
-    #     city: 'Seattle',
-    #     country: 'Washington',
-    #     description: "Make sure to rent a bike and explore the city!", 
-    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
-    #     lister_id: 1,
-    #     latitude: 47.6062,
-    #     longitude: -122.3321,
-    #     price: 206,
-    # )
+ 
 
 
     
