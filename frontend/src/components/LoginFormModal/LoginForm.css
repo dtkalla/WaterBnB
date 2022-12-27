@@ -41,6 +41,7 @@
 
 #login-form-modal {
     width: 575px;
+    z-index: 2;
 }
 
 .form-errors {
