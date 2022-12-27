@@ -224,7 +224,7 @@ ApplicationRecord.transaction do
 
     
     Listing.create!(
-        city: 'Bemidji ',
+        city: 'Bemidji',
         country: "Minnesota",
         description: "The birthplace of Paul Bunyan and the Mississippi, plus pretty good shopping.  Make sure to try the wild rice soup!", 
         lister_id: 1,
@@ -372,7 +372,9 @@ ApplicationRecord.transaction do
         lister_name: "Charles",
         profile_pic: charles,
         number_of_ratings: 4,
-        rating: 4.5
+        rating: 4.5,
+        beds: 1,
+        bedrooms: 1
     )
 
 
@@ -474,81 +476,81 @@ ApplicationRecord.transaction do
     )
 
 
-    # Listing.create!(
-    #     city: 'Puerto Iguazu',
-    #     country: 'Argentina',
-    #     description: "We make Niagara look like a kitchen faucet!", 
-    #     lister_id: 4,
-    #     latitude: -25.5972,
-    #     longitude: -54.5786,
-    #     price: 89,
-    #     type_of_water: "falls"
-    #     lister_name: "Elisa",
-    #     profile_pic: elisa,
-    #     building_type: "cabin",
-    #     boat: false,
-    #     bedrooms: 2,
-    #     beds: 3,
-    #     number_of_ratings: 17,
-    #     rating: 4.882353
-    # )
+    Listing.create!(
+        city: 'Puerto Iguazu',
+        country: 'Argentina',
+        description: "We make Niagara look like a kitchen faucet!", 
+        lister_id: 4,
+        latitude: -25.5972,
+        longitude: -54.5786,
+        price: 89,
+        type_of_water: "falls",
+        lister_name: "Elisa",
+        profile_pic: elisa,
+        building_type: "cabin",
+        boat: false,
+        bedrooms: 2,
+        beds: 3,
+        number_of_ratings: 17,
+        rating: 4.882353
+    )
 
     
-    # Listing.create!(
-    #     city: 'Kampala',
-    #     country: 'Uganda',
-    #     description: "On the beautiful shores of Lake Victoria!", 
-    #     lister_id: 7,
-    #     lister_name: "Charles",
-    #     profile_pic: charles,
-    #     latitude: 0.3476,
-    #     longitude: 32.5825,
-        # building_type: "condo",
-    #     price: 54,
-    #     type_of_water: "lake",
-    #     number_of_ratings: 3,
-    #     rating: 4
-    # )
+    Listing.create!(
+        city: 'Kampala',
+        country: 'Uganda',
+        description: "On the beautiful shores of Lake Victoria!", 
+        lister_id: 7,
+        lister_name: "Charles",
+        profile_pic: charles,
+        latitude: 0.3476,
+        longitude: 32.5825,
+        building_type: "condo",
+        price: 54,
+        type_of_water: "lake",
+        number_of_ratings: 3,
+        rating: 4
+    )
 
 
-    #  Listing.create!(
-    #     city: 'Montreux',
-    #     country: 'Switzerland',
-    #     description: "Across the lake from Geneva, and much more relaxing!", 
-    #     lister_id: 1,
-    #     lister_name: 'Muhammed',
-    #     profile_pic: muhammed,
-    #     latitude: 46.4312,
-    #     longitude: 6.9107,
-    #     price: 114,
-    #     number_of_ratings: 14,
-    #     rating: 4.428571,
-    #     type_of_water: "lake",
-        # building_type: "condo",
-    #   beds: 3,
-    #   bathrooms: 2
-    # )
+     Listing.create!(
+        city: 'Montreux',
+        country: 'Switzerland',
+        description: "Across the lake from Geneva, and much more relaxing!", 
+        lister_id: 1,
+        lister_name: 'Muhammed',
+        profile_pic: muhammed,
+        latitude: 46.4312,
+        longitude: 6.9107,
+        price: 114,
+        number_of_ratings: 14,
+        rating: 4.428571,
+        type_of_water: "lake",
+        building_type: "condo",
+      beds: 3,
+      bathrooms: 2
+    )
 
 
-    # Listing.create!(
-    #     city: 'Livingstone',
-    #     country: 'Zambia',
-    #     description: "Th gateway to Victoria Falls!", 
-    #     lister_id: 5,
-    #     lister_name: "Brian",
-    #     profile_pic: brian,
-    #     latitude: -17.8520,
-    #     longitude: 25.8285,
-    #     price: 43,
-    #     number_of_ratings: 9,
-    #     rating: 4.444444,
-    #     type_of_water: "falls",
-    #     boat: false
-    # )
+    Listing.create!(
+        city: 'Livingstone',
+        country: 'Zambia',
+        description: "The gateway to Victoria Falls!", 
+        lister_id: 5,
+        lister_name: "Brian",
+        profile_pic: brian,
+        latitude: -17.8520,
+        longitude: 25.8285,
+        price: 43,
+        number_of_ratings: 9,
+        rating: 4.444444,
+        type_of_water: "falls",
+        boat: false
+    )
 
 
 
-    
+
 
 
 
@@ -1615,7 +1617,7 @@ ApplicationRecord.transaction do
         reviewer_id: 4,
         listing_id: 14,
         review_date: Date.new(2022,3,16),
-        body: "I've loved penguins ever since the first time I saw them in a zoo, so when I saw an opportunity to study them on Bouvet Island, I jumped at the chance!  No a lot of human company, but some of the cutest animals I've ever seen <3",
+        body: "I've loved penguins ever since the first time I saw them in a zoo, so when I saw an opportunity to study them on Bouvet Island, I jumped at the chance!  Not a lot of human company, but some of the cutest animals I've ever seen <3",
         reviewer_name: "Elisa",
         profile_pic: elisa
     )
@@ -1808,6 +1810,126 @@ ApplicationRecord.transaction do
         body: "Me encanto aquí! Lo recomiendo por un grupo grande o alguien que quiere un lugar nuevo o quien respeta la arquitectura :) muy bonito todo y la dueña del waterbnb comunico súper bien!",
         reviewer_name: "Muhammed",
         profile_pic: muhammed
+    )
+
+
+    Review.create!(
+        reviewer_id: 1,
+        listing_id: 21,
+        review_date: Date.new(2021,8,14),
+        body: "Very nice owner, she responds very quickly. we had a wonderful stay. The owner also allowed us storage our luggage, it helps us a lot.",
+        reviewer_name: "Muhammed",
+        profile_pic: muhammed
+    )
+
+
+    Review.create!(
+        reviewer_id: 7,
+        listing_id: 21,
+        review_date: Date.new(2022,1,7),
+        body: "Elisa is the best water bnb host we have ever encountered. Prompt responses, very thoughtful, willing to go the extra mile, etc. She's amazing!",
+        reviewer_name: "Charles",
+        profile_pic: charles
+    )
+
+
+    Review.create!(
+        reviewer_id: 5,
+        listing_id: 21,
+        review_date: Date.new(2019,5,30),
+        body: "Very nice place, great host who was also a big help if you are not proficient in Spanish. Can only recommend this place for your stay in Iguazu.",
+        reviewer_name: "Brian",
+        profile_pic: brian
+    )
+
+
+    Review.create!(
+        reviewer_id: 4,
+        listing_id: 24,
+        review_date: Date.new(2019,4,20),
+        body: "Exactly as advertised and a great value.  So glad I finally got to see Victoria Falls!",
+        reviewer_name: "Elisa",
+        profile_pic: elisa
+    )
+
+
+    Review.create!(
+        reviewer_id: 3,
+        listing_id: 24,
+        review_date: Date.new(2021,1,27),
+        body: "Brian was a very responsive host, and it was easy to get to the falls.",
+        reviewer_name: "Barbara",
+        profile_pic: barbara
+    )
+
+
+    Review.create!(
+        reviewer_id: 6,
+        listing_id: 24,
+        review_date: Date.new(2022,10,26),
+        body: "Wifi was bad, making it hard for me to get work done on the trip.",
+        reviewer_name: "Karen",
+        profile_pic: karen
+    )
+
+
+    Review.create!(
+        reviewer_id: 2,
+        listing_id: 23,
+        review_date: Date.new(2018,4,7),
+        body: "Thia is probably the best place I've stayed in Switzerland.",
+        reviewer_name: "Anthony",
+        profile_pic: anthony
+    )
+
+
+    Review.create!(
+        reviewer_id: 3,
+        listing_id: 23,
+        review_date: Date.new(2021,7,15),
+        body: "Great location, great host. Thankful for Muhammed's kindness! Very responsive and flexible.",
+        reviewer_name: "Barbara",
+        profile_pic: barbara
+    )
+
+
+    Review.create!(
+        reviewer_id: 6,
+        listing_id: 23,
+        review_date: Date.new(2020,6,12),
+        body: "Beautiful view, convenient location and quiet. Muhammed was super responsive and made everything easy. Will stay again when I return to Montreux.",
+        reviewer_name: "Karen",
+        profile_pic: karen
+    )
+
+
+    Review.create!(
+        reviewer_id: 5,
+        listing_id: 22,
+        review_date: Date.new(2017,3,4),
+        body: "Excellent value!",
+        reviewer_name: "Brian",
+        profile_pic: brian
+    )
+
+
+    Review.create!(
+        reviewer_id: 4,
+        listing_id: 22,
+        review_date: Date.new(2022,7,5),
+        body: "I had a lovely stay at Charles's place. The house is very clean and nicely located. it was definitely a home away from home",
+        reviewer_name: "Elisa",
+        profile_pic: elisa
+    )
+
+
+    Review.create!(
+        reviewer_id: 2,
+        listing_id: 22,
+        review_date: Date.new(2021,8,14),
+        body: "Great place, very good location easy to get to and very close to town. Clean and warm and both the house helper and night security were very helpfully and great.",
+        reviewer_name: "Anthony",
+        profile_pic: anthony
     )
 
     puts "Done!"
