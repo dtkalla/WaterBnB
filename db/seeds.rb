@@ -544,6 +544,7 @@ ApplicationRecord.transaction do
         price: 43,
         number_of_ratings: 9,
         rating: 4.444444,
+        self_check_in: false,
         type_of_water: "falls",
         boat: false
     )
@@ -563,9 +564,72 @@ ApplicationRecord.transaction do
         bedrooms: 3,
         beds: 3,
         building_type: "cottage",
+        pets_allowed: true,
         number_of_ratings: 5,
         rating: 4.2
     )
+
+
+
+
+    Listing.create!(
+        city: 'Guatapé',
+        country: 'Colombia',
+        description: "Climb the Peñol stone and relax on the water!", 
+        lister_id: 4,
+        lister_name: "Elisa",
+        profile_pic: elisa,
+        latitude: 6.2338,
+        longitude: -75.1592,
+        price: 199,
+        bedrooms: 2,
+        beds: 4,
+        building_type: "cabin",
+        type_of_water: "lake",
+        number_of_ratings: 11,
+        rating: 5
+    )
+
+
+    Listing.create!(
+        city: 'Baku',
+        country: 'Azerbaijan',
+        description: "A lake so big we call it a sea!", 
+        lister_id: 6,
+        lister_name: "Karen",
+        profile_pic: karen,
+        latitude: 40.4093,
+        longitude: 49.8671,
+        price: 52,
+        bedrooms: 2,
+        beds: 3,
+        building_type: "apartment",
+        type_of_water: "lake",
+        number_of_ratings: 7,
+        rating: 4.142857
+    )
+
+
+    Listing.create!(
+        city: 'Chattanooga',
+        country: 'Tennessee',
+        description: "Come see Ruby Falls, the tallest underground waterfall in the world!", 
+        lister_id: 2,
+        lister_name: "Anthony",
+        profile_pic: anthony,
+        latitude: 35.0458,
+        longitude: -85.3094,
+        price: 56,
+        bedrooms: 2,
+        beds: 3,
+        building_type: "bungalow",
+        type_of_water: "falls",
+        pets_allowed: true,
+        number_of_ratings: 8,
+        rating: 4.625
+    )
+
+
 
 
 
@@ -576,16 +640,6 @@ ApplicationRecord.transaction do
  # Devils Tower oil rig
     # 28.2089, -88.7375
 
-
-    # Guatape
-# 6.2338° N, 75.1592° W
-
-    #Baku
-    # 40.4093° N, 49.8671° E
-
-
-    #Ruby Falls
-    # 35.0192° N, 85.3397° W
 
 
     # Istanbul
@@ -1966,6 +2020,107 @@ ApplicationRecord.transaction do
         reviewer_name: "Charles",
         profile_pic: charles
     )
+
+
+    Review.create!(
+        reviewer_id: 5,
+        listing_id: 26,
+        review_date: Date.new(2022,11,6),
+        body: "Amazing place the view are so worth the price",
+        reviewer_name: "Brian",
+        profile_pic: brian
+    )
+
+
+    Review.create!(
+        reviewer_id: 3,
+        listing_id: 26,
+        review_date: Date.new(2019,7,24),
+        body: "the place was beautiful. exactly as the pictures. nice view, good communication wit the host. we had a great experience. I will go back",
+        reviewer_name: "Barbara",
+        profile_pic: barbara
+    )
+
+
+    Review.create!(
+        reviewer_id: 6,
+        listing_id: 26,
+        review_date: Date.new(2020,10,8),
+        body: "Beautiful place and an even better view, definitely worth the price!",
+        reviewer_name: "Karen",
+        profile_pic: karen
+    )
+
+
+
+    Review.create!(
+        reviewer_id: 1,
+        listing_id: 27,
+        review_date: Date.new(2015,7,12),
+        body: "wonderful place to stay in baku. for international family tour best place to stay.",
+        reviewer_name: "Muhammed",
+        profile_pic: muhammed
+    )
+
+
+    Review.create!(
+        reviewer_id: 2,
+        listing_id: 27,
+        review_date: Date.new(2022,6,18),
+        body: "Perfect location and beautiful apartment. Loved staying here. Highly recommended. Karen was awesome with communication and very helpful.",
+        reviewer_name: "Anthony",
+        profile_pic: anthony
+    )
+
+
+    Review.create!(
+        reviewer_id: 4,
+        listing_id: 27,
+        review_date: Date.new(20),
+        body: "Highly recommended- nice, clean and spacious apartment in the heart of the center of beautiful Baku with all the amenities you could think of, including a much cherished parking space and a nespresso machine to start your day in the right way. Will come again",
+        reviewer_name: "Elisa",
+        profile_pic: elisa
+    )
+
+
+    Review.create!(
+        reviewer_id: 6,
+        listing_id: 28,
+        review_date: Date.new(2021,3,27),
+        body: "Our stay was very pleasant, the rental was maintained well! Everything that we needed was there! We'll be back!",
+        reviewer_name: "Karen",
+        profile_pic: karen
+    )
+
+
+    Review.create!(
+        reviewer_id: 1,
+        listing_id: 28,
+        review_date: Date.new(2016,5,20),
+        body: "The perfect stay to host my family for a quick trip to see Ruby Falls. My kids were comfortable and if they're good, we're good, so thank you!",
+        reviewer_name: "Muhammed",
+        profile_pic: muhammed
+    )
+
+
+    Review.create!(
+        reviewer_id: 3,
+        listing_id: 28,
+        review_date: Date.new(2019,7,13),
+        body: "Great stay. Comfortable quiet and felt like home away from home!",
+        reviewer_name: "Barbara",
+        profile_pic: barbara
+    )
+
+
+    # Review.create!(
+    #     reviewer_id: ,
+    #     listing_id: ,
+    #     review_date: Date.new(20),
+    #     body: "",
+    #     reviewer_name: "",
+    #     profile_pic: 
+    # )
 
     puts "Done!"
   end
