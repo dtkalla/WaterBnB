@@ -7,13 +7,6 @@ import star from '../../assets/star.png'
 
 const FilteredIndexItem = (props) => {
     const listing = props.listing
-    // const dispatch = useDispatch()
-
-    // const handleClick = (e) => {
-    //     dispatch(deleteListing(listing.id))
-    // }
-
-    // const image_url = listing.picturesUrl
     
     if (listing.id) {
         return (
@@ -28,7 +21,6 @@ const FilteredIndexItem = (props) => {
                     
                     <span id='price'><span id='price-number'>${listing.price}</span>/night</span>
                 </Link>
-                {/* <button onClick={handleClick}>Delete</button> */}
             </div>
         )
     }

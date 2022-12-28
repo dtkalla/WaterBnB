@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-// import { Link } from 'react-router-dom';
 import ListingIndexItem from '../Listings/ListingIndexItem';
 import { fetchListings, getListings } from '../../store/listings';
 import '../Listings/listings.css'
@@ -29,7 +28,7 @@ const FilteredListings = () => {
             case 'pets':
                 return listing.petsAllowed ? listing : null
             case 'popular':
-                return listing.numberOfRatings > 5 && listing.rating > 4.5 ? listing : null
+                return listing.numberOfRatings >= 5 && listing.rating >= 4.75 ? listing : null
             default:
                 if (parseInt(filter.filter)) {
                     return (listing.price <= parseInt(filter.filter)) ? listing : null

@@ -411,6 +411,7 @@ ApplicationRecord.transaction do
         price: 503,
         bedrooms: 2,
         beds: 4,
+        bathrooms: 2,
         lister_name: "Karen",
         profile_pic: karen,
         type_of_water: 'sea',
@@ -467,6 +468,7 @@ ApplicationRecord.transaction do
         price: 79,
         bedrooms: 3,
         beds: 5,
+        bathrooms: 2,
         pets_allowed: true,
         type_of_water: "lake",
         lister_name: "Elisa",
@@ -491,6 +493,7 @@ ApplicationRecord.transaction do
         boat: false,
         bedrooms: 2,
         beds: 3,
+        bathrooms: 2,
         number_of_ratings: 17,
         rating: 4.882353
     )
@@ -527,8 +530,9 @@ ApplicationRecord.transaction do
         rating: 4.428571,
         type_of_water: "lake",
         building_type: "condo",
-      beds: 3,
-      bathrooms: 2
+        beds: 3,
+        bedrooms: 2,
+        bathrooms: 2
     )
 
 
@@ -563,6 +567,7 @@ ApplicationRecord.transaction do
         price: 159,
         bedrooms: 3,
         beds: 3,
+        bathrooms: 2,
         building_type: "cottage",
         pets_allowed: true,
         number_of_ratings: 5,
@@ -584,6 +589,7 @@ ApplicationRecord.transaction do
         price: 199,
         bedrooms: 2,
         beds: 4,
+        bathrooms: 2,
         building_type: "cabin",
         type_of_water: "lake",
         number_of_ratings: 11,
@@ -603,6 +609,7 @@ ApplicationRecord.transaction do
         price: 52,
         bedrooms: 2,
         beds: 3,
+        bathrooms: 2,
         building_type: "apartment",
         type_of_water: "lake",
         number_of_ratings: 7,
@@ -622,6 +629,7 @@ ApplicationRecord.transaction do
         price: 56,
         bedrooms: 2,
         beds: 3,
+        bathrooms: 2,
         building_type: "bungalow",
         type_of_water: "falls",
         pets_allowed: true,

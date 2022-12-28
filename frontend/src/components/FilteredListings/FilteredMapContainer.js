@@ -27,7 +27,7 @@ export const FilteredMapContainer = (props) => {
         case 'pets':
             return location.petsAllowed ? location : null
         case 'popular':
-            return location.numberOfRatings > 5 && location.rating > 4.5 ? location : null
+            return location.numberOfRatings >= 5 && location.rating >= 4.75 ? location : null
         default:
             if (parseInt(filter.filter)) {
                 return (location.price <= parseInt(filter.filter)) ? location : null
