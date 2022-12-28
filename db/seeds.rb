@@ -630,6 +630,25 @@ ApplicationRecord.transaction do
     )
 
 
+    Listing.create!(
+        city: "Devil's Tower",
+        country: 'Guld of Mexico',
+        description: "...", 
+        lister_id: 7,
+        lister_name: "Charles",
+        profile_pic: charles,
+        latitude: 28.2089,
+        longitude: -88.7375,
+        price: 173,
+        bedrooms: 1,
+        beds: 1,
+        building_type: "oil rig",
+        type_of_water: "sea",
+        boat: false,
+        self_check_in: false,
+        number_of_ratings: 3,
+        rating: 1.666667
+    )
 
 
 
@@ -637,8 +656,9 @@ ApplicationRecord.transaction do
 
 
 
- # Devils Tower oil rig
-    # 28.2089, -88.7375
+
+
+
 
 
 
@@ -2110,6 +2130,36 @@ ApplicationRecord.transaction do
         body: "Great stay. Comfortable quiet and felt like home away from home!",
         reviewer_name: "Barbara",
         profile_pic: barbara
+    )
+
+
+    Review.create!(
+        reviewer_id: 2,
+        listing_id: 29,
+        review_date: Date.new(2019,6,17),
+        body: "I don't know what I expected, but I was diappointed.",
+        reviewer_name: "Anthony",
+        profile_pic: anthony
+    )
+
+
+    Review.create!(
+        reviewer_id: 4,
+        listing_id: 29,
+        review_date: Date.new(2022,6,28),
+        body: "I decided to visit here on a whim.  It was meh.",
+        reviewer_name: "Elisa",
+        profile_pic: elisa
+    )
+
+
+    Review.create!(
+        reviewer_id: 1,
+        listing_id: 29,
+        review_date: Date.new(20),
+        body: "Don't vacation here -- it's overpriced and not relaxing at ALL!",
+        reviewer_name: "Muhammed",
+        profile_pic: muhammed
     )
 
 
