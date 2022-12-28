@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom/cjs/react-router-dom.min"
+import { Link, useParams } from "react-router-dom/cjs/react-router-dom.min"
 import lake from '../../assets/lake-3.png'
 import ocean from '../../assets/ocean-3.png'
 import sea from '../../assets/sea-3.png'
@@ -17,6 +17,11 @@ const Filters = () => {
     const [showModal, setShowModal] = useState(false);
     const [maxPrice, setMaxPrice] = useState(100)
     // const span = document.getElementsByClassName("close")[0];
+    const listingId = useParams();
+    let newListingNumber = listingId
+    while (newListingNumber == listingId) {
+        newListingNumber = Math.floor(Math.random() * 28) + 1
+    }
 
     return (
         <ul id='filter-icons'>
@@ -26,7 +31,7 @@ const Filters = () => {
             <Link to='/falls'><img src={falls} /><span>Falls</span></Link>
             <Link to='/pets'><img src={pets} /><span>Pets</span></Link>
             <Link to='/popular'><img src={stars} /><span>Top-rated</span></Link>
-            <Link to={`/listings/${Math.floor(Math.random() * 24) + 1}`}><img src={random} /><span>Random</span></Link>
+            <Link to={`/listings/${newListingNumber}`}><img src={random} /><span>Random</span></Link>
             <div id='price-filter' onClick={() => setShowModal(true)}><img src={price} /><span>Price</span></div>
 
             {showModal && (
