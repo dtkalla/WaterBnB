@@ -2156,7 +2156,7 @@ ApplicationRecord.transaction do
     Review.create!(
         reviewer_id: 1,
         listing_id: 29,
-        review_date: Date.new(20),
+        review_date: Date.new(2023,1,5),
         body: "Don't vacation here -- it's overpriced and not relaxing at ALL!",
         reviewer_name: "Muhammed",
         profile_pic: muhammed
