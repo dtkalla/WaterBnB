@@ -632,8 +632,8 @@ ApplicationRecord.transaction do
 
     Listing.create!(
         city: "Devil's Tower",
-        country: 'Guld of Mexico',
-        description: "...", 
+        country: 'Gulf of Mexico',
+        description: "Probably the best oil platform you'll ever visit!", 
         lister_id: 7,
         lister_name: "Charles",
         profile_pic: charles,
