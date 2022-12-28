@@ -22,6 +22,8 @@ export const FilteredMapContainer = (props) => {
             return location.typeOfWater == 'lake' ? location : null
         case 'sea':
             return location.typeOfWater == 'sea' ? location : null
+        case 'sea':
+            return location.typeOfWater == 'falls' ? location : null
         case 'pets':
             return location.petsAllowed ? location : null
         case 'popular':
