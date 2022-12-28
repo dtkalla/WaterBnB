@@ -550,23 +550,28 @@ ApplicationRecord.transaction do
 
 
 
+    Listing.create!(
+        city: 'Dakar',
+        country: 'Senegal',
+        description: "Venez ici, tout le monde !", 
+        lister_id: 3,
+        lister_name: "Barbara",
+        profile_pic: barbara,
+        latitude: 14.7167,
+        longitude: -17.4677,
+        price: 159,
+        bedrooms: 3,
+        beds: 3,
+        building_type: "cottage",
+        number_of_ratings: 5,
+        rating: 4.2
+    )
 
 
 
 
-    # Listing.create!(
-    #     city: 'Dakar',
-    #     country: 'Senegal',
-    #     description: "Venez ici, tout le monde !", 
-    #     lister_id: 3,
-    #     lister_name: "Barbara",
-    #     profile_pic: barbara,
-    #     latitude: 14.7167,
-    #     longitude: -17.4677,
-    #     price: 41,
-    #     number_of_ratings: 5,
-    #     rating: 4.2
-    # )
+
+
 
  # Devils Tower oil rig
     # 28.2089, -88.7375
@@ -1930,6 +1935,36 @@ ApplicationRecord.transaction do
         body: "Great place, very good location easy to get to and very close to town. Clean and warm and both the house helper and night security were very helpfully and great.",
         reviewer_name: "Anthony",
         profile_pic: anthony
+    )
+
+
+    Review.create!(
+        reviewer_id: 1,
+        listing_id: 25,
+        review_date: Date.new(2018,9,25),
+        body: "Great location, adorable hosts, beautiful house and efficient communication - recommended!",
+        reviewer_name: "Muhammed",
+        profile_pic: muhammed
+    )
+
+
+    Review.create!(
+        reviewer_id: 5,
+        listing_id: 25,
+        review_date: Date.new(2022,3,30),
+        body: "This place is gorgeous. The host is lovely and the property caretaker is kind and helpful. Thanks for a great weekend!",
+        reviewer_name: "Brian",
+        profile_pic: brian
+    )
+
+
+    Review.create!(
+        reviewer_id: 7,
+        listing_id: 25,
+        review_date: Date.new(2020,5,10),
+        body: "Beautiful home and garden. Lovely and safe. We had a wonderful time.",
+        reviewer_name: "Charles",
+        profile_pic: charles
     )
 
     puts "Done!"
