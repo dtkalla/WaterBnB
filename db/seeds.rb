@@ -659,6 +659,23 @@ ApplicationRecord.transaction do
     )
 
 
+    Listing.create!(
+        city: "Istanbul",
+        country: 'Türkiye',
+        description: "Not Constantinople, not Turkey!", 
+        lister_id: 5,
+        lister_name: "Brian",
+        profile_pic: brian,
+        latitude: 41.0082,
+        longitude: 28.9784,
+        price: 149,
+        bedrooms: 2,
+        beds: 2,
+        type_of_water: "sea",
+        parking: false,
+        number_of_ratings: 17,
+        rating: 4.411765
+    )
 
 
 
@@ -668,11 +685,7 @@ ApplicationRecord.transaction do
 
 
 
-
-
-    # Istanbul
-    # 41.0082° N, 28.9784° E
-    # "Not Constantinople, not Turkey"
+    # Khon Phapheng Falls
 
     # Algiers
 
@@ -2168,6 +2181,36 @@ ApplicationRecord.transaction do
         body: "Don't vacation here -- it's overpriced and not relaxing at ALL!",
         reviewer_name: "Muhammed",
         profile_pic: muhammed
+    )
+
+
+    Review.create!(
+        reviewer_id: 1,
+        listing_id: 30,
+        review_date: Date.new(2017,12,31),
+        body: "Very good location! Great view <3 recommended!",
+        reviewer_name: "Muhammed",
+        profile_pic: muhammed
+    )
+
+
+    Review.create!(
+        reviewer_id: 4,
+        listing_id: 30,
+        review_date: Date.new(2021,4,12),
+        body: "The apartment has an amazing view!!! We had a great time there during our time in Istanbul. I would recommend this place to my friends.",
+        reviewer_name: "Elisa",
+        profile_pic: elisa
+    )
+
+
+    Review.create!(
+        reviewer_id: 2,
+        listing_id: 30,
+        review_date: Date.new(2020,12,23),
+        body: "The place was so nice, a lot of things to see in walking distance, amazing view and so organized. Just be ready to climb some stairs like in the whole city.",
+        reviewer_name: "Anthony",
+        profile_pic: anthony
     )
 
 
