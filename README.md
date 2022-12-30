@@ -1,6 +1,6 @@
-# Fullstack Project: WaterBnb
+# Fullstack Project: WaterBnB
 
-[WaterBnb](https://waterbnb.onrender.com/) is an affordable water-themed travel booking site -- a clone of AirBnb.  Like AirBnb, WaterBnb allows users to views different listings around the world, make reservations, and leave ratings and reviews.  It uses the Google Maps API to give exact locations and let users search by location.  The splash page is an index of all the listings, with a map centered in New York City by default.
+[WaterBnB](https://waterbnb.onrender.com/) is an affordable water-themed travel booking site -- a clone of AirBnB.  Like AirBnB, WaterBnB allows users to views different listings around the world, make reservations, and leave ratings and reviews.  It uses the Google Maps API to give exact locations and let users search by location.  The splash page is an index of all the listings, with a map centered in New York City by default.
 
 ![](images/index_view.png)
 
@@ -16,7 +16,7 @@
 - AWS
 
 
-## With WaterBnb, users can:
+## With WaterBnB, users can:
 
 - #### See Listings, with detailed information and photos
 
@@ -73,7 +73,7 @@ The MapContainer object uses locations passed into it that are already fetched e
 
 ![](images/ratings.png)
 
-Users can read reviews of each listing, see ratings, and leave their own ratings/reviews.  This is *not* a full CRUD feature -- like AirBnb, WaterBnb doesn't allow users to delete or modify reviews, because it could create a conflict of interest.  Average rating is stored with each listing and dynamically recalculated whenever a user rates a property.  (For purposes of being a better demo, logged-in users can rate/review any property, but they can't rate/review the same property more than once in a day.)  Here's the calculation:
+Users can read reviews of each listing, see ratings, and leave their own ratings/reviews.  This is *not* a full CRUD feature -- like AirBnB, WaterBnB doesn't allow users to delete or modify reviews, because it could create a conflict of interest.  Average rating is stored with each listing and dynamically recalculated whenever a user rates a property.  (For purposes of being a better demo, logged-in users can rate/review any property, but they can't rate/review the same property more than once in a day.)  Here's the calculation:
 
 ```
 def create
@@ -147,5 +147,5 @@ const listings = useSelector(getListings)
 - Recenter default index map based on user's location
 
 ## Sources:
-- Photos, descriptions, some reviews, and amenity icons taken from AirBnb
+- Photos, descriptions, some reviews, and amenity icons taken from AirBnB
 - Filter Icons taken from [here](https://www.flaticon.com/)
