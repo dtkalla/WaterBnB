@@ -671,7 +671,7 @@ ApplicationRecord.transaction do
         price: 149,
         bedrooms: 2,
         beds: 2,
-        building_type: "apartment"
+        building_type: "apartment",
         type_of_water: "sea",
         parking: false,
         number_of_ratings: 17,
