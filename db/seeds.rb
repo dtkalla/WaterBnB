@@ -671,10 +671,32 @@ ApplicationRecord.transaction do
         price: 149,
         bedrooms: 2,
         beds: 2,
+        building_type: "apartment"
         type_of_water: "sea",
         parking: false,
         number_of_ratings: 17,
         rating: 4.411765
+    )
+
+
+     Listing.create!(
+        city: 'Denpasar, Bali',
+        country: 'Indonesia',
+        description: "Eat, pray, love <3", 
+        lister_id: 1,
+        lister_name: "Muhammed",
+        profile_pic: muhammed,
+        type_of_water: "sea",
+        building_type: "villa",
+        beds: 3,
+        bedrooms: 3,
+        bathrooms: 3,
+        latitude: -8.4095,
+        longitude: 115.1889,
+        price: 136,
+        pets_allowed: true,
+        number_of_ratings: 23,
+        rating: 4.956522
     )
 
 
@@ -684,6 +706,18 @@ ApplicationRecord.transaction do
 
 
 
+
+
+
+    # Listing.create!(
+    #     city: 'Rio de Janeiro',
+    #     country: 'Brazil',
+    #     description: "Come see the biggest Carnaval on earth!", 
+    #     lister_id: 3,
+    #     latitude: -22.9068,
+    #     longitude: -43.1729,
+    #     price: 162,
+    # )
 
     # Khon Phapheng Falls
 
@@ -882,28 +916,6 @@ ApplicationRecord.transaction do
 
 
 
-    # Listing.create!(
-    #     city: 'Ubud',
-    #     country: 'Indonesia',
-    #     description: "Eat, pray, love <3", 
-    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
-    #     lister_id: 1,
-    #     latitude: -8.4095,
-    #     longitude: 115.1889,
-    #     price: 94,
-    # )
-
-
-    # Listing.create!(
-    #     city: 'Rio de Janeiro',
-    #     country: 'Brazil',
-    #     description: "Come see the biggest Carnaval on earth!", 
-    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
-    #     lister_id: 3,
-    #     latitude: -22.9068,
-    #     longitude: -43.1729,
-    #     price: 162,
-    # )
 
 
     # Listing.create!(
