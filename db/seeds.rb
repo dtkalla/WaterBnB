@@ -2230,7 +2230,7 @@ ApplicationRecord.transaction do
         reviewer_id: 4,
         listing_id: 31,
         review_date: Date.new(2022,6,1),
-        body: "Suri was a wonderful host. Very helpful and communicative. Would recommend.",
+        body: "Muhammed was a wonderful host. Very helpful and communicative. Would recommend.",
         reviewer_name: "Elisa",
         profile_pic: elisa
     )
