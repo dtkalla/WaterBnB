@@ -2226,6 +2226,36 @@ ApplicationRecord.transaction do
     )
 
 
+    Review.create!(
+        reviewer_id: 4,
+        listing_id: 31,
+        review_date: Date.new(2022,6,1),
+        body: "Suri was a wonderful host. Very helpful and communicative. Would recommend.",
+        reviewer_name: "Elisa",
+        profile_pic: elisa
+    )
+
+
+    Review.create!(
+        reviewer_id: 7,
+        listing_id: 31,
+        review_date: Date.new(2016,4,17),
+        body: "Excellent villa with three separate bedrooms, close to the sea and many shops and restaurants! Thank you Muhammed for the hospitality and care!",
+        reviewer_name: "Charles",
+        profile_pic: charles
+    )
+
+
+    Review.create!(
+        reviewer_id: 3,
+        listing_id: 31,
+        review_date: Date.new(2019,9,25),
+        body: "We stayed with 5 adults and a 1yr old and this villa is perfection. For family with a baby, the layout is brilliant and so safe (with pool fence). Location incredible, staff wonderful and the little touches made this a very special place to stay. We will be back.",
+        reviewer_name: "Barbara",
+        profile_pic: barbara
+    )
+
+    
     # Review.create!(
     #     reviewer_id: ,
     #     listing_id: ,
