@@ -691,8 +691,8 @@ ApplicationRecord.transaction do
         beds: 3,
         bedrooms: 3,
         bathrooms: 3,
-        latitude: -8.4095,
-        longitude: 115.1889,
+        latitude: -8.6705,
+        longitude: 115.2126,
         price: 136,
         pets_allowed: true,
         number_of_ratings: 23,
@@ -701,23 +701,82 @@ ApplicationRecord.transaction do
 
 
 
+    Listing.create!(
+        city: 'Rio de Janeiro',
+        country: 'Brazil',
+        description: "Come see the biggest Carnaval on earth!", 
+        lister_id: 3,
+        lister_name: "Barbara",
+        profile_pic: barbara,
+        latitude: -22.9068,
+        longitude: -43.1729,
+        price: 91,
+        building_type: "apartment",
+        bedrooms: 1,
+        beds: 1,
+        number_of_ratings: 7,
+        rating: 4.142857
+    )
+
+
+    Listing.create!(
+        city: 'San Francisco',
+        country: 'California',
+        description: "Stay here -- it'll be a great experience!", 
+        lister_id: 7,
+        lister_name: "Charles",
+        profile_pic: charles,
+        building_type: "garden apartment",
+        parking: false,
+        latitude: 37.7180,
+        longitude: -122.4772,
+        price: 160,
+        number_of_ratings: 11,
+        rating: 4.636364
+    )
+
+
+    Listing.create!(
+        city: 'San Francisco',
+        country: 'California',
+        description: "Stay here -- it'll be a great experience!", 
+        lister_id: 3,
+        lister_name: "Barbara",
+        profile_pic: barbara,
+        building_type: "condo",
+        bedrooms: 2,
+        beds: 2,
+        bathrooms: 2,
+        latitude: 37.7277,
+        longitude: -122.3932,
+        price: 250,
+        number_of_ratings: 8,
+        rating: 4.625
+    )
+
+
+    Listing.create!(
+        city: 'Staten Island',
+        country: 'New York',
+        description: "Stay here -- it'll be a great experience!", 
+        lister_id: 1,
+        lister_name: "Muhammed",
+        profile_pic: muhammed,
+        building_type: "apartment",
+        boat: false,
+        bedrooms: 2,
+        beds: 4,
+        latitude: 40.6427,
+        longitude: -74.0799,
+        price: 160,
+        number_of_ratings: 4,
+        rating: 4.75
+    )
 
 
 
 
 
-
-
-
-    # Listing.create!(
-    #     city: 'Rio de Janeiro',
-    #     country: 'Brazil',
-    #     description: "Come see the biggest Carnaval on earth!", 
-    #     lister_id: 3,
-    #     latitude: -22.9068,
-    #     longitude: -43.1729,
-    #     price: 162,
-    # )
 
     # Khon Phapheng Falls
 
@@ -854,40 +913,7 @@ ApplicationRecord.transaction do
 
 
     
-    # Listing.create!(
-    #     city: 'San Francisco (west)',
-    #     country: 'California',
-    #     description: "Stay here -- it'll be a great experience!", 
-    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
-    #     lister_id: 3,
-    #     latitude: 37.7180,
-    #     longitude: -122.4772,
-    #     price: 284,
-    # )
-
-
-    # Listing.create!(
-    #     city: 'San Francisco (east)',
-    #     country: 'California',
-    #     description: "Stay here -- it'll be a great experience!", 
-    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
-    #     lister_id: 3,
-    #     latitude: 37.7277,
-    #     longitude: -122.3932,
-    #     price: 411,
-    # )
-
-
-    # Listing.create!(
-    #     city: 'Staten Island',
-    #     country: 'New York',
-    #     description: "Stay here -- it'll be a great experience!", 
-    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
-    #     lister_id: 3,
-    #     latitude: 40.6427,
-    #     longitude: -74.0799,
-    #     price: 108,
-    # )
+    
 
 
     # Listing.create!(
@@ -2255,6 +2281,121 @@ ApplicationRecord.transaction do
         profile_pic: barbara
     )
 
+    
+    Review.create!(
+        reviewer_id: 5,
+        listing_id: 32,
+        review_date: Date.new(2018,7,19),
+        body: "Best experience I've ever had on the platform. Would give 6 stars if it was possible!",
+        reviewer_name: "Brian",
+        profile_pic: brian
+    )
+
+
+    Review.create!(
+        reviewer_id: 4,
+        listing_id: 32,
+        review_date: Date.new(2022,9,23),
+        body: "Clean space. Well equipped. Beachfront Location. Outstanding Hospitality.",
+        reviewer_name: "Elisa",
+        profile_pic: elisa
+    )
+
+
+    Review.create!(
+        reviewer_id: 7,
+        listing_id: 32,
+        review_date: Date.new(2023,1,5),
+        body: "Me and my girlfriend loved staying at this cozy apartment in Copacabana! The location is incredible, and the host made sure that everything was perfect for us to enjoy our stay - highly recommended!",
+        reviewer_name: "Charles",
+        profile_pic: charles
+    )
+
+
+    Review.create!(
+        reviewer_id: 3,
+        listing_id: 33,
+        review_date: Date.new(2020,1,10),
+        body: "Charles is the ultimate host. His home is beautiful and inviting. The photos do not do the entrance or the patio and garden that is off the bedroom justice.",
+        reviewer_name: "Barbara",
+        profile_pic: barbara
+    )
+
+
+    Review.create!(
+        reviewer_id: 6,
+        listing_id: 33,
+        review_date: Date.new(2021,9,28),
+        body: "Close to beach, amazing location. Had a great time with my son visiting a friend's graduation at Berkely. Charles was responsive to questions and helpful.",
+        reviewer_name: "Karen",
+        profile_pic: karen
+    )
+
+
+    Review.create!(
+        reviewer_id: 4,
+        listing_id: 33,
+        review_date: Date.new(2018,8,14),
+        body: "Charles sets the standard for excellence!",
+        reviewer_name: "Elisa",
+        profile_pic: elisa
+    )
+
+
+    Review.create!(
+        reviewer_id: 2,
+        listing_id: 34,
+        review_date: Date.new(2022,12,12),
+        body: "Great modern apartment with plenty amenities. Barbara was super communicative and helped us when needed.",
+        reviewer_name: "Anthony",
+        profile_pic: anthony
+    )
+
+    Review.create!(
+        reviewer_id: 4,
+        listing_id: 34,
+        review_date: Date.new(2019,11,14),
+        body: "Clean and comfortable apartment. Would recommend.",
+        reviewer_name: "Elisa",
+        profile_pic: elisa
+    )
+
+    Review.create!(
+        reviewer_id: 6,
+        listing_id: 34,
+        review_date: Date.new(2017,7,13),
+        body: "We had a wonderful time and enjoyed our stay. The apartment was clean, quiet and spacious with an amazing view and great amenities in the building.",
+        reviewer_name: "Karen",
+        profile_pic: karen
+    )
+
+
+    Review.create!(
+        reviewer_id: 3,
+        listing_id: 35,
+        review_date: Date.new(2017,9,8),
+        body: "Perfect score. immaculate apartment that had everything. We enjoyed taking the ferry each day.",
+        reviewer_name: "Barbara",
+        profile_pic: barbara
+    )
+
+    Review.create!(
+        reviewer_id: 6,
+        listing_id: 35,
+        review_date: Date.new(2023,1,7),
+        body: "Location is perfect. Very clean. Definitely recommend this unit. Absolutely no negatives.",
+        reviewer_name: "Karen",
+        profile_pic: karen
+    )
+
+    Review.create!(
+        reviewer_id: 4,
+        listing_id: 35,
+        review_date: Date.new(2019,11,30),
+        body: "lovely, modern and clean appartement with ideal location with easy access to Manhattan",
+        reviewer_name: "Elisa",
+        profile_pic: elisa
+    )
     
     # Review.create!(
     #     reviewer_id: ,
