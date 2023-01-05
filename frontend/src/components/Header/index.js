@@ -18,6 +18,10 @@ function Header( props ) {
         <a href="www.linkedin.com/in/daniel-kalla" target="_blank">
             <img className="icons-header" alt="LinkedIn" src="https://cdn-icons-png.flaticon.com/512/174/174857.png"/>
         </a>
+        <br/>
+        <a href="https://angel.co/u/daniel-thomas-kalla" target="_blank">
+            <img class="icons" src="https://cdn2.iconfinder.com/data/icons/font-awesome/1792/angellist-512.png"/>
+        </a>
         </div>
         )
     }
