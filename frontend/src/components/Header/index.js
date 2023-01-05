@@ -15,7 +15,7 @@ function Header( props ) {
             <img className="icons-header" alt="Github" src="https://cdn-icons-png.flaticon.com/512/25/25231.png"/>
         </a>
         <br/>
-        <a href="www.linkedin.com/in/daniel-kalla" target="_blank">
+        <a href="https://linkedin.com/in/daniel-kalla" target="_blank">
             <img className="icons-header" alt="LinkedIn" src="https://cdn-icons-png.flaticon.com/512/174/174857.png"/>
         </a>
         <br/>
