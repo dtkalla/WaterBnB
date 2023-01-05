@@ -774,6 +774,23 @@ ApplicationRecord.transaction do
     )
 
 
+    Listing.create!(
+        city: 'Bondai Beach',
+        country: 'Australia',
+        description: "Stay here -- it'll be a great experience!", 
+        lister_id: 3,
+        lister_name: "Barbara",
+        profile_pic: barbara,
+        latitude: -33.8915,
+        longitude: 151.2767,
+        price: 239,
+        building_type: "apartment",
+        pets_allowed: true,
+        number_of_ratings: 15,
+        rating: 4.733333
+    )
+
+
 
 
 
@@ -2396,6 +2413,37 @@ ApplicationRecord.transaction do
         reviewer_name: "Elisa",
         profile_pic: elisa
     )
+
+
+    Review.create!(
+        reviewer_id: 2,
+        listing_id: 36,
+        review_date: Date.new(2018,1,30),
+        body: "This is an amazing apartment, newly renovated and all new furnishings. The location is perfect, just around the corner from the beach and all the best cafes. Highly recommend.",
+        reviewer_name: "Anthony",
+        profile_pic: anthony
+    )
+
+
+    Review.create!(
+        reviewer_id: 6,
+        listing_id: 36,
+        review_date: Date.new(2017,8,13),
+        body: "Amazing spot right in the heart of North Bondi - 5 mins walk to the beach or the shops, but on a quieter street so it was a lovely oasis. Newly renovated and looks just as amazing in real life as the pictures!",
+        reviewer_name: "Karen",
+        profile_pic: karen
+    )
+
+
+    Review.create!(
+        reviewer_id: 5,
+        listing_id: 36,
+        review_date: Date.new(2021,9,22),
+        body: "Fantastic and well equipped large apartment. The finish is lovely after the recent renovations. We spent 10 days here and had an amazing holiday - with two young kids we spent lots of time at the beach, north bondi pool and local playground, all within a 5-10 min walk. The apartment is in a great location. Lots of good coffee shops and restaurants nearby. We loved being 5 mins away from the 333 bus which took us directly to the city and made getting to lots of the tourist spots easy. Barbara was a lovely host and very responsive. Would definitely stay here again and recommend to friends!",
+        reviewer_name: "Brian",
+        profile_pic: brian
+    )
+
     
     # Review.create!(
     #     reviewer_id: ,

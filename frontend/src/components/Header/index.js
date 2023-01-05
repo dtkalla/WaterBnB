@@ -20,7 +20,7 @@ function Header( props ) {
         </a>
         <br/>
         <a href="https://angel.co/u/daniel-thomas-kalla" target="_blank">
-            <img class="icons" src="https://cdn2.iconfinder.com/data/icons/font-awesome/1792/angellist-512.png"/>
+            <img class="icons-header" src="https://cdn2.iconfinder.com/data/icons/font-awesome/1792/angellist-512.png"/>
         </a>
         </div>
         )
