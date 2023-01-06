@@ -790,12 +790,43 @@ ApplicationRecord.transaction do
         rating: 4.733333
     )
 
+    Listing.create!(
+        city: 'Khon Phapheng Falls',
+        country: 'Laos',
+        description: "Widest waterfall on earth!", 
+        lister_id: 2,
+        lister_name: "Anthony",
+        profile_pic: anthony,
+        latitude: 13.94806,
+        longitude: 105.94056,
+        price: 63,
+        building_type: "private room",
+        type_of_water: "falls",
+        boat: false,
+        number_of_ratings: 3,
+        rating: 5
+    )
+
+
+    Listing.create!(
+        city: 'Las Coloradas',
+        country: 'Mexico',
+        description: "The pinkest lakes you've ever seen!", 
+        lister_id: 4,
+        lister_name: "Elisa",
+        profile_pic: elisa,
+        latitude: 21.6083,
+        longitude: -87.9913,
+        price: 42,
+        building_type: "private room",
+        type_of_water: "lagoon",
+        pets_allowed: true,
+        number_of_ratings: 17,
+        rating: 4.882353
+    )
 
 
 
-
-
-    # Khon Phapheng Falls
 
     # Algiers
 
@@ -2445,6 +2476,66 @@ ApplicationRecord.transaction do
     )
 
     
+    Review.create!(
+        reviewer_id: 6,
+        listing_id: 37,
+        review_date: Date.new(2016,5,23),
+        body: "Very nice accommodation in an idyllic location.",
+        reviewer_name: "Karen",
+        profile_pic: karen
+    )
+
+
+    Review.create!(
+        reviewer_id: 3,
+        listing_id: 37,
+        review_date: Date.new(2022,12,30),
+        body: "Had a great stay and didn’t want to leave.",
+        reviewer_name: "Barbara",
+        profile_pic: barbara
+    )
+
+
+    Review.create!(
+        reviewer_id: 5,
+        listing_id: 37,
+        review_date: Date.new(2017,1,1),
+        body: "Very pleasant and relaxing stay",
+        reviewer_name: "Brian",
+        profile_pic: brian
+    )
+
+
+    Review.create!(
+        reviewer_id: 1,
+        listing_id: 38,
+        review_date: Date.new(2021,6,12),
+        body: "Very nice room, good wifi connection. Nice Restaurant with delicious food. 😃",
+        reviewer_name: "Muhammed",
+        profile_pic: muhammed
+    )
+
+
+    Review.create!(
+        reviewer_id: 7,
+        listing_id: 38,
+        review_date: Date.new(2021,5,21),
+        body: "It is a nice location near the coloradas. It’s basically a hotel/motel room. There is a restaurant here, which is convenient. The room was clean and everyone was very nice.",
+        reviewer_name: "Charles",
+        profile_pic: charles
+    )
+
+
+    Review.create!(
+        reviewer_id: 2,
+        listing_id: 38,
+        review_date: Date.new(2018,8,29),
+        body: "Todo ok",
+        reviewer_name: "Anthony",
+        profile_pic: anthony
+    )
+
+
     # Review.create!(
     #     reviewer_id: ,
     #     listing_id: ,
