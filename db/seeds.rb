@@ -828,6 +828,48 @@ ApplicationRecord.transaction do
 
 
 
+
+
+    # Add Copenhagen
+
+
+
+    
+
+
+
+
+
+
+
+
+
+    # Listing.create!(
+    #     city: 'Tokyo',
+    #     country: 'Japan',
+    #     description: "Stay at the biggest city on earth and climb Mount Fuji!", 
+    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
+    #     lister_id: 3,
+    #     latitude: 35.6762,
+    #     longitude: 139.6503,
+    #     price: 132,
+    # )
+
+
+
+
+
+    # Listing.create!(
+    #     city: 'Phuket',
+    #     country: 'Thailand',
+    #     description: "Please pronounce this city's name correctly...", 
+    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
+    #     lister_id: 1,
+    #     latitude: 7.8804,
+    #     longitude: 98.3923,
+    #     price: 28,
+    # )
+
     # Algiers
 
 
@@ -973,49 +1015,6 @@ ApplicationRecord.transaction do
     #     latitude: 40.8553,
     #     longitude: -73.8640,
     #     price: 93,
-    # )
-
-    # Add Copenhagen
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-    # Listing.create!(
-    #     city: 'Tokyo',
-    #     country: 'Japan',
-    #     description: "Stay at the biggest city on earth and climb Mount Fuji!", 
-    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
-    #     lister_id: 3,
-    #     latitude: 35.6762,
-    #     longitude: 139.6503,
-    #     price: 132,
-    # )
-
-
-
-
-
-    # Listing.create!(
-    #     city: 'Phuket',
-    #     country: 'Thailand',
-    #     description: "Please pronounce this city's name correctly...", 
-    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
-    #     lister_id: 1,
-    #     latitude: 7.8804,
-    #     longitude: 98.3923,
-    #     price: 28,
     # )
 
 

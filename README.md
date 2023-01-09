@@ -139,7 +139,7 @@ const listings = useSelector(getListings)
 - Thursday: Filters
 
 ## Future Features:
-- More categories (and more seed data to show them)
+~~- More categories (and more seed data to show them)~~
 - Ratings for specific items (location, communication, boat quality, etc.)
 - Carousel for photos
 - Search function
