@@ -827,11 +827,39 @@ ApplicationRecord.transaction do
 
 
 
+    Listing.create!(
+        city: 'Copenhagen',
+        country: 'Denmark',
+        description: "Best biking city on earth!", 
+        lister_id: 6,
+        lister_name: "Karen",
+        profile_pic: karen,
+        latitude: 55.6761,
+        longitude: 12.5683,
+        price: 151,
+        building_type: "townhouse",
+        type_of_water: "sea",
+        pets_allowed: true,
+        bathrooms: 1.5,
+        number_of_ratings: 12,
+        rating: 4.833333
+    )
 
-
-
-    # Add Copenhagen
-
+    Listing.create!(
+        city: 'Tokyo',
+        country: 'Japan',
+        description: "Stay at the biggest city on earth and climb Mount Fuji!", 
+        lister_id: 5,
+        lister_name: "Brian",
+        profile_pic: brian,
+        latitude: 35.6762,
+        longitude: 139.6503,
+        building_type: "historic hut",
+        price: 300,
+        parking: false,
+        number_of_ratings: 16,
+        rating: 4.75
+    )
 
 
     
@@ -844,16 +872,7 @@ ApplicationRecord.transaction do
 
 
 
-    # Listing.create!(
-    #     city: 'Tokyo',
-    #     country: 'Japan',
-    #     description: "Stay at the biggest city on earth and climb Mount Fuji!", 
-    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
-    #     lister_id: 3,
-    #     latitude: 35.6762,
-    #     longitude: 139.6503,
-    #     price: 132,
-    # )
+  
 
 
 
@@ -1102,18 +1121,6 @@ ApplicationRecord.transaction do
     #     latitude: 22.3193,
     #     longitude: 114.1694,
     #     price: 386,
-    # )
-
-
-    # Listing.create!(
-    #     city: 'Bondai Beach',
-    #     country: 'Australia',
-    #     description: "Stay here -- it'll be a great experience!", 
-    #     pictures_url: 'https://a0.muscache.com/im/pictures/77c897ae-e66b-4b16-8e50-da04b868c3bd.jpg?im_w=720',
-    #     lister_id: 3,
-    #     latitude: -33.8915,
-    #     longitude: 151.2767,
-    #     price: 162,
     # )
 
 
@@ -2535,6 +2542,64 @@ ApplicationRecord.transaction do
     )
 
 
+    Review.create!(
+        reviewer_id: 4,
+        listing_id: 39,
+        review_date: Date.new(2018,7,30),
+        body: "A wonderful location in gardens in Christianhavn Close to the canals and easy walking to some of the main sites. Cosy place to stay that is as good as it looks in the photos. Highly recommended and we would stay here again.",
+        reviewer_name: "Elisa",
+        profile_pic: elisa
+    )
+
+
+    Review.create!(
+        reviewer_id: 5,
+        listing_id: 39,
+        review_date: Date.new(2022,3,1),
+        body: "We had such a relaxing stay, close to everything but in a peaceful area. Loved every minute !",
+        reviewer_name: "Brian",
+        profile_pic: brian
+    )
+
+
+    Review.create!(
+        reviewer_id: 2,
+        listing_id: 39,
+        review_date: Date.new(2021,9,12),
+        body: "Great location, and very easy to get to from the airport. Would stay again!",
+        reviewer_name: "Anthony",
+        profile_pic: anthony
+    )
+
+
+    Review.create!(
+        reviewer_id: 6,
+        listing_id: 40,
+        review_date: Date.new(2016,7,13),
+        body: "We had a wonderful stay at the Little House. The location is perfect for exploring Tokyo, the host was very helpful, and you can feel the history in this place. Will definitely stay again.",
+        reviewer_name: "Karen",
+        profile_pic: karen
+    )
+
+    Review.create!(
+        reviewer_id: 7,
+        listing_id: 40,
+        review_date: Date.new(2019,6,27),
+        body: "Location is quite good. Host is considerate, nice, and helpful. The house is cozy. We have really good days. Highly recommend it to waterbnb community!",
+        reviewer_name: "Charles",
+        profile_pic: charles
+    )
+
+    Review.create!(
+        reviewer_id: 3,
+        listing_id: 40,
+        review_date: Date.new(2020,5,31),
+        body: "Wonderful, unique stay in Tokyo! Felt transported back in time. It was amazing to wake each morning in the very comfortable bed and look directly at walls that date back 70 years. Truly incredible! Location is very easy to multiple subway stations. The cafe downstairs is an extra delight: warm, lovely and welcoming. The coffee is exquisite by the way, if you stay there you must go. All in all, exactly what you would expect from a listing that has an endless number of five star reviews :)",
+        reviewer_name: "Barbara",
+        profile_pic: barbara
+    )
+
+
     # Review.create!(
     #     reviewer_id: ,
     #     listing_id: ,
@@ -2543,6 +2608,7 @@ ApplicationRecord.transaction do
     #     reviewer_name: "",
     #     profile_pic: 
     # )
+
 
     puts "Done!"
   end
