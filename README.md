@@ -13,7 +13,7 @@
 - PostgreSQL
 - Google Maps
 - Debugger
-- AWS
+- Amazon Web Storage (AWS)
 
 
 ## With WaterBnB, users can:
