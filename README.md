@@ -38,14 +38,14 @@ Users (who are logged in) can reserve listings and watch as costs change based o
 
 Users can use Google Maps to search specific locations, with each property having a popup summarizing key information.  Every page uses Google maps, either for or to show the exact location of a specific listing.
 
-The MapContainer object uses locations passed into it that are already fetched elsewhere on the page.  Rather than pass the entire listing object for each location, this passes only the variables the map is going to use (including id so the popup can link to the listing's show page):
+The MapContainer object uses locations passed into it that are already fetched elsewhere on the page.  Rather than pass the entire listing object for each location, this passes only the variables the map is going to use (ieither to show in the popup or to filter appropriately):
 
 ```
     const locations = []
 
     for (let i = 0; i < listings.length; i++) {
         locations.push({
-            name: listings[i].id,
+            id: listings[i].id,
             title: listings[i].listerName+"'s " + listings[i].buildingType,
             rating: (parseFloat(listings[i].rating).toFixed(1)),
             place: listings[i].city + ', ' + listings[i].country,
@@ -54,18 +54,14 @@ The MapContainer object uses locations passed into it that are already fetched e
             location: {
                 lat: parseFloat(listings[i].latitude),
                 lng: parseFloat(listings[i].longitude)
-            }
+            },
+            typeOfWater: listings[i].typeOfWater,
+            numberOfRatings: listings[i].numberOfRatings,
+            petsAllowed: listings[i].petsAllowed
         })
     }
-
-    return (
-        ...
-            <MapContainer locations={locations} />
-        ...
-    )
 ```
 
-<!-- ![](images/Google_map) -->
 
 
 
@@ -98,7 +94,7 @@ Note that people can rate without reviewing (though not vice versa), so most lis
 
 ![](images/max_100.png)
 
-Rather than looking at all properties at once, users can filter by the body of water it's near (ocean, sea, or lake), by maximum price, or to show only places that allow pets or are highly rated (at least 5 ratings with average of at least 4.5 stars -- that's what the user is looking at currently).  Because filters show fewer listings, the default map with filters is a full world map.
+Rather than looking at all properties at once, users can filter by the body of water it's near (ocean, sea, lake, or falls), by maximum price, or to show only places that allow pets or are highly rated (at least 5 ratings with average of at least 4.75 stars -- that's what the user is looking at currently).  Because filters show fewer listings, the default map with filters is a full world map.
 
 I used different urls to represent different filters, including a catch-all number for maximum price.  (React is fast enough that redirecting isn't a problem, and this stores users' filters in their browser history.)  I filtered it right at the useSelector to prevent errors with undefined variables.
 
@@ -109,13 +105,15 @@ const listings = useSelector(getListings)
             case 'ocean':
                 return listing.typeOfWater == 'ocean' ? listing : null
             case 'lake':
-                return listing.typeOfWater == 'lake' ? listing : null
+                return listing.typeOfWater == 'lake' || listing.typeOfWater == 'lagoon' ? listing : null
             case 'sea':
-                return listing.typeOfWater == 'sea' ? listing : null
+                return listing.typeOfWater == 'sea'|| listing.typeOfWater == 'lagoon' ? listing : null
+            case 'falls':
+                return listing.typeOfWater == 'falls' ? listing : null
             case 'pets':
                 return listing.petsAllowed ? listing : null
             case 'popular':
-                return listing.numberOfRatings > 5 && listing.rating > 4.5 ? listing : null
+                return listing.numberOfRatings >= 5 && listing.rating >= 4.75 ? listing : null
             default:
                 if (parseInt(filter.filter)) {
                     return (listing.price <= parseInt(filter.filter)) ? listing : null
@@ -123,6 +121,7 @@ const listings = useSelector(getListings)
                     return listing
                 }
         }
+    })
 ```
 
 ### This project also includes:

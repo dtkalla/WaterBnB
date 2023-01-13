@@ -20,7 +20,7 @@ const Filters = () => {
     const listingId = useParams();
     let newListingNumber = listingId
     while (newListingNumber == listingId) {
-        newListingNumber = Math.floor(Math.random() * 30) + 1
+        newListingNumber = Math.floor(Math.random() * 40) + 1
     }
 
     return (
