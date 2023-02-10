@@ -1,6 +1,6 @@
 # Fullstack Project: WaterBnB
 
-[WaterBnB](https://waterbnb.onrender.com/) is an affordable water-themed travel booking site -- a clone of AirBnB.  Like AirBnB, WaterBnB allows users to views different listings around the world, make reservations, and leave ratings and reviews.  It uses the Google Maps API to give exact locations and let users search by location.  The splash page is an index of all the listings, with a map centered in New York City by default.
+[WaterBnB](https://waterbnb.onrender.com/) is an affordable water-themed travel booking site -- a clone of Airbnb.  Like Airbnb, WaterBnB allows users to views different listings around the world, make reservations, and leave ratings and reviews.  It uses the Google Maps API to give exact locations and let users search by location.  The splash page is an index of all the listings, with a map centered in New York City by default.
 
 ![](images/index_view.png)
 
@@ -69,7 +69,7 @@ The MapContainer object uses locations passed into it that are already fetched e
 
 ![](images/ratings.png)
 
-Users can read reviews of each listing, see ratings, and leave their own ratings/reviews.  This is *not* a full CRUD feature -- like AirBnB, WaterBnB doesn't allow users to delete or modify reviews, because it could create a conflict of interest.  Average rating is stored with each listing and dynamically recalculated whenever a user rates a property.  Here's the calculation:
+Users can read reviews of each listing, see ratings, and leave their own ratings/reviews.  This is *not* a full CRUD feature -- like Airbnb, WaterBnB doesn't allow users to delete or modify reviews, because it could create a conflict of interest.  Average rating is stored with each listing and dynamically recalculated whenever a user rates a property.  Here's the calculation:
 
 ```
 def create
@@ -146,5 +146,5 @@ const listings = useSelector(getListings)
 - Recenter default index map based on user's location
 
 ## Sources:
-- Photos, descriptions, some reviews, and amenity icons taken from AirBnB
+- Photos, descriptions, some reviews, and amenity icons taken from Airbnb
 - Filter Icons taken from [here](https://www.flaticon.com/)
