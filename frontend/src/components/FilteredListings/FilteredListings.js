@@ -61,7 +61,6 @@ const FilteredListings = () => {
             rating: (parseFloat(listings[i].rating).toFixed(1)),
             place: listings[i].city + ', ' + listings[i].country,
             price: listings[i].price,
-            pic: listings[i].picturesUrl,
             location: {
                 lat: parseFloat(listings[i].latitude),
                 lng: parseFloat(listings[i].longitude)
