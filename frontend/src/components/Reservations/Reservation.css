@@ -9,7 +9,7 @@
 
 .reservation-index-image {
     width: 30%;
-    height: auto;
+    aspect-ratio: 1/1;
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 1.5%;
