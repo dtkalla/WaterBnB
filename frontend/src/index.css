@@ -838,8 +838,8 @@
      
  a:-webkit-any-link {
      color: -webkit-link;
-     text-decoration: underline;
-     cursor: auto;
+     text-decoration: none;
+     cursor: pointer;
  }
  a:-webkit-any-link:active {
      color: -webkit-activelink
