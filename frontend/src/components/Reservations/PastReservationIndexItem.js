@@ -145,7 +145,7 @@ const ReservationIndexItem = (props) => {
                     {errors && <div className='errors'>{errors[0]}</div>}
                     {messages && <div className='success'>{messages[0]}</div>}
                 </div>
-                <img className="reservation-index-image" src={listing.pictures_url} alt="" />
+                <img className="reservation-index-image" src={`https://waterbnb-seeds.s3.amazonaws.com/${listing.id}_0a.png`} alt="" />
                 <div className='res-index-map'>
                     <ResMapContainer locations={locations} />
                 </div>
