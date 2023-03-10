@@ -19,9 +19,9 @@ const ListingIndexItem = (props) => {
         return (
             <div className="listing-index-item">
                 <Link className='index-show-list-element' to={`/listings/${listing.id}`}>
-                    {/* <div id='listing-item-idx-div'> */}
+                    <div id='listing-item-idx-div'>
                         <img className="listing-index-image" src={`https://waterbnb-seeds.s3.amazonaws.com/${listing.id}_0a.png`} alt="" />
-                    {/* </div> */}
+                    </div>
                     <div id='location-rating'>
                         <span id='title'>{listing.city}, {listing.country}</span>
                         <span id='stars'><img id='star' src={star}/>{listing.rating % 1 == 0 ? listing.rating : Math.round(listing.rating * 100) / 100}</span>
