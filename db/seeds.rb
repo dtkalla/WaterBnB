@@ -2250,7 +2250,7 @@ ApplicationRecord.transaction do
         reviewer_id: 2,
         listing_id: 29,
         review_date: Date.new(2019,6,17),
-        body: "I don't know what I expected, but I was diappointed.",
+        body: "I don't know what I expected, but I was disappointed.",
         reviewer_name: "Anthony",
         profile_pic: anthony
     )
