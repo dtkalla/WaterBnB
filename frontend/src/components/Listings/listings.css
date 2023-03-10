@@ -50,6 +50,8 @@
 .listing-index-image {
     border-radius: 20px;
     padding-bottom: 10px;
+    width: auto;
+    height: auto;
 }
 
 
@@ -60,12 +62,17 @@
     border-bottom-left-radius: 20px;
 }
 
-.listing-show-image-main {
+#listing-show-idx-div {
     width: 48%;
     aspect-ratio: 4/3;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     padding-right: 5px;
+}
+
+.listing-show-image-main {
+    width: 100%;
+    height: 100%;
 }
 
 .listing-show-image-small {

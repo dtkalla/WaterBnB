@@ -64,7 +64,9 @@ const ListingShow = () => {
         <div>
             <ListingPicsModal id='listing-pics-modal-container'/>
             <div className='show-page-images' onClick={() => setShowModal(true)}>
-                <img className="listing-show-image-main" src={`https://waterbnb-seeds.s3.amazonaws.com/${l.id}_0.png`} alt='' />
+                <div id='listing-show-idx-div'>
+                    <img className="listing-show-image-main" src={`https://waterbnb-seeds.s3.amazonaws.com/${l.id}_0.png`} alt='' />
+                </div>
                 <div className='show-page-small-images'>
                     <img className="listing-show-image-small" src={`https://waterbnb-seeds.s3.amazonaws.com/${l.id}_1.png`} alt='' />
                     <img className="listing-show-image-small" id='small-2' src={`https://waterbnb-seeds.s3.amazonaws.com/${l.id}_2.png`} alt='' />
