@@ -1819,7 +1819,7 @@ ApplicationRecord.transaction do
         reviewer_id: 5,
         listing_id: 14,
         review_date: Date.new(2015,4,7),
-        body: "I didn't realize that visiting here was illegal, so I two days into my trip I was arrested and ended up spending 2 years in a Norwegian prison!  Norway has surprisingly nice prisons, and it was a great chance to disconnect and finally become fluent in Norwegian.  Hard to get to, but definitely worth it!",
+        body: "I didn't realize that visiting here was illegal, so two days into my trip I was arrested and I ended up spending 2 years in a Norwegian prison!  Norway has surprisingly nice prisons, and it was a great chance to disconnect and finally become fluent in Norwegian.  Hard to get to, but definitely worth it!",
         reviewer_name: "Brian",
         profile_pic: brian
     )
