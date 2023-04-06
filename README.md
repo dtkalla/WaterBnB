@@ -93,7 +93,7 @@ Note that people can rate without reviewing (though not vice versa), so most lis
 
 ![](images/max_100.png)
 
-Rather than looking at all properties at once, users can filter by the body of water it's near (ocean, sea, lake, or falls), by maximum price, or to show only places that allow pets or are highly rated (at least 5 ratings with average of at least 4.75 stars -- that's what the user is looking at currently).  Because filters show fewer listings, the default map with filters is a full world map.
+Rather than looking at all properties at once, users can filter by the body of water it's near (ocean, sea, lake, or falls), by maximum price (this photo shows a max price of $100/night), or to show only places that allow pets or are highly rated (at least 5 ratings with average of at least 4.75 stars).  Because filters show fewer listings, the default map with filters is a full world map.
 
 I used different urls to represent different filters, including a catch-all number for maximum price.  (React is fast enough that redirecting isn't a problem, and this stores users' filters in their browser history.)  I filtered it right at the useSelector to prevent errors with undefined variables.
 
