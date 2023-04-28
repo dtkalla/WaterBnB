@@ -1345,8 +1345,8 @@ ApplicationRecord.transaction do
     Reservation.create!(
         reserver_id: 2,
         listing_id: 8,
-        start_date: Date.new(2023,4,25),
-        end_date: Date.new(2023,4,30),
+        start_date: Date.new(2023,8,25),
+        end_date: Date.new(2023,8,30),
         num_guests: 1,
         price: 204
     )
@@ -1355,8 +1355,8 @@ ApplicationRecord.transaction do
     Reservation.create!(
         reserver_id: 2,
         listing_id: 4,
-        start_date: Date.new(2023,2,16),
-        end_date: Date.new(2023,2,26),
+        start_date: Date.new(2023,6,16),
+        end_date: Date.new(2023,6,26),
         num_guests: 2,
         price: 174
     )
