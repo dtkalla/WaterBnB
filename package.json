@@ -6,7 +6,7 @@
     "lib": "lib"
   },
   "scripts": {
-    "build": "npm install --prefix frontend && npm run build --prefix frontend"    
+    "build": "npm install --prefix frontend && npm run build --prefix frontend"
   },
   "repository": {
     "type": "git",
@@ -21,5 +21,8 @@
   "homepage": "https://github.com/dtkalla/Airbnb-clone#readme",
   "engines": {
     "node": "16.x"
+  },
+  "devDependencies": {
+    "@types/node": "^18.16.2"
   }
 }
