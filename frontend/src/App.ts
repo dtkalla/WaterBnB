@@ -23,14 +23,13 @@ import './components/MapContainer/MapContainer.css'
 
 function App() {
   const dispatch = useDispatch();
-    const listings = useSelector(getListings)
+    const listings: any[] = useSelector(getListings)
 
-    console.log(listings)
 
     useEffect(() => {
         dispatch(fetchListings())
     }, [])
-    const locations = []
+    const locations: any[] = []
 
     for (let i = 0; i < listings.length; i++) {
         locations.push({
